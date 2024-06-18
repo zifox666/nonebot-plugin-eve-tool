@@ -54,7 +54,7 @@ class MysqlArray:
         async with conn.cursor() as cursor:
             await cursor.execute(f"CREATE DATABASE IF NOT EXISTS {self.database}")
             await conn.commit()
-            logger.success(f"{self.database}已经成功创建")
+            logger.success(f"数据库{self.database}已经成功创建")
             return True
 
     async def close(self):

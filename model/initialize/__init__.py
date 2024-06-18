@@ -1,14 +1,18 @@
 import json
+from pathlib import Path
 
 from ...database.mysql import MysqlArray
 from ...database.redis import RedisArray
 from ...model.common import data_path
+from ...model.config import plugin_config
+from ...utils.common import check_files_exist, download_sde
+from ..sde import load_sde_to_mysql
 
 from nonebot import logger
 
 
 async def create_db(MYSQL: MysqlArray, db: str):
-    print("开始创建数据库eve_tool")
+    logger.info("开始创建数据库eve_tool")
     await MYSQL.create_database()
     await MYSQL.create_pool()
     eve_type_sql = """
@@ -61,6 +65,9 @@ async def create_db(MYSQL: MysqlArray, db: str):
     await MYSQL.execute(listener_sql)
     await MYSQL.execute(high_listener_sql)
 
+    if check_eve_sde_path(plugin_config.eve_sde_path):
+        await load_sde_to_mysql(MYSQL, plugin_config.eve_sde_path)
+
     return True
 
 
@@ -74,7 +81,7 @@ async def init_data(RA: RedisArray, MYSQL: MysqlArray) -> bool:
                      'SCHEMA', 'name', 'TEXT', 'name_en', 'TEXT')
 
     for row in eve_type_data:
-        redis_key = f"eve_type:{row['id']}"
+        redis_key = row['id']
         redis_value = {
             'name': row['name'],
             'name_en': row['name_en']
@@ -83,4 +90,21 @@ async def init_data(RA: RedisArray, MYSQL: MysqlArray) -> bool:
         await RA.hset('eveTypeIdx', redis_key, redis_value)
     logger.info("eve_type数据写入Redis完成")
     return True
+
+
+def check_eve_sde_path(sde_path: Path) -> bool | str:
+    """
+    判断SDE文件
+    """
+    files = ["types.yaml", "marketGroups.yaml", "metaGroups.yaml", "groups.yaml", "categories.yaml"]
+    if check_files_exist((sde_path / 'fsd'), files):
+        logger.info('SDE文件已导入')
+    else:
+        logger.info('SDE文件不存在，开始下载')
+        Path(sde_path).mkdir(parents=True, exist_ok=True)
+        if download_sde(sde_path):
+            logger.success("SDE数据下载完成，开始解压")
+            return True
+        else:
+            raise FileNotFoundError(f'SDE自动下载失败，请手动放置SDE文件到{sde_path}下')
 

@@ -1,13 +1,11 @@
-import json
+from pathlib import Path
 
-import yaml
-import asyncio
 import aiomysql
 
+from nonebot import logger
 
-async def load_yaml(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        return yaml.safe_load(file)
+from ..utils.common import load_yaml
+from ..database.mysql import MysqlArray
 
 
 async def transform_data(eve_type_data, meta_groups, market_groups, groups,categories):
@@ -42,38 +40,21 @@ async def transform_data(eve_type_data, meta_groups, market_groups, groups,categ
     return transformed_data
 
 
-async def save_to_txt(data, file_path):
-    with open(file_path, 'w', encoding='utf-8') as file:
-        for item in data:
-            file.write(str(item) + '\n')
+async def load_sde_to_mysql(MYSQL: MysqlArray, sde_path: Path):
+    fsd_path: Path = sde_path / 'fsd'
+    logger.info("开始加载SDE数据，耗时较长，请耐心等待，预计五分钟")
+    eve_type_data = await load_yaml(f'{fsd_path}/types.yaml')
+    logger.info('types loaded!')
+    meta_groups = await load_yaml(f'{fsd_path}/metaGroups.yaml')
+    logger.info('meta groups loaded!')
+    market_groups = await load_yaml(f'{fsd_path}/marketGroups.yaml')
+    logger.info('market groups loaded!')
+    groups = await load_yaml(f'{fsd_path}/groups.yaml')
+    logger.info('groups loaded!')
+    categories = await load_yaml(f'{fsd_path}/categories.yaml')
+    logger.info('categories loaded!')
 
-
-async def main():
-    # 创建连接池
-    pool = await aiomysql.create_pool(
-        host='192.168.0.110',
-        port=33061,
-        user='root',
-        password='Wy050427!',
-        db='eve_corp_manager_cacx',
-        charset='utf8mb4',
-        autocommit=False,
-        maxsize=10
-    )
-
-    eve_type_data = await load_yaml('types_full.yaml')
-    print('types loaded')
-    meta_groups = await load_yaml('metaGroups.yaml')
-    print('meta groups loaded')
-    market_groups = await load_yaml('marketGroups.yaml')
-    print('market groups loaded')
-    groups = await load_yaml('groups.yaml')
-    print('groups loaded')
-    categories = await load_yaml("categories.yaml")
-    print('categories loaded')
-
-    transformed_data = await transform_data(eve_type_data, meta_groups, market_groups, groups,categories)
-    await save_to_txt(transformed_data, 'transformed_data.txt')
+    transformed_data = await transform_data(eve_type_data, meta_groups, market_groups, groups, categories)
 
     insert_query = """
         INSERT INTO eve_type (
@@ -81,15 +62,11 @@ async def main():
         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW());
         """
 
-    async with pool.acquire() as conn:
-        async with conn.cursor() as cur:
-            await cur.execute("TRUNCATE TABLE eve_type")
-            print('Table eve_type truncated')
+    await MYSQL.execute("TRUNCATE TABLE eve_type")
+    logger.info('Table eve_type truncated')
 
-            await cur.executemany(insert_query, transformed_data)
-            await conn.commit()
+    await MYSQL.executemany(insert_query, transformed_data)
+    logger.success("SDE已写入数据库")
 
-    pool.close()
-    await pool.wait_closed()
 
 
