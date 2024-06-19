@@ -8,8 +8,6 @@ from ..model.common import data_path
 
 __all__ = ["Config", "plugin_config"]
 
-plugin_config_path = data_path / "config.json"
-"""插件数据文件默认路径"""
 _driver = nonebot.get_driver()
 
 
@@ -43,6 +41,7 @@ class Config(BaseModel):
     """市场设置"""
     eve_market_preference: str = 'mix'
     eve_janice_api_key: str = 'G9KwKq3465588VPd6747t95Zh94q3W2E'
+    eve_word_cut: str = 'jieba'
 
     @field_validator('eve_market_preference')
     def check_eve_market_preference(cls, v):
@@ -60,6 +59,8 @@ class Config(BaseModel):
     """kill mail偏好"""
     eve_km_speed_limit: int = 0
     eve_km_send_delay: int = 3
+
+    eve_kb_info_background_url: str = 'https://www.loliapi.com/acg/'
 
     """SDE存放位置"""
     eve_sde_path: str = data_path / 'sde'

@@ -1,7 +1,5 @@
 from pathlib import Path
 
-import aiomysql
-
 from nonebot import logger
 
 from ..utils.common import load_yaml
@@ -63,7 +61,7 @@ async def load_sde_to_mysql(MYSQL: MysqlArray, sde_path: Path):
         """
 
     await MYSQL.execute("TRUNCATE TABLE eve_type")
-    logger.info('Table eve_type truncated')
+    logger.info('数据库清理完成')
 
     await MYSQL.executemany(insert_query, transformed_data)
     logger.success("SDE已写入数据库")

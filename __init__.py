@@ -1,10 +1,7 @@
-from textwrap import dedent
-
 from nonebot.plugin import PluginMetadata
 from nonebot import logger
 
-
-from . import _version
+from nonebot_plugin_eve_tool import _version
 
 __version__ = _version.__version__
 __plugin_meta__ = PluginMetadata(
@@ -18,10 +15,10 @@ __plugin_meta__ = PluginMetadata(
 from nonebot import init
 from nonebot import get_driver
 
-from .model.config import plugin_config
-from .database.redis.RedisArray import RedisArray
-from .database.mysql.MysqlArray import MysqlArray
-from .model import initialize
+from nonebot_plugin_eve_tool.model.config import plugin_config
+from nonebot_plugin_eve_tool.database import RedisArray
+from nonebot_plugin_eve_tool.database.mysql import MysqlArray
+from nonebot_plugin_eve_tool.model import initialize
 
 init()
 driver = get_driver()
@@ -52,13 +49,14 @@ async def startup():
     logger.info(echo)
     if not echo:
         logger.info('数据库不存在，开始初始化数据库')
-        await initialize.create_db(MYSQL, plugin_config.eve_mysql_db)
+        await initialize.create_db(MYSQL)
 
     await initialize.init_data(RA, MYSQL)
 
 
 @driver.on_shutdown
 async def shutdown():
+    await RA.execute('FLUSHDB')
     await RA.close()
     await MYSQL.close()
 

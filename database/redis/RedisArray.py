@@ -105,7 +105,17 @@ class RedisArray:
         try:
             return await self.aioClient.execute_command(command, *args)
         except Exception as e:
-            print(f"Error executing command {command} with args {args}: {e}")
+            logger.error(f"Error executing command {command} with args {args}: {e}")
+            return None
+
+    async def expire_key(self, key, seconds):
+        """
+        设置键的过期时间
+        """
+        try:
+            return await self.aioClient.expire(key, seconds)
+        except Exception as e:
+            logger.error(f"expire_key 设置过期时间: {key}/{seconds}报错: {str(e)}")
             return None
 
     async def close(self):
