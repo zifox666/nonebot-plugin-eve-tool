@@ -2,8 +2,12 @@ from nonebot import on_command
 from nonebot.adapters.onebot.v11 import MessageSegment, Bot, Event
 from nonebot import logger
 
+from ..database.redis.search import get_names_for_redis
 from ..model.config import plugin_config
 from ..utils.price import get_marketer_price
+from ..utils.png import md2pic
+from ..api.esi.market import get_price_history
+from ..utils.line import draw_price_history
 
 from nonebot import require
 
@@ -34,7 +38,7 @@ query_price = on_alconna(
         Option(
             "--history",
             Args["history", str],
-            help_text="选择是否显示历史曲线['follow', 'mix', 'none', 'only']",
+            help_text="选择是否显示历史曲线['follow', 'only', 'none']",
             default=OptionResult(args={"history": plugin_config.eve_history_preference})
         ),
         meta=CommandMeta(
@@ -77,9 +81,25 @@ async def _query_price(
     logger.info(f"查询价格:{item_name}*{num}")
 
     if item_name:
-        result = await get_marketer_price(item_name, api, num)
-        # pic = await _md2pic(text)
-        await query_price.finish(MessageSegment.text(result))
+        result, first_item = await get_marketer_price(item_name, api, num)
+        pic = None
+        if first_item == "0":
+            await query_price.finish(f"未找到物品[{args}]")
+        if history == "follow" or history == "only":
+            history_data = await get_price_history(int(first_item))
+            if history_data:
+                line = await draw_price_history(history_data,
+                                                await get_names_for_redis(first_item),
+                                                True if history == 'follow' else False)
+                if history == "follow":
+                    pic = await md2pic(f"{result}\n{line}")
+                else:
+                    pic = f"base64://{line}"
+        else:
+            pic = await md2pic(result)
+        if not pic:
+            pic = await md2pic(result)
+        await query_price.finish(MessageSegment.image(pic))
     else:
         await query_price.finish("数据错误")
 

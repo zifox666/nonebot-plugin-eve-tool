@@ -53,6 +53,13 @@ class Config(BaseModel):
             raise ValueError(f'eve_market_preference must be one of {allowed_values}')
         return v
 
+    @field_validator('eve_history_preference')
+    def check_eve_market_preference(cls, v):
+        allowed_values = {'follow', 'only', 'none'}
+        if v not in allowed_values:
+            raise ValueError(f'eve_market_preference must be one of {allowed_values}')
+        return v
+
     @field_validator('eve_janice_api_key')
     def check_eve_janice_api_key(cls, v):
         if v == 'G9KwKq3465588VPd6747t95Zh94q3W2E':

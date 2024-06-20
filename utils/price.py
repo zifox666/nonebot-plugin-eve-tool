@@ -22,7 +22,7 @@ async def query_diversion(types_id: List[int], api: str) -> dict:
         return await get_price_for_tycoon(types_id)
 
 
-async def get_marketer_price(item_name: str, api: str, num: int = 1, lagrange: str = 'zh') -> str:
+async def get_marketer_price(item_name: str, api: str, num: int = 1, lagrange: str = 'zh') -> tuple[str, str]:
     # 彩蛋
     if item_name in special_cases:
         return special_cases[item_name]
@@ -38,10 +38,11 @@ async def get_marketer_price(item_name: str, api: str, num: int = 1, lagrange: s
         else:
             item_name = item_name.capitalize()
             item_type = "en"
-        item_num, type_dict = await search_eve_types(item_name, item_type)
+            logger.info("使用的是EN")
+        item_num, type_dict = await search_eve_types(item_name, lang=item_type)
 
     if item_num == 0:
-        return f"没有查询到[{item_name}]相关物品"
+        return f"没有查询到[{item_name}]相关物品", str(0)
 
     if item_num <= 6:
         type_dict = type_dict
@@ -64,4 +65,4 @@ async def get_marketer_price(item_name: str, api: str, num: int = 1, lagrange: s
     buy_total = buy_total * num
     sell_total = sell_total * num
     text += f"\n> 买单总价(x{num})：{format_price(buy_total)} <br> 卖单总价(x{num})：{format_price(sell_total)}\n"
-    return text
+    return text, type_dict[0]

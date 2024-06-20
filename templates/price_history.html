@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Chart.js Line Charts</title>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+      <canvas id="priceChart" style="height: 250px; width: 800px;"></canvas>
+      <canvas id="quantityChart" style="height: 200px; width: 800px;"></canvas>
+      <script>
+        // Sample data
+        var data = ${pngshuju};
+
+        // Extract price and quantity data
+        var highPrices = data.map(row => row[1]);
+        var lowPrices = data.map(row => row[2]);
+        var quantities = data.map(row => row[3]);
+
+        function formatTicks(value, index, values) {
+          var units = ['', 'k', 'm', 'b', 't'];
+          var unitIndex = Math.floor(Math.log10(value) / 3);
+          var unitLabel = units[unitIndex];
+          var tickValue = value / Math.pow(10, unitIndex * 3);
+          return tickValue + unitLabel;
+        }
+
+        // Function to filter labels to display every other label
+        function filterLabels(value, index, values) {
+          return index % 2 === 0 ? value : '';
+        }
+
+        // Chart configuration for price
+        var priceConfig = {
+          type: 'line',
+          data: {
+            labels: data.map(row => row[0]),
+            datasets: [
+              {
+                label: '最高价格',
+                data: highPrices,
+                borderColor: 'rgb(75, 192, 192)',
+                borderWidth: 1,
+                fill: false,
+                pointRadius: 0
+              },
+              {
+                label: '最低价格',
+                data: lowPrices,
+                borderColor: 'rgb(255, 99, 132)',
+                borderWidth: 1,
+                fill: false,
+                pointRadius: 0
+              }
+            ]
+          },
+          options: {
+            responsive: false,
+            animation: {
+              duration: 0 // Disable animation
+            },
+            plugins: {
+              title: {
+                display: true,
+                text: '${name}'
+              }
+            },
+            scales: {
+              x: {
+                display: false,
+                grid: {
+                  display: false // 隐藏网格线
+                },
+                ticks: {
+                  callback: filterLabels // 过滤标签
+                }
+              },
+              y: {
+                display: true,
+                title: {
+                  display: true,
+                  text: '价格'
+                },
+                ticks: {
+                  callback: formatTicks // 自定义刻度标签
+                }
+              }
+            }
+          }
+        };
+
+        // Chart configuration for quantity
+        var quantityConfig = {
+          type: 'line',
+          data: {
+            labels: data.map(row => row[0]),
+            datasets: [{
+              label: '数量',
+              data: quantities,
+              borderColor: 'rgb(54, 162, 235)',
+              borderWidth: 1,
+              fill: false,
+              pointRadius: 0
+            }]
+          },
+          options: {
+            responsive: false,
+            animation: {
+              duration: 0 // Disable animation
+            },
+            plugins: {},
+            scales: {
+              x: {
+                display: true,
+                grid: {
+                  display: false // 隐藏网格线
+                }
+              },
+              y: {
+                display: true,
+                title: {
+                  display: true,
+                  text: '数量'
+                },
+                ticks: {
+                  callback: formatTicks // 自定义刻度标签
+                }
+              }
+            }
+          }
+        };
+
+        // Create price chart
+        var priceChart = new Chart(
+          document.getElementById('priceChart'),
+          priceConfig
+        );
+
+        // Create quantity chart
+        var quantityChart = new Chart(
+          document.getElementById('quantityChart'),
+          quantityConfig
+        );
+      </script>
+    </body>
+    </html>

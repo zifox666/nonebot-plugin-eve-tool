@@ -26,7 +26,7 @@ async def process_orders(data: List[dict], type_id: int) -> dict:
 
     if min_sell_price == float('inf'):
         min_sell_price = 0
-    if max_buy_price == float('-inf'):
+    if max_buy_price == float('inf'):
         max_buy_price = 0
 
     return {

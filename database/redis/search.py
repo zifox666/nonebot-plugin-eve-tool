@@ -56,7 +56,7 @@ async def search_eve_types(query_list, lang='zh', fuzzy: bool = True):
     total_count = 0
 
     for query in query_list:
-        search_query = f'@name:{" ".join(query)}' if lang == 'zh' else f'@name_en:{query}'
+        search_query = f'@name:{" ".join(query)}' if lang == 'zh' else f'@name_en:{query}*'
 
         result = await RA.execute('FT.SEARCH', 'eveTypeIdx', search_query, 'RETURN', '2', 'name',
                                   'name_en', 'LIMIT', '0', '50')

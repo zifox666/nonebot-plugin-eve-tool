@@ -78,3 +78,11 @@ async def get_price_for_esi(types_id: List[int]) -> dict[int, dict[str, int | fl
 
     return result
 
+
+async def get_price_history(type_id: int) -> dict[int, dict[str, int | float | str]]:
+    """
+    获取一年的历史价格
+    """
+    url = f"https://esi.evetech.net/latest/markets/10000002/history/?datasource&type_id={str(type_id)}"
+    return await aioClient.get(url)
+
