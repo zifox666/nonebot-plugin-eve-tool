@@ -6,6 +6,7 @@ from ..sde import load_sde_to_mysql
 from .sde import load_sde_to_redis, check_eve_sde_path
 from .sql import Sql
 from .sub import load_listener_to_redis
+from .market import load_alias_to_redis
 
 from nonebot import logger
 
@@ -25,6 +26,8 @@ async def create_db(MYSQL: MysqlArray):
     await MYSQL.execute(Sql.listener_sql)
     await MYSQL.execute(Sql.high_listener_sql)
 
+    await MYSQL.execute(Sql.alias_items)
+
     if check_eve_sde_path(plugin_config.eve_sde_path):
         await load_sde_to_mysql(MYSQL, plugin_config.eve_sde_path)
 
@@ -37,6 +40,7 @@ async def init_data(RA: RedisArray, MYSQL: MysqlArray) -> bool:
     """
     await load_sde_to_redis(RA, MYSQL)
     await load_listener_to_redis(RA, MYSQL)
+    await load_alias_to_redis(RA, MYSQL)
     return True
 
 

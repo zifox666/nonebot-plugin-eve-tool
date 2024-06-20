@@ -39,3 +39,12 @@ async def load_listener_to_redis(RA: RedisArray, MYSQL: MysqlArray):
     logger.info("highListener数据写入Redis完成")
 
     return True
+
+
+async def load_alias_to_redis(RA: RedisArray, MYSQL: MysqlArray):
+    data = await MYSQL.fetchall('SELECT alias, item FROM alias_items')
+
+    for row in data:
+        await RA.rpush(f"alias:{row['alias']}", row['item'])
+
+    logger.info("alias数据写入Redis完成")

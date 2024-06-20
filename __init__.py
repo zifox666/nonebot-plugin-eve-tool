@@ -1,7 +1,7 @@
 from nonebot.plugin import PluginMetadata
 from nonebot import logger
 
-from nonebot_plugin_eve_tool import _version
+from . import _version
 
 __version__ = _version.__version__
 __plugin_meta__ = PluginMetadata(
@@ -15,10 +15,12 @@ __plugin_meta__ = PluginMetadata(
 from nonebot import init
 from nonebot import get_driver
 
-from nonebot_plugin_eve_tool.model.config import plugin_config
-from nonebot_plugin_eve_tool.database import RedisArray
-from nonebot_plugin_eve_tool.database.mysql import MysqlArray
-from nonebot_plugin_eve_tool.model import initialize
+from .model.config import plugin_config
+from .database.redis.RedisArray import RedisArray
+from .database.mysql.MysqlArray import MysqlArray
+from .model import initialize
+
+from .command import *
 
 init()
 driver = get_driver()
@@ -32,13 +34,19 @@ MYSQL = MysqlArray(
 )
 
 print("""
- _______   ___      ___ _______  _________  ________  ________  ___          
-|\  ___ \ |\  \    /  /|\  ___ \|\___   ___\\   __  \|\   __  \|\  \         
-\ \   __/|\ \  \  /  / | \   __/\|___ \  \_\ \  \|\  \ \  \|\  \ \  \        
- \ \  \_|/_\ \  \/  / / \ \  \_|/__  \ \  \ \ \  \\\  \ \  \\\  \ \  \       
-  \ \  \_|\ \ \    / /   \ \  \_|\ \  \ \  \ \ \  \\\  \ \  \\\  \ \  \____  
-   \ \_______\ \__/ /     \ \_______\  \ \__\ \ \_______\ \_______\ \_______\
-    \|_______|\|__|/       \|_______|   \|__|  \|_______|\|_______|\|_______|
+                                                                           .-'''-.        .-'''-.          
+                                                                          '   _    \     '   _    \  .---. 
+       __.....__   .----.     .----.   __.....__                        /   /` '.   \  /   /` '.   \ |   | 
+   .-''         '.  \    \   /    /.-''         '.                     .   |     \  ' .   |     \  ' |   | 
+  /     .-''"'-.  `. '   '. /'   //     .-''"'-.  `.                .| |   '      |  '|   '      |  '|   | 
+ /     /________\   \|    |'    //     /________\   \             .' |_\    \     / / \    \     / / |   | 
+ |                  ||    ||    ||                  |           .'     |`.   ` ..' /   `.   ` ..' /  |   | 
+ \    .-------------''.   `'   .'\    .-------------'          '--.  .-'   '-...-'`       '-...-'`   |   | 
+  \    '-.____...---. \        /  \    '-.____...---.             |  |                               |   | 
+   `.             .'   \      /    `.             .'              |  |                               |   | 
+     `''-...... -'      '----'       `''-...... -'                |  '.'                             '---' 
+                                                                  |   /                                    
+                                                                  `'-'                                     
 """)
 
 

@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale">
+<style>
+    {css}
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="margin-top: -10px; margin-left: -10px;">
+            <img src="https://wiki.eveuniversity.org/images/thumb/e/eb/Killreport.png/48px-Killreport.png" style="height: 25px; width: 25px;"/>
+            <span class="chinese" style="font-size: 12px; margin-top: 5px; margin-left: 3px;">击毁报告 - {title}</span>
+            <span style="font-size: 12px; position: absolute; right: 20px; top: 15px;">kill ID:{killmail_id}</span>
+        </div>
+        <div style="margin-top: 10px;" class="clear">
+            <img src="https://images.evetech.net/characters/{victim_id}/portrait?size=128" />
+            <img src="https://images.evetech.net/types/{ship_type_id}/render?size=128" />
+        </div>
+        <div style="margin-left: 11px; margin-top: 10px;">
+            <div><span style="font-size: 18px; margin-top: 2px">{victim_name}</span></div>
+            <br class="clear" />
+            <div>
+                <img src="https://images.evetech.net/corporations/{victim_corp_id}/logo?size=32" />
+                <img src="https://images.evetech.net/alliances/{victim_alliance_id}/logo?size=32" />
+                <span>
+                    {victim_corp} <br />
+                    {victim_alliance_name}
+                </span>
+                <div class="clear" style="font-size: 13px;">
+                    <div class="clear" style="margin-top: 12px;"><span>{ship_type_name} </span><span style="margin-left: 0.5ex; font-weight: 500;">{ship_group_name}</span></div>
+                    <div class="clear" style="position: absolute; left: 287px; top: 142px; font-weight: 500;">{time}</div>
+                    <div class="clear" style="position: absolute; left: 287px; top: 157px; font-weight: 500;"><span>{solar_system} </span><span style="margin-left: 0.5ex; color:var({sec_color})">{sec}</span><span style="margin-left: 0.5ex;">&lt; {constellation} &lt; {region}</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="line clear" style="margin: 10px 0;"></div>
+        <div class="clear" style="width: 256px; font-weight: 500;">
+            <span class="clear chinese" style="font-size: 16px;">参与者 ({attacker_number})</span>
+            <span class="clear chinese" style="color: var(--dmg-color);font-size: 14px; ">共受到伤害: {damage_taken}</span>
+            <span class="clear chinese" style="font-size: 14px; margin-top: 6px;">最后一击</span>
+            {LastDamageAttackerHtml}
+            <span class="clear chinese" style="font-size: 14px; margin-top: 10px;">造成伤害最多</span>
+            {TopDamageAttackerHtml}
+            <div class="line clear" style="margin: 10px 0 0 0;"></div>
+            <div style="height:580px; overflow-y:auto">
+                {attacker_list_html}
+            </div>
+
+        </div>
+        <div style="margin-left:11px; font-weight: 500; height: 100%;">
+            <span class="chinese" style="font-size: 16px;">装备与明细</span><br>
+            <div style="height:780px;overflow-y:auto; margin-top: 8px">
+            {equipment_html}
+            </div>
+        </div>
+    
+        <div>
+            <div style="position: absolute; left: 20px; top: 1041px; font-weight: 500; font-size:14px">Generate by @evebot(3815647974)</div>
+            <div style="position: absolute; left: 20px; top: 1021px; font-weight: 500; font-size:14px">Powered by @BigfishOVO</div>
+            <div class="chinese" style="position: absolute; left: 287px; top: 1020px; font-weight: 500; font-size:15px">总价值：</div>
+            <div style="position: absolute; right: 20px; top: 1020px; font-weight: 500; font-size:15px">{total_value} 星币</div>
+            <div class="chinese" style="position: absolute; left: 287px; top: 1040px; font-weight: 500; font-size:15px">总掉落：</div>
+            <div style="position: absolute; right: 20px; top: 1040px; font-weight: 500; font-size:15px; color:#25b025">{drop_value} 星币</div>
+            <img src="data:image/png;base64,{qrcode}" style="max-width: 70px; position: absolute; right: 20px; top: 40px; font-weight: 500;" />
+        </div>
+
+
+    </div>
+</body>
+
+</html>

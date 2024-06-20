@@ -5,18 +5,33 @@ from aioredis import Redis
 
 
 class RedisArray:
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            cls._instance.aioClient = None
+            cls._instance.url = None
+        return cls._instance
+
     def __init__(self, url):
         """
         :param url: redis url
         """
         self.aioClient: Redis
-        self.url: str = url
+        if self.url is None:
+            self.url = url
 
     async def create_pool(self):
         """
         创建连接池
         """
         self.aioClient = await aioredis.from_url(self.url, decode_responses=True)
+
+    def get_client(self) -> Redis:
+        if self.aioClient is None:
+            raise RuntimeError("Redis client is not initialized. Call create_pool() first.")
+        return self.aioClient
 
     async def lpush(self, list_name, value):
         """
@@ -83,6 +98,19 @@ class RedisArray:
             logger.error(f"读取: {hash_name}/{key}错误: {str(e)}")
             return None
 
+    async def hmget(self, hash_name, keys):
+        """
+        获取多个哈希值
+        :param hash_name: 哈希名称
+        :param keys: 哈希键列表
+        """
+        try:
+            result = await self.aioClient.hmget(hash_name, *keys)
+            return result
+        except Exception as e:
+            logger.error(f"读取多个哈希值: {hash_name}/{keys}错误: {str(e)}")
+            return None
+
     async def hgetall(self, hash_name):
         """
         获取整个哈希
@@ -90,7 +118,6 @@ class RedisArray:
         """
         try:
             result = await self.aioClient.hgetall(hash_name)
-            logger.error(result)
             return result
         except Exception as e:
             logger.error(f"读取: {hash_name}错误: {str(e)}")
@@ -106,6 +133,15 @@ class RedisArray:
             return await self.aioClient.execute_command(command, *args)
         except Exception as e:
             logger.error(f"Error executing command {command} with args {args}: {e}")
+            return None
+
+    async def lrange(self, keyname, key, start=0, end=-1):
+        try:
+            key = f"{keyname}:{key}"
+            items = await self.aioClient.lrange(key, start, end)
+            return items
+        except Exception as e:
+            logger.error(f"读取{key}错误: {e}")
             return None
 
     async def expire_key(self, key, seconds):

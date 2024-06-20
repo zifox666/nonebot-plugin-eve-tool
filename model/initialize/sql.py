@@ -44,3 +44,12 @@ class Sql:
     )"""
     group_index: str = "CREATE INDEX idx_group_id ON eve_type (group_id)"
     market_group_index: str = "CREATE INDEX idx_market_group_id ON eve_type (market_group_id)"
+
+    alias_items: str = """
+        CREATE TABLE alias_items (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        alias VARCHAR(255) NOT NULL,
+        item VARCHAR(255) NOT NULL
+    )
+    """
+

@@ -1,3 +1,5 @@
+from typing import List
+
 import nonebot
 from nonebot import get_plugin_config
 from nonebot.log import logger
@@ -39,13 +41,14 @@ class Config(BaseModel):
     eve_proxy: str = None
 
     """市场设置"""
-    eve_market_preference: str = 'mix'
+    eve_market_preference: str = 'tycoon'
     eve_janice_api_key: str = 'G9KwKq3465588VPd6747t95Zh94q3W2E'
     eve_word_cut: str = 'jieba'
+    eve_history_preference: str = 'follow'
 
     @field_validator('eve_market_preference')
     def check_eve_market_preference(cls, v):
-        allowed_values = {'mix', 'ceve'}
+        allowed_values = {'tycoon', 'ceve', 'esi'}
         if v not in allowed_values:
             raise ValueError(f'eve_market_preference must be one of {allowed_values}')
         return v
@@ -64,6 +67,12 @@ class Config(BaseModel):
 
     """SDE存放位置"""
     eve_sde_path: str = data_path / 'sde'
+
+    """语言偏好"""
+    eve_lagrange_preference: str = 'zh'
+
+    """常规设置"""
+    eve_command_start: List[str] = ["/", "", "！", "."]
 
 
 plugin_config = get_plugin_config(Config)

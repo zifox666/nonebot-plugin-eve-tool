@@ -15,17 +15,17 @@ async def load_sde_to_redis(RA: RedisArray, MYSQL: MysqlArray) -> bool:
     """
     eve_type_data = await MYSQL.fetchall("SELECT id, name, name_en FROM eve_type WHERE market_group_id IS NOT NULL")
     await RA.execute('FLUSHDB')
-    await RA.execute('FT.CREATE', 'eveTypeIdx', 'ON', 'HASH', 'PREFIX', '1', 'eve_type:',
-                     'SCHEMA', 'name', 'TEXT', 'name_en', 'TEXT')
 
     for row in eve_type_data:
         redis_key = f"eve_type:{row['id']}"
-        redis_value = {
-            'name': row['name'],
-            'name_en': row['name_en']
-        }
-        redis_value = json.dumps(redis_value)
-        await RA.hset('eveTypeIdx', redis_key, redis_value)
+        if row['name']:
+            await RA.hset(redis_key, 'name', ' '.join(row['name']))
+        if row['name_en']:
+            await RA.hset(redis_key, 'name_en', row['name_en'])
+
+    await RA.execute('FT.CREATE', 'eveTypeIdx', 'ON', 'HASH', 'PREFIX', '1', 'eve_type:',
+                     'SCHEMA', 'name', 'TEXT', 'name_en', 'TEXT')
+
     logger.info("eve_type数据写入Redis完成")
     return True
 

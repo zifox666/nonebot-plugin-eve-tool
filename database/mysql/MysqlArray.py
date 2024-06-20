@@ -5,6 +5,15 @@ from nonebot import logger
 
 
 class MysqlArray:
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            cls._instance.aioClient = None
+            cls._instance.host = None
+        return cls._instance
+
     def __init__(
             self,
             host: str,
@@ -20,12 +29,18 @@ class MysqlArray:
         :param password: MySQL 密码
         :param database: MySQL 数据库名
         """
-        self.host: str = host
+        if self.host is None:
+            self.host: str = host
         self.port: int = port
         self.user: str = user
         self.password: str = password
         self.database: str = database
-        self.aioClient: Pool = None
+        self.aioClient: Pool
+
+    def get_client(self) -> Pool:
+        if self.aioClient is None:
+            raise RuntimeError("Mysql client is not initialized. Call create_pool() first.")
+        return self.aioClient
 
     async def create_pool(self):
         """

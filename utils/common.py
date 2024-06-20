@@ -6,12 +6,6 @@ import re
 from pathlib import Path
 from typing import (Dict, Literal,
                     Union, Optional, Tuple, Iterable, List, Any)
-from urllib.parse import urlencode
-
-import httpx
-import nonebot.log
-import nonebot.plugin
-import tenacity
 import yaml
 from qrcode import QRCode
 from nonebot.log import logger
@@ -29,11 +23,6 @@ try:
 except ImportError:
     Logger = None
     pass
-
-from nonebot import Adapter, Bot, require
-
-from nonebot.adapters.onebot.v11 import MessageEvent as OneBotV11MessageEvent, PrivateMessageEvent, GroupMessageEvent, \
-    Adapter as OneBotV11Adapter, Bot as OneBotV11Bot
 
 from ..model import plugin_config, data_path
 
@@ -171,3 +160,19 @@ async def load_yaml(file_path):
     """
     with open(file_path, 'r', encoding='utf-8') as file:
         return yaml.safe_load(file)
+
+
+def format_price(price):
+    """
+    整理价格，千分位
+    :param price:
+    :return:
+    """
+    a = format(float(price), '.2f')
+    return format(float(a), ',')
+
+
+def pack_strings(words):
+    packed_string = str(''.join([word.strip() for word in words if word.strip()]))
+    return packed_string
+
