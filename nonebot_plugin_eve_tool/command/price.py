@@ -1,6 +1,4 @@
 from nonebot import logger
-from nonebot_plugin_alconna.uniseg import UniMessage, At
-
 from ..database.redis.search import get_names_for_redis
 from ..model.config import plugin_config
 from ..utils.price import get_marketer_price
@@ -20,6 +18,7 @@ from nonebot_plugin_alconna import (
     AlcResult
 )
 from arclet.alconna import Alconna, Args, Option, Arparma, Subcommand, CommandMeta, OptionResult, MultiVar
+from nonebot_plugin_alconna.uniseg import UniMessage, At
 
 __all__ = ["query_price"]
 
