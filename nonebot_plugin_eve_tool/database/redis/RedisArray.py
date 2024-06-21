@@ -1,10 +1,11 @@
 from nonebot import logger
 try:
     import aioredis
-    from aioredis import Redis
+
 except:
     logger.error(f"请一定使用python<3.11版本，如果无法使用，请自行百度修改aioredis包")
 from nonebot import logger
+from aioredis import Redis
 
 from ...model.config import plugin_config
 
