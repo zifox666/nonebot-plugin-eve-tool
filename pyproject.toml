@@ -3,7 +3,7 @@ name = "EVE_TEST_BOT"
 version = "0.1.0"
 description = "EVE_TEST_BOT"
 readme = "README.md"
-requires-python = ">=3.8, <4.0"
+requires-python = ">=3.8, <3.11"
 
 [tool.nonebot]
 adapters = [
