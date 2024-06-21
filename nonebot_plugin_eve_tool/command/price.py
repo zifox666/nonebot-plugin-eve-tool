@@ -1,5 +1,3 @@
-from nonebot import on_command
-from nonebot.adapters.onebot.v11 import MessageSegment, Bot, Event
 from nonebot import logger
 from nonebot_plugin_alconna.uniseg import UniMessage, At
 
@@ -65,8 +63,6 @@ alias_plex = {
 
 @query_price.handle()
 async def _query_price(
-        bot: Bot,
-        event: Event,
         args: tuple[str, ...],
         api: str,
         history: str
