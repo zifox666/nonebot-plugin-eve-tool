@@ -1,6 +1,7 @@
 from nonebot import on_command
 from nonebot.adapters.onebot.v11 import MessageSegment, Bot, Event
 from nonebot import logger
+from nonebot_plugin_alconna.uniseg import UniMessage, At
 
 from ..database.redis.search import get_names_for_redis
 from ..model.config import plugin_config
@@ -84,7 +85,7 @@ async def _query_price(
         result, first_item = await get_marketer_price(item_name, api, num)
         pic = None
         if first_item == "0":
-            await query_price.finish(f"未找到物品[{args}]")
+            await query_price.finish(UniMessage(f"未找到[{item_name}]"))
         if history == "follow" or history == "only":
             history_data = await get_price_history(int(first_item))
             if history_data:
@@ -94,12 +95,12 @@ async def _query_price(
                 if history == "follow":
                     pic = await md2pic(f"{result}\n{line}")
                 else:
-                    pic = f"base64://{line}"
+                    pic = f"{line}"
         else:
             pic = await md2pic(result)
         if not pic:
             pic = await md2pic(result)
-        await query_price.finish(MessageSegment.image(pic))
+        await query_price.finish(UniMessage.image(pic))
     else:
-        await query_price.finish("数据错误")
+        await query_price.finish(UniMessage("数据错误"))
 

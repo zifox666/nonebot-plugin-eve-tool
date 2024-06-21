@@ -15,7 +15,7 @@ builtin_plugins = []
 
 [tool.poetry]
 name = "nonebot-plugin-eve-tool"
-version = "0.1.0"
+version = "0.1.1"
 description = "A NoneBot based plugin provides information query services for EVE online."
 authors = ["zifox666 <zifox666@gmail.com>"]
 license = "GPL-3.0 license"
