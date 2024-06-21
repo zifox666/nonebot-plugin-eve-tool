@@ -1,14 +1,24 @@
-<div align="center">
-  <a href="https://v2.nonebot.dev/store"><img src="https://github.com/A-kirami/nonebot-plugin-template/blob/resources/nbp_logo.png" width="180" height="180" alt="NoneBotPluginLogo"></a>
-  <br>
-  <p><img src="https://github.com/A-kirami/nonebot-plugin-template/blob/resources/NoneBotPlugin.svg" width="240" alt="NoneBotPluginText"></p>
-</div>
+```text
+                                                                           .-'''-.        .-'''-.          
+                                                                          '   _    \     '   _    \  .---. 
+       __.....__   .----.     .----.   __.....__                        /   /` '.   \  /   /` '.   \ |   | 
+   .-''         '.  \    \   /    /.-''         '.                     .   |     \  ' .   |     \  ' |   | 
+  /     .-''"'-.  `. '   '. /'   //     .-''"'-.  `.                .| |   '      |  '|   '      |  '|   | 
+ /     /________\   \|    |'    //     /________\   \             .' |_\    \     / / \    \     / / |   | 
+ |                  ||    ||    ||                  |           .'     |`.   ` ..' /   `.   ` ..' /  |   | 
+ \    .-------------''.   `'   .'\    .-------------'          '--.  .-'   '-...-'`       '-...-'`   |   | 
+  \    '-.____...---. \        /  \    '-.____...---.             |  |                               |   | 
+   `.             .'   \      /    `.             .'              |  |                               |   | 
+     `''-...... -'      '----'       `''-...... -'                |  '.'                             '---' 
+                                                                  |   /                                    
+                                                                  `'-'                                     
+```
 
 <div align="center">
 
 # nonebot-plugin-eve-tool
 
-_✨ NoneBot 插件简单描述 ✨_
+_✨ NoneBot EVE信息查询插件 ✨_
 
 
 <a href="./LICENSE">
@@ -21,54 +31,17 @@ _✨ NoneBot 插件简单描述 ✨_
 
 </div>
 
-这是一个 nonebot2 插件项目的模板库, 你可以直接使用本模板创建你的 nonebot2 插件项目的仓库
+这是一个基于 nonebot2 编写的EVE ONLINE信息查询插件。
 
-<details>
-<summary>模板库使用方法</summary>
-
-1. 点击仓库中的 "Use this template" 按钮, 输入仓库名与描述, 点击 "  Create repository from template" 创建仓库
-2. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
-3. 全局替换`owner`为仓库所有者ID; 全局替换`nonebot-plugin-template`为插件名; 全局替换`nonebot_plugin_template`为包名; 修改 python 徽标中的版本为你插件的运行所需版本
-4. 修改 README 中的插件名和插件描述, 并在下方填充相应的内容
-
-</details>
-
-<details>
-<summary>配置发布工作流</summary>
-
-模块库中自带了一个发布工作流, 你可以使用此工作流自动发布你的插件到 pypi
-
-> [!IMPORTANT]
-> 这个发布工作流需要 pyproject.toml 文件, 并且只支持 [PEP 621](https://peps.python.org/pep-0621/) 标准的 pyproject.toml 文件
-
-1. 前往 https://pypi.org/manage/account/#api-tokens 并创建一个新的 API 令牌。创建成功后不要关闭页面，不然你将无法再次查看此令牌。
-2. 在单独的浏览器选项卡或窗口中，打开 [Actions secrets and variables](./settings/secrets/actions) 页面。你也可以在 Settings - Secrets and variables - Actions 中找到此页面。
-3. 点击 New repository secret 按钮，创建一个名为 `PYPI_API_TOKEN` 的新令牌，并从第一步复制粘贴令牌。
-
-</details>
-
-<details>
-<summary>触发发布工作流</summary>
-从本地推送任意 tag 即可触发。
-
-创建 tag:
-
-    git tag <tag_name>
-
-推送本地所有 tag:
-
-    git push origin --tags
-
-</details>
 
 ## 📖 介绍
 
-这里是插件的详细介绍部分
+懒，具体功能：查价，kb信息，翻译，汇率，KM订阅及推送
 
 ## 💿 安装
 
 <details open>
-<summary>使用 nb-cli 安装</summary>
+<summary>使用 nb-cli 安装 (推荐)</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
     nb plugin install nonebot-plugin-eve-tool
@@ -82,17 +55,17 @@ _✨ NoneBot 插件简单描述 ✨_
 <details>
 <summary>pip</summary>
 
-    pip install nonebot-plugin-template
+    pip install nonebot-plugin-eve-tool
 </details>
 <details>
 <summary>pdm</summary>
 
-    pdm add nonebot-plugin-template
+    pdm add nonebot-plugin-eve-tool
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add nonebot-plugin-template
+    poetry nonebot-plugin-eve-tool
 </details>
 <details>
 <summary>conda</summary>
@@ -110,10 +83,41 @@ _✨ NoneBot 插件简单描述 ✨_
 
 在 nonebot2 项目的`.env`文件中添加下表中的必填配置
 
+```text
+eve_mysql_password='你的密码'
+eve_proxy='http://127.0.0.1:7890' #国内强烈推荐
+```
+
+<details>
+<summary>全部配置项</summary>
+
 | 配置项 | 必填 | 默认值 | 说明 |
 |:-----:|:----:|:----:|:----:|
-| 配置项1 | 是 | 无 | 配置说明 |
-| 配置项2 | 否 | 无 | 配置说明 |
+| eve_mysql_host | 否 | 'localhost' | MYSQL主机地址 |
+| eve_mysql_port | 否 | 3306 | MYSQL端口号 |
+| eve_mysql_user | 否 | 'root' | MYSQL用户名 |
+| eve_mysql_password | 是 | 无 | MYSQL密码 |
+| eve_mysql_db | 否 | 'eve_tool' | MYSQL数据库名 |
+| eve_redis_url | 否 | 'redis://localhost:6379/0' | Redis连接URL |
+| eve_proxy | 否 | None | 代理配置 |
+| eve_market_preference | 否 | 'esi_cache' | 市场设置偏好 |
+| eve_janice_api_key | 否 | 'G9KwKq3465588VPd6747t95Zh94q3W2E' | Janice API密钥 |
+| eve_word_cut | 否 | 'jieba' | 分词工具偏好 |
+| eve_history_preference | 否 | 'follow' | 历史记录偏好 |
+| eve_km_speed_limit | 否 | 0 | Kill Mail速度限制 |
+| eve_km_send_delay | 否 | 3 | Kill Mail发送延迟 |
+| eve_kb_info_background_url | 否 | 'https://www.loliapi.com/acg/' | KB信息背景URL |
+| eve_sde_path | 否 | data_path / 'sde' | SDE存放位置 |
+| eve_lagrange_preference | 否 | 'zh' | 语言偏好 |
+| eve_command_start | 否 | ["/", "", "！", ".", "!", "#"] | 命令起始字符 |
+</details>
+
+
+接下来请安装mysql和redis，推荐使用docker
+```shell
+docker run -itd --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql
+docker run -itd --name redis -p 6379:6379 redis/redis-stack-server:latest
+```
 
 ## 🎉 使用
 ### 指令表
