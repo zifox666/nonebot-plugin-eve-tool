@@ -20,7 +20,7 @@ from .command import *
 
 
 __plugin_meta__ = PluginMetadata(
-    name="EVE ONLINE 多功能机器人\n版本 - {__version__}\n",
+    name=f"EVE ONLINE 多功能机器人\n版本 - {__version__}\n",
     description="EVE ONLINE-游戏查价，合同，游戏信息查询\n",
     usage="导入并安装mysql和redis即可使用",
 
