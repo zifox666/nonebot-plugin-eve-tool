@@ -76,7 +76,6 @@ async def get_price_for_esi(types_id: List[int] | None) -> dict[int, dict[str, i
     :return:
     """
     result = {}
-    print(types_id)
     for type_id in types_id:
         url = (f"https://esi.evetech.net/latest/markets/10000002/orders/?&order_type=all&type_id="
                f"{str(type_id) if types_id else ''}")

@@ -59,7 +59,6 @@ async def get_marketer_price(item_name: str, api: str, num: int = 1, lagrange: s
         type_dict = {key: type_dict[key] for key in keys}
     type_dict.pop("total", None)
     results = await query_diversion(list(type_dict.keys()), api)
-    print(results)
 
     buy_total = 0
     sell_total = 0
