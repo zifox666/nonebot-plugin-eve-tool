@@ -8,7 +8,7 @@ from pydantic import BaseModel
 root_path = Path(__name__).parent.absolute()
 '''NoneBot2 机器人根目录'''
 
-data_path = root_path / "data" / "eve_tool"
+data_path = root_path / "eve_tool_data"
 '''插件数据保存目录'''
 
 plugin_path = Path(__file__).resolve().parent.parent
