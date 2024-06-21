@@ -60,7 +60,6 @@ async def search_eve_types_for_mysql(
 async def get_ids_names_for_mysql(type_names: list, fuzzy_str: str, data_type="zh") -> dict:
     cache_result = await read_from_cache('types', fuzzy_str, 'fuzzy_list')
     if cache_result:
-        print(f"有cache_result\n{cache_result}")
         return cache_result
     result = {}
 
