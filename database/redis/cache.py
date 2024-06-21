@@ -9,8 +9,8 @@ RA = RedisArray(plugin_config.eve_redis_url)
 
 
 async def read_from_cache(name: str, params: str, cache_type: str) -> dict | None:
-    key = f"@{name}:{params}"
-    cached_data = await RA.hget(cache_type, key)
+    key = f"{cache_type}:{name}:{params}"
+    cached_data = await RA.hget(key, key)
     if cached_data:
         return json.loads(cached_data)
     else:
@@ -18,9 +18,9 @@ async def read_from_cache(name: str, params: str, cache_type: str) -> dict | Non
 
 
 async def write_to_cache(name: str, params: str, data: dict, cache_type: str, expire_seconds: int = -1):
-    key = f"@{name}:{params}"
+    key = f"{cache_type}:{name}:{params}"
     data = json.dumps(data)
-    await RA.hset(cache_type, key, data)
+    await RA.hset(key, key, data)
     if expire_seconds > 0:
         await RA.expire(key, expire_seconds)
 
