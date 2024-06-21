@@ -1,9 +1,11 @@
+from ..database.redis.cache import cache_async
 from .aioclient import aioClient
 
 from nonebot import logger
 from typing import *
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_zkb_info(killID: int):
     """
     获取角色zkb信息
@@ -16,6 +18,7 @@ async def get_zkb_info(killID: int):
     return data
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_corp_info(corp_id: str):
     """
     获取zkb军团信息

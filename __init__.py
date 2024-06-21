@@ -20,11 +20,13 @@ from .database.redis.RedisArray import RedisArray
 from .database.mysql.MysqlArray import MysqlArray
 from .model import initialize
 
+# from .utils import mission
+
 from .command import *
 
 init()
 driver = get_driver()
-RA = RedisArray(url=plugin_config.eve_redis_url)
+RA = RedisArray(plugin_config.eve_redis_url)
 MYSQL = MysqlArray(
     host=plugin_config.eve_mysql_host,
     port=plugin_config.eve_mysql_port,

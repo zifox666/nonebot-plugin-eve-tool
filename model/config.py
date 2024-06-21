@@ -29,7 +29,7 @@ class Config(BaseModel):
     eve_mysql_db: str = 'eve_tool'
 
     """Redis配置"""
-    eve_redis_url: str = 'redis://127.0.0.1:6379/0'
+    eve_redis_url: str = 'redis://localhost:6379/0'
 
     @field_validator('eve_redis_url')
     def validate_eve_mysql_url(cls, v):
@@ -41,20 +41,20 @@ class Config(BaseModel):
     eve_proxy: str = None
 
     """市场设置"""
-    eve_market_preference: str = 'tycoon'
+    eve_market_preference: str = 'esi_cache'
     eve_janice_api_key: str = 'G9KwKq3465588VPd6747t95Zh94q3W2E'
     eve_word_cut: str = 'jieba'
     eve_history_preference: str = 'follow'
 
     @field_validator('eve_market_preference')
     def check_eve_market_preference(cls, v):
-        allowed_values = {'tycoon', 'ceve', 'esi'}
+        allowed_values = {'tycoon', 'ceve', 'esi', 'esi_cache'}
         if v not in allowed_values:
             raise ValueError(f'eve_market_preference must be one of {allowed_values}')
         return v
 
     @field_validator('eve_history_preference')
-    def check_eve_market_preference(cls, v):
+    def check_eve_history_preference(cls, v):
         allowed_values = {'follow', 'only', 'none'}
         if v not in allowed_values:
             raise ValueError(f'eve_market_preference must be one of {allowed_values}')
@@ -79,7 +79,7 @@ class Config(BaseModel):
     eve_lagrange_preference: str = 'zh'
 
     """常规设置"""
-    eve_command_start: List[str] = ["/", "", "！", "."]
+    eve_command_start: List[str] = ["/", "", "！", ".", "!", "#"]
 
 
 plugin_config = get_plugin_config(Config)

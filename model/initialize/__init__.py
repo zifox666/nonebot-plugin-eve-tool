@@ -6,7 +6,7 @@ from ..sde import load_sde_to_mysql
 from .sde import load_sde_to_redis, check_eve_sde_path
 from .sql import Sql
 from .sub import load_listener_to_redis
-from .market import load_alias_to_redis
+from .market import load_alias_to_redis, load_price_list_to_redis
 
 from nonebot import logger
 
@@ -41,6 +41,8 @@ async def init_data(RA: RedisArray, MYSQL: MysqlArray) -> bool:
     await load_sde_to_redis(RA, MYSQL)
     await load_listener_to_redis(RA, MYSQL)
     await load_alias_to_redis(RA, MYSQL)
+    if plugin_config.eve_market_preference == 'esi_cache':
+        await load_price_list_to_redis()
     return True
 
 

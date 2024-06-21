@@ -1,9 +1,11 @@
+from ...database.redis.cache import cache_async
 from ..aioclient import aioClient
 
 from nonebot import logger
 from typing import *
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_character_id(char_name: str) -> str | None:
     """
     查询角色id
@@ -20,6 +22,7 @@ async def get_character_id(char_name: str) -> str | None:
         return None
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_char_name(char_id: int) -> str:
     """
     查询角色名称
@@ -38,6 +41,7 @@ async def get_char_name(char_id: int) -> str:
         return "未知"
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_char_title(char_id: int) -> str | None:
     """
     查询角色title
@@ -52,6 +56,7 @@ async def get_char_title(char_id: int) -> str | None:
         return None
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_system_name(system_id: int) -> Tuple[str, str | None]:
     """
     查询星系（system）名称以及星座id
@@ -66,6 +71,7 @@ async def get_system_name(system_id: int) -> Tuple[str, str | None]:
         return "unknown", None
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_alliance_name(alliance_id: int) -> Tuple[str, str]:
     """
     获取联盟名称和简写
@@ -84,6 +90,7 @@ async def get_alliance_name(alliance_id: int) -> Tuple[str, str]:
         return "未知", ""
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_corp_name(corp_id: int) -> Tuple[str, str]:
     """
         获取军团名称和简写
@@ -101,6 +108,7 @@ async def get_corp_name(corp_id: int) -> Tuple[str, str]:
         return "未知", ""
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_constellation_name(constellation_id: int) -> Tuple[str, str | None]:
     """
     获取constellation信息
@@ -116,6 +124,7 @@ async def get_constellation_name(constellation_id: int) -> Tuple[str, str | None
         return "unknown", None
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_region_name(region_id: int) -> str:
     """
     获取region信息
@@ -130,6 +139,7 @@ async def get_region_name(region_id: int) -> str:
         return "unknown"
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_moon_info(moon_id: int) -> List | None:
     """
     获取moon信息
@@ -144,6 +154,7 @@ async def get_moon_info(moon_id: int) -> List | None:
         return None
 
 
+@cache_async(cache_expiry_seconds=86400)
 async def get_corp_id(corp_name: str) -> str | None:
     """
     获取军团id

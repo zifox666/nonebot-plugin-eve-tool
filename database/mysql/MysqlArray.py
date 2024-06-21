@@ -3,6 +3,8 @@ from aiomysql import Pool
 from pydantic import BaseModel
 from nonebot import logger
 
+from ...model.config import plugin_config
+
 
 class MysqlArray:
     _instance = None
@@ -166,3 +168,11 @@ class MysqlArray:
         async with self.aioClient.acquire() as conn:
             await conn.rollback()
 
+
+MYSQL = MysqlArray(
+    host=plugin_config.eve_mysql_host,
+    port=plugin_config.eve_mysql_port,
+    user=plugin_config.eve_mysql_user,
+    password=plugin_config.eve_mysql_password,
+    database=plugin_config.eve_mysql_db
+)

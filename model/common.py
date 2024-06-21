@@ -11,7 +11,10 @@ root_path = Path(__name__).parent.absolute()
 data_path = root_path / "data" / "eve_tool"
 '''插件数据保存目录'''
 
-__all__ = ["root_path", "data_path", "CommandUsage"]
+plugin_path = Path(__file__).resolve().parent.parent
+'''插件目录'''
+
+__all__ = ["root_path", "data_path", "plugin_path", "CommandUsage"]
 
 
 class CommandUsage(BaseModel):

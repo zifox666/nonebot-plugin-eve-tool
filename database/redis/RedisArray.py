@@ -3,6 +3,8 @@ from nonebot import logger
 
 from aioredis import Redis
 
+from ...model.config import plugin_config
+
 
 class RedisArray:
     _instance = None
@@ -135,6 +137,17 @@ class RedisArray:
             logger.error(f"Error executing command {command} with args {args}: {e}")
             return None
 
+    async def hdel(self, hash_name, *key):
+        try:
+            if not key:
+                keys = await self.aioClient.hkeys(hash_name)
+                return await self.aioClient.hdel(hash_name, keys)
+            else:
+                return await self.aioClient.hdel(hash_name, *key)
+        except Exception as e:
+            logger.error(f"Error hdel command {hash_name} with args {key}: {e}")
+            return None
+
     async def lrange(self, keyname, key, start=0, end=-1):
         try:
             key = f"{keyname}:{key}"
@@ -144,7 +157,7 @@ class RedisArray:
             logger.error(f"读取{key}错误: {e}")
             return None
 
-    async def expire_key(self, key, seconds):
+    async def expire(self, key, seconds):
         """
         设置键的过期时间
         """
@@ -159,3 +172,5 @@ class RedisArray:
         关闭redis连接
         """
         await self.aioClient.close()
+
+

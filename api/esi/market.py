@@ -1,16 +1,21 @@
+import asyncio
+import json
 from typing import Dict, Any
 
+import aiohttp
 import httpx
 
 from ..aioclient import aioClient
 from ...utils.dataProcess import process_orders
 from ...database.redis import search
+from ...database.redis.cache import cache_async
 
 from nonebot import logger
 from typing import *
 import xml.etree.ElementTree as ET
 
 
+@cache_async(cache_expiry_seconds=1800)
 async def get_price_for_ceve(types_id: List[int]) -> dict[str | None, dict[str, int | float | str]] | None:
     """
     通过ceve批量查询
@@ -42,6 +47,7 @@ async def get_price_for_ceve(types_id: List[int]) -> dict[str | None, dict[str, 
             return None
 
 
+@cache_async(cache_expiry_seconds=1800)
 async def get_price_for_tycoon(types_id: List[int]) -> dict[int, dict[str, int | float | Any]]:
     """
     通过tycoon批量查询
@@ -62,7 +68,8 @@ async def get_price_for_tycoon(types_id: List[int]) -> dict[int, dict[str, int |
     return result
 
 
-async def get_price_for_esi(types_id: List[int]) -> dict[int, dict[str, int | float | str]]:
+@cache_async(cache_expiry_seconds=1800)
+async def get_price_for_esi(types_id: List[int] | None) -> dict[int, dict[str, int | float | str]]:
     """
     通过esi批量查询价格
     :param types_id:
@@ -71,7 +78,8 @@ async def get_price_for_esi(types_id: List[int]) -> dict[int, dict[str, int | fl
     result = {}
     print(types_id)
     for type_id in types_id:
-        url = f"https://esi.evetech.net/latest/markets/10000002/orders/?&order_type=all&type_id={str(type_id)}"
+        url = (f"https://esi.evetech.net/latest/markets/10000002/orders/?&order_type=all&type_id="
+               f"{str(type_id) if types_id else ''}")
         data = await aioClient.get(url)
         if data:
             result[type_id] = await process_orders(data, type_id)
@@ -79,10 +87,46 @@ async def get_price_for_esi(types_id: List[int]) -> dict[int, dict[str, int | fl
     return result
 
 
+@cache_async(cache_expiry_seconds=1800)
 async def get_price_history(type_id: int) -> dict[int, dict[str, int | float | str]]:
     """
     获取一年的历史价格
     """
     url = f"https://esi.evetech.net/latest/markets/10000002/history/?datasource&type_id={str(type_id)}"
-    return await aioClient.get(url)
+    data = await aioClient.get(url)
+    if data:
+        return data
+
+
+base_url = "https://esi.evetech.net/latest/markets/10000002/orders/?datasource&order_type&page={}"
+all_data = []
+
+
+async def fetch_data(session, page):
+    url = base_url.format(page)
+    async with session.get(url) as response:
+        if response.status == 200:
+            return await response.json()
+        else:
+            logger.debug(f"没有分页{page}: Status Code {response.status}")
+            return None
+
+
+async def fetch_all_price_pages():
+    pages = 350
+    async with aiohttp.ClientSession() as session:
+        while True:
+            tasks = [fetch_data(session, page) for page in range(1, pages + 1)]
+            results = await asyncio.gather(*tasks)
+            for result in results:
+                if result:
+                    all_data.extend(result)
+                    flag = True
+                else:
+                    flag = False
+            if flag:
+                pages += 20
+            else:
+                break
+    return all_data
 
