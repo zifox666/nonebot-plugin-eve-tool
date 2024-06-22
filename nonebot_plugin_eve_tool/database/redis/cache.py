@@ -29,18 +29,16 @@ def cache_async(cache_expiry_seconds=-1):
     def decorator(func):
         @wraps(func)
         async def wrapper(*args, **kwargs):
-            # 构建缓存的key，这里示例中使用函数名 + 参数作为key
-            cache_key = func.__name__ + '_' + '_'.join(map(str, args)) + '_' + '_'.join(f'{key}={value}' for key, value in kwargs.items())
+            args_str = '_'.join(map(str, args)).replace(' ', '_')
+            kwargs_str = '_'.join(f'{key}={value}'.replace(' ', '_') for key, value in kwargs.items())
+            cache_key = f"{func.__name__}_{args_str}_{kwargs_str}"
 
-            # 尝试从缓存中读取数据
             cached_data = await read_from_cache(func.__name__, cache_key, 'api')
-            if cached_data:
+            if cached_data is not None:
                 return cached_data
 
-            # 缓存中没有数据，调用实际的函数获取数据
             result = await func(*args, **kwargs)
 
-            # 将结果写入缓存
             await write_to_cache(func.__name__, cache_key, result, 'api', cache_expiry_seconds)
 
             return result

@@ -81,5 +81,8 @@ class Config(BaseModel):
     """常规设置"""
     eve_command_start: List[str] = ["/", "", "！", ".", "!", "#"]
 
+    """作者id"""
+    SUPERUSERS: int = 123456
+
 
 plugin_config = get_plugin_config(Config)

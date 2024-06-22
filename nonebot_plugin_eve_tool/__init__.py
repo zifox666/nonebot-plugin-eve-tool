@@ -17,6 +17,7 @@ from .model import initialize
 from .utils import mission
 
 from .command import *
+from .src import *
 
 
 __plugin_meta__ = PluginMetadata(
@@ -30,7 +31,7 @@ __plugin_meta__ = PluginMetadata(
 
     config=Config,
 
-    supported_adapters=inherit_supported_adapters("nonebot_plugin_alconna"),
+    supported_adapters={"~onebot.v11"},
 )
 
 
@@ -77,9 +78,17 @@ async def startup():
 
 @driver.on_shutdown
 async def shutdown():
+    await stop_wss()
     await RA.execute('FLUSHDB')
     await RA.close()
     await MYSQL.close()
 
 
+@driver.on_bot_connect
+async def bot_connect(bot: Bot):
+    await start_wss(bot)
 
+
+@driver.on_bot_disconnect
+async def bot_disconnect():
+    await stop_wss()

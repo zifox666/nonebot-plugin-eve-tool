@@ -70,10 +70,11 @@ async def get_marketer_price(item_name: str, api: str, num: int = 1, lagrange: s
         sell = float(0 if float(format_price(results[item]['sell']).replace(',', '')) == float('inf')
                      else format_price(results[item]['sell']).replace(',', ''))
         mid = (buy + sell) / 2
-        text += f"### {name}\n" \
-                f"* 中间价：{mid:,.2f}\n" \
-                f"* 买单价格: {buy:,.2f}  ({results[item]['buy_num']})\n" \
-                f"* 卖单价格: {sell:,.2f}  ({results[item]['sell_num']})\n"
+        if name != "None":
+            text += f"### {name}\n" \
+                    f"* 中间价：{mid:,.2f}\n" \
+                    f"* 买单价格: {buy:,.2f}  ({results[item]['buy_num']})\n" \
+                    f"* 卖单价格: {sell:,.2f}  ({results[item]['sell_num']})\n"
         buy_total += buy
         sell_total += sell
     buy_total = buy_total * num

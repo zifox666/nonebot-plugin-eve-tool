@@ -18,10 +18,8 @@ async def load_sde_to_redis(RA: RedisArray, MYSQL: MysqlArray) -> bool:
 
     for row in eve_type_data:
         redis_key = f"eve_type:{row['id']}"
-        if row['name']:
-            await RA.hset(redis_key, 'name', row['name'])
-        if row['name_en']:
-            await RA.hset(redis_key, 'name_en', row['name_en'])
+        await RA.hset(redis_key, 'name', row['name'] if row['name'] else row['name_en'])
+        await RA.hset(redis_key, 'name_en', row['name_en'])
 
     await RA.execute('FT.CREATE', 'eveTypeIdx', 'ON', 'HASH', 'PREFIX', '1', 'eve_type:',
                      'SCHEMA', 'name', 'TEXT', 'name_en', 'TEXT')

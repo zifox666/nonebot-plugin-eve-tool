@@ -53,3 +53,5 @@ class Sql:
     )
     """
 
+    set_limit_time: str = "SET GLOBAL regexp_time_limit=10240;"
+

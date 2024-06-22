@@ -9,7 +9,7 @@ from ...utils.common import pack_strings
 RA = RedisArray(plugin_config.eve_redis_url)
 
 
-async def get_names_for_redis(ids: int | str) -> str | list[str]:
+async def get_names_for_redis(ids: int | str | list) -> str | list[str]:
     """
     批量通过id获取名称
     :param ids:
@@ -84,6 +84,8 @@ async def get_price_from_cache(ids: list[int]) -> dict:
     for _id in ids:
         try:
             result[str(_id)] = json.loads(await RA.hget('market_price', f"@eve_type:{_id}"))
+            if not result[str(_id)]["name"]:
+                result[str(_id)]["name"] = await get_names_for_redis(str(_id))
         except Exception as e:
             logger.error(e)
             result[str(_id)] = {
@@ -91,7 +93,7 @@ async def get_price_from_cache(ids: list[int]) -> dict:
                 "sell_num": 0,
                 "buy": 0,
                 "buy_num": 0,
-                "name": str(_id)
+                "name": "None"
             }
     if result:
         return result

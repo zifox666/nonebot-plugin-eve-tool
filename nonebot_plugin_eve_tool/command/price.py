@@ -10,15 +10,9 @@ from nonebot import require
 
 require("nonebot_plugin_alconna")
 
-from nonebot_plugin_alconna import (
-    on_alconna,
-    Match,
-    Query,
-    AlconnaMatch,
-    AlcResult
-)
-from arclet.alconna import Alconna, Args, Option, Arparma, Subcommand, CommandMeta, OptionResult, MultiVar
-from nonebot_plugin_alconna.uniseg import UniMessage, At
+from nonebot_plugin_alconna import on_alconna
+from arclet.alconna import Alconna, Args, Option, CommandMeta, OptionResult, MultiVar
+from nonebot_plugin_alconna.uniseg import UniMessage
 
 __all__ = ["query_price"]
 
@@ -43,9 +37,11 @@ query_price = on_alconna(
             "查询欧服吉他价格",
             usage="可以模糊查询名称或者名称*数量",
             example="ojita 毒蜥级*10",
+            fuzzy_match=True
         )
     ),
-    aliases=("查价", "Ojita", "OJITA")
+    aliases=("查价", "Ojita", "OJITA"),
+    auto_send_output=True
 )
 
 alias_plex = {

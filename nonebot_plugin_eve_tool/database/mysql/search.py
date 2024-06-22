@@ -32,8 +32,8 @@ async def search_eve_types_for_mysql(
         sql = f"SELECT id, name, name_en FROM eve_type WHERE name_en REGEXP %s {market_sql}"
         regex = '.*' + '.*'.join(f'(?=.*{re.escape(word)})' for word in type_name.split()) + '.*'
 
-    logger.debug("SQL Query:", sql)
-    logger.debug("Regex Pattern:", regex)
+    logger.debug(f"SQL Query:{sql}")
+    logger.debug(f"Regex Pattern:{regex}")
     info = await MYSQL.fetchall(sql, (regex,))
     logger.debug(info)
 
@@ -86,4 +86,12 @@ async def get_ids_names_for_mysql(type_names: list, fuzzy_str: str, data_type="z
         cache_type='fuzzy_list'
     )
     return result
+
+
+async def query_eve_types(ids: list[int], lagrange: str = 'zh') -> list[dict]:
+    if lagrange == 'zh':
+        query = f"SELECT id, name, group_name FROM eve_type WHERE id IN ({','.join(['%s'] * len(ids))});"
+    else:
+        query = f"SELECT id, name_en, group_name_en FROM eve_type WHERE id IN ({','.join(['%s'] * len(ids))});"
+    return await MYSQL.fetchall(query, ids)
 

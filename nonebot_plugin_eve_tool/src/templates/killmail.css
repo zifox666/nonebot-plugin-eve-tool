@@ -20,14 +20,14 @@
         }
 
 body, html {
-    width: 800px;
-    height: 1080px;
+    width: auto;
+    height: auto;  /* 调整为与 .container 一致 */
     margin: 0;
     padding: 0;
-    background-color: rgb(50, 50, 50);
+    background-color: var(--main-bg-color);
     font-family: 'Microsoft YaHei', sans-serif;
     color: white;
-    overflow: hidden;
+    /* overflow: hidden;  // 移除这行 */
 }
 
 .container {
@@ -39,7 +39,7 @@ body, html {
     white-space: nowrap;
     letter-spacing: 0.5px;
     min-width: 620px;
-    height: 1060px;
+    height: 890px;  /* 调整为与 body, html 一致 */
 
     display: inline-block;
     font-size: 12px;

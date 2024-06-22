@@ -57,18 +57,18 @@ async def get_char_title(char_id: int) -> str | None:
 
 
 @cache_async(cache_expiry_seconds=86400)
-async def get_system_name(system_id: int) -> Tuple[str, str | None]:
+async def get_system_name(system_id: int) -> Tuple[str, str | None, int]:
     """
     查询星系（system）名称以及星座id
     :param system_id:星系id
     :return:星系名称， 星座id | None
     """
-    url = url = f'https://esi.evetech.net/latest/universe/systems/{str(system_id)}/?datasource=tranquility&language=zh'
+    url = f'https://esi.evetech.net/latest/universe/systems/{str(system_id)}/?datasource=tranquility&language=zh'
     data = await aioClient.get(url)
     if "name" in data:
-        return data["name"], data["constellation_id"]
+        return data["name"], data["constellation_id"], data['security_status']
     else:
-        return "unknown", None
+        return "unknown", None, 0
 
 
 @cache_async(cache_expiry_seconds=86400)
@@ -171,4 +171,56 @@ async def get_corp_id(corp_name: str) -> str | None:
         return None
 
 
+@cache_async(cache_expiry_seconds=86400)
+async def get_names_id(names: str, lagrange) -> dict | None:
+    url = f"https://esi.evetech.net/latest/universe/ids/?datasource&language={lagrange}"
+    payload = [names]
+    data = await aioClient.post(url, params=payload)
+    if data:
+        return data
+    else:
+        return
 
+
+@cache_async(cache_expiry_seconds=86400)
+async def get_id_name(solar_id: int, lagrange: str = 'zh') -> str | None:
+    url = f"https://esi.evetech.net/latest/universe/systems/{str(solar_id)}/?datasource&language={lagrange}"
+    data = await aioClient.get(url)
+    if 'name' in data:
+        return data['name']
+    else:
+        return
+
+
+async def get_names(ids: List[int]) -> list:
+    url = 'https://esi.evetech.net/latest/universe/names/'
+    data = await aioClient.post(url, params=ids)
+    return data
+
+
+async def get_type_name(type_id: int, lagrange: str = 'zh') -> Tuple[str, int]:
+    """
+    获取物品名称
+    :param type_id:
+    :param lagrange:
+    :return:
+    """
+    url = f'https://esi.evetech.net/latest/universe/types/{type_id}/?language={lagrange}'
+    data = await aioClient.get(url)
+    if "name" in data:
+        return data['name'], data['group_id']
+    return "unknown", 0
+
+
+async def get_group_name(group_id: int, lagrange: str = 'zh') -> str:
+    """
+    获取物品组名
+    :param group_id:
+    :param lagrange:
+    :return:
+    """
+    url = f'https://esi.evetech.net/latest/universe/groups/{group_id}/?language={lagrange}'
+    data = await aioClient.get(url)
+    if "name" in data:
+        return data['name']
+    return 'unknown'
