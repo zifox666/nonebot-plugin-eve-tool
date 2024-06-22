@@ -3,8 +3,6 @@ import base64
 
 import matplotlib.pyplot as plt
 from datetime import datetime
-import numpy as np
-from scipy.interpolate import make_interp_spline
 
 
 async def draw_price_history(data, title="Historical Prices and Volume", markdown: bool = True) -> str:

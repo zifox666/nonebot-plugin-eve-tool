@@ -17,7 +17,7 @@ RA = RedisArray(plugin_config.eve_redis_url)
 file_path = data_path / "price_list.json"
 
 
-@scheduler.scheduled_job('cron', minute='*/45', id='001')
+@scheduler.scheduled_job('cron', minute='*/30', id='001')
 async def refresh_price_cache():
     skip = False
     if file_path.exists():

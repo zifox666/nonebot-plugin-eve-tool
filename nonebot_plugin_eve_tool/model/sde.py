@@ -12,7 +12,7 @@ async def transform_data(eve_type_data, meta_groups, market_groups, groups,categ
         group_id = item_data.get('groupID', None)
         market_group_id = item_data.get('marketGroupID', None)
         meta_group_id = item_data.get('metaGroupID', None)
-        category_id = item_data.get('categoryID', None)
+        category_id = groups.get(group_id, {}).get('categoryID', None)
 
         data = (
             item_id,
@@ -29,9 +29,9 @@ async def transform_data(eve_type_data, meta_groups, market_groups, groups,categ
             market_group_id if market_group_id else None,
             market_groups.get(market_group_id, {}).get('nameID', {}).get('zh', None),
             market_groups.get(market_group_id, {}).get('nameID', {}).get('en', None),
-            category_id if category_id else None,
-            categories.get(category_id, {}.get('name', {}).get('zh', None)),
-            categories.get(category_id, {}.get('name', {}).get('en', None))
+            category_id,
+            categories.get(category_id, {}).get('name', {}).get('zh', None),
+            categories.get(category_id, {}).get('name', {}).get('en', None)
         )
 
         transformed_data.append(data)

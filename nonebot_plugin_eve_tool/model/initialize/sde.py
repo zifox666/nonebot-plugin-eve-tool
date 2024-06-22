@@ -30,7 +30,7 @@ async def load_sde_to_redis(RA: RedisArray, MYSQL: MysqlArray) -> bool:
     return True
 
 
-def check_eve_sde_path(sde_path: Path) -> bool | str:
+async def check_eve_sde_path(sde_path: Path) -> bool | str:
     """
     判断SDE文件
     """
@@ -40,7 +40,7 @@ def check_eve_sde_path(sde_path: Path) -> bool | str:
     else:
         logger.info('SDE文件不存在，开始下载')
         Path(sde_path).mkdir(parents=True, exist_ok=True)
-        if download_sde(sde_path):
+        if await download_sde(sde_path):
             logger.success("SDE数据下载完成，开始解压")
             return True
         else:

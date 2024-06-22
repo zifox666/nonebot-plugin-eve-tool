@@ -28,7 +28,7 @@ async def create_db(MYSQL: MysqlArray):
 
     await MYSQL.execute(Sql.alias_items)
 
-    if check_eve_sde_path(plugin_config.eve_sde_path):
+    if await check_eve_sde_path(plugin_config.eve_sde_path):
         await load_sde_to_mysql(MYSQL, plugin_config.eve_sde_path)
 
     return True

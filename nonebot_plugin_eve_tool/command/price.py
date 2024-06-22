@@ -43,7 +43,7 @@ query_price = on_alconna(
             "查询欧服吉他价格",
             usage="可以模糊查询名称或者名称*数量",
             example="ojita 毒蜥级*10",
-        ),
+        )
     ),
     aliases=("查价", "Ojita", "OJITA")
 )
@@ -62,7 +62,7 @@ alias_plex = {
 
 @query_price.handle()
 async def _query_price(
-        args: tuple[str, ...],
+        args: tuple,
         api: str,
         history: str
 ):

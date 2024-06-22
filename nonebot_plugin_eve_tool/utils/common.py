@@ -6,6 +6,8 @@ import re
 from pathlib import Path
 from typing import (Dict, Literal,
                     Union, Optional, Tuple, Iterable, List, Any)
+
+import aiohttp
 import yaml
 from qrcode import QRCode
 from nonebot.log import logger
@@ -13,9 +15,7 @@ from nonebot.log import logger
 
 import os
 from zipfile import ZipFile
-
-import requests
-from tqdm import tqdm
+from tqdm.asyncio import tqdm
 
 
 try:
@@ -116,38 +116,35 @@ def check_files_exist(directory, filenames) -> bool:
     return True
 
 
-def download_file(url, local_path):
+async def download_file(url, local_path, proxy=None):
     """
     可视化进度条下载文件
     """
-    response = requests.get(
-        url,
-        stream=True,
-        proxies={
-            "http": plugin_config.eve_proxy,
-            "https": plugin_config.eve_proxy
-        })
-    total_size = int(response.headers.get('content-length', 0))
-    block_size = 1024
-    progress_bar = tqdm(total=total_size, unit='iB', unit_scale=True)
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, proxy=proxy) as response:
+            total_size = int(response.headers.get('content-length', 0))
+            block_size = 1024
+            progress_bar = tqdm(total=total_size, unit='iB', unit_scale=True, miniters=1)
 
-    with open(local_path, 'wb') as file:
-        for data in response.iter_content(block_size):
-            progress_bar.update(len(data))
-            file.write(data)
-    progress_bar.close()
+            os.makedirs(os.path.dirname(local_path), exist_ok=True)
 
-    if total_size != 0 and progress_bar.n != total_size:
-        logger.error("ERROR: Something went wrong")
+            with open(local_path, 'wb') as file:
+                async for data in response.content.iter_chunked(block_size):
+                    file.write(data)
+                    progress_bar.update(len(data))
+            progress_bar.close()
+
+            if total_size != 0 and progress_bar.n != total_size:
+                logger.error("ERROR: Something went wrong")
 
 
-def download_sde(directory):
+async def download_sde(directory):
     """
     sde文件更新
     """
     local_zip_path = os.path.join(directory, 'sde.zip')
     if not os.path.isfile(local_zip_path):
-        download_file("https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/sde.zip", local_zip_path)
+        await download_file("https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/sde.zip", local_zip_path)
     with ZipFile(local_zip_path, 'r') as zip_file:
         zip_file.extractall(directory)
     logger.success(f"SDE已下载并解压到 '{directory}'")
