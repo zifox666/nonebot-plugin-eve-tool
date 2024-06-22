@@ -1,8 +1,15 @@
-from typing import Union
+from nonebot import on_command, Bot
 
-from nonebot.internal.params import ArgStr
-from nonebot.matcher import Matcher
-from nonebot.params import CommandArg
+from ..src import templates_path
+from ..utils.png import md2pic, html2pic
+from nonebot.adapters.onebot.v11 import MessageSegment
 
-from ..command.common import CommandRegistry
-from ..model import plugin_config, CommandUsage
+
+help_list = on_command("help", block=True)
+
+
+@help_list.handle()
+async def _(bot: Bot):
+    with open(templates_path / "help.html", "r", encoding="utf-8") as file:
+        template_content = file.read()
+    await help_list.finish(MessageSegment.image(await html2pic(template_content)))

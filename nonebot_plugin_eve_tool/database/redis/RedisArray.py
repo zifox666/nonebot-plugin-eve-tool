@@ -1,5 +1,5 @@
 from nonebot import logger
-from redis import asyncio as aioredis  # noqa
+from redis import asyncio as aioredis
 import redis
 from nonebot import logger
 from redis import Redis
@@ -58,6 +58,25 @@ class RedisArray:
             logger.error(f"rpush 插入: {list_name}/{value}报错: {str(e)}")
             return None
 
+    async def sismember(self, key, value):
+        try:
+            return await self.aioClient.sismember(key, value)
+        except Exception as e:
+            logger.error(f"查询: {key}/{value}报错: {str(e)}")
+            return None
+
+    async def hscan(
+            self,
+            name,
+            cursor: int = 0,
+            match=None,
+            count: int = None):
+        try:
+            return await self.aioClient.hscan(name, cursor, match, count)
+        except Exception as e:
+            logger.error(f"读取: {name}报错: {str(e)}")
+            return None
+
     async def get(self, list_name, start=0, end=-1):
         """
         获取元素
@@ -97,6 +116,14 @@ class RedisArray:
             return result
         except Exception as e:
             logger.error(f"读取: {hash_name}/{key}错误: {str(e)}")
+            return None
+
+    async def hkeys(self, name):
+        try:
+            result = await self.aioClient.hkeys(name)
+            return result
+        except Exception as e:
+            logger.error(f"读取: {name}错误: {str(e)}")
             return None
 
     async def hmget(self, hash_name, keys):
@@ -172,4 +199,9 @@ class RedisArray:
         """
         await self.aioClient.close()
 
-
+    async def sadd(self, name, values):
+        try:
+            return await self.aioClient.sadd(name, values)
+        except Exception as e:
+            logger.error(f"{name}/{values}报错: {str(e)}")
+            return None

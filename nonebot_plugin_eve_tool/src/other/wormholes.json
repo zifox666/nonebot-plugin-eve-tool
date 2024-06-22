@@ -1,0 +1,485 @@
+{
+	"A239": {
+		"goto": "低安全区域",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"A641": {
+		"goto": "高安全区域",
+		"life": 16,
+		"max_mass": 1000000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"A982": {
+		"goto": "虫洞等级6级",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"B041": {
+		"goto": "虫洞等级6级",
+		"life": 48,
+		"max_mass": 300000000,
+		"jump_mass": 5000000000,
+		"regen_mass": 500000000
+	},
+	"B274": {
+		"goto": "高安全区域",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"B449": {
+		"goto": "高安全区域",
+		"life": 16,
+		"max_mass": 1000000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"B520": {
+		"goto": "高安全区域",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 5000000000,
+		"regen_mass": 500000000
+	},
+	"C125": {
+		"goto": "虫洞等级2级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"C140": {
+		"goto": "低安全区域",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"C247": {
+		"goto": "虫洞等级3级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"C248": {
+		"goto": "零安全区域",
+		"life": 24,
+		"max_mass": 1800000000,
+		"jump_mass": 5000000000,
+		"regen_mass": 500000000
+	},
+	"C391": {
+		"goto": "低安全区域",
+		"life": 24,
+		"max_mass": 1800000000,
+		"jump_mass": 5000000000,
+		"regen_mass": 500000000
+	},
+	"D364": {
+		"goto": "虫洞等级2级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"D382": {
+		"goto": "虫洞等级2级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"D792": {
+		"goto": "高安全区域",
+		"life": 24,
+		"max_mass": 1000000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"D845": {
+		"goto": "高安全区域",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 5000000000,
+		"regen_mass": 500000000
+	},
+	"E175": {
+		"goto": "虫洞等级4级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"E545": {
+		"goto": "零安全区域",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"G024": {
+		"goto": "虫洞等级2级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"H121": {
+		"goto": "虫洞等级1级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 500000000,
+		"regen_mass": 0
+	},
+	"H296": {
+		"goto": "虫洞等级5级",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"H900": {
+		"goto": "虫洞等级5级",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"I182": {
+		"goto": "虫洞等级2级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"J244": {
+		"goto": "低安全区域",
+		"life": 24,
+		"max_mass": 20000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"K162": {
+		"goto": "虫洞彼端对应出口",
+		"life": 0,
+		"max_mass": 0,
+		"jump_mass": 0,
+		"regen_mass": 0
+	},
+	"K329": {
+		"goto": "零安全区域",
+		"life": 24,
+		"max_mass": 1800000000,
+		"jump_mass": 5000000000,
+		"regen_mass": 500000000
+	},
+	"K346": {
+		"goto": "零安全区域",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"L477": {
+		"goto": "虫洞等级3级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"L614": {
+		"goto": "虫洞等级5级",
+		"life": 24,
+		"max_mass": 20000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"M267": {
+		"goto": "虫洞等级3级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"M555": {
+		"goto": "虫洞等级5级",
+		"life": 24,
+		"max_mass": 1000000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"M609": {
+		"goto": "虫洞等级4级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"N062": {
+		"goto": "虫洞等级5级",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"N110": {
+		"goto": "高安全区域",
+		"life": 24,
+		"max_mass": 20000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"N290": {
+		"goto": "低安全区域",
+		"life": 24,
+		"max_mass": 1800000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 500000000
+	},
+	"N432": {
+		"goto": "虫洞等级5级",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"N766": {
+		"goto": "虫洞等级2级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"N770": {
+		"goto": "虫洞等级5级",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"N944": {
+		"goto": "低安全区域",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"N968": {
+		"goto": "虫洞等级3级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"O128": {
+		"goto": "虫洞等级4级",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 100000000
+	},
+	"O477": {
+		"goto": "虫洞等级3级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"O883": {
+		"goto": "虫洞等级3级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"P060": {
+		"goto": "虫洞等级1级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 500000000,
+		"regen_mass": 0
+	},
+	"Q317": {
+		"goto": "虫洞等级1级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 500000000,
+		"regen_mass": 0
+	},
+	"R051": {
+		"goto": "低安全区域",
+		"life": 16,
+		"max_mass": 1000000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"R474": {
+		"goto": "虫洞等级6级",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"R943": {
+		"goto": "虫洞等级2级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 750000000,
+		"regen_mass": 0
+	},
+	"S047": {
+		"goto": "高安全区域",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"S199": {
+		"goto": "零安全区域",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"S804": {
+		"goto": "虫洞等级6级",
+		"life": 24,
+		"max_mass": 20000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"T405": {
+		"goto": "虫洞等级4级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"U210": {
+		"goto": "低安全区域",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"U319": {
+		"goto": "虫洞等级6级",
+		"life": 48,
+		"max_mass": 1800000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 500000000
+	},
+	"U574": {
+		"goto": "虫洞等级6级",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"V283": {
+		"goto": "零安全区域",
+		"life": 24,
+		"max_mass": 1000000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"V301": {
+		"goto": "虫洞等级1级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 500000000,
+		"regen_mass": 0
+	},
+	"V753": {
+		"goto": "虫洞等级6级",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"V911": {
+		"goto": "虫洞等级5级",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"W237": {
+		"goto": "虫洞等级6级",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"X702": {
+		"goto": "虫洞等级3级",
+		"life": 24,
+		"max_mass": 300000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"X877": {
+		"goto": "虫洞等级4级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"Y683": {
+		"goto": "虫洞等级4级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"Y790": {
+		"goto": "虫洞等级1级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 500000000,
+		"regen_mass": 0
+	},
+	"Z060": {
+		"goto": "零安全区域",
+		"life": 24,
+		"max_mass": 20000000,
+		"jump_mass": 1000000000,
+		"regen_mass": 0
+	},
+	"Z142": {
+		"goto": "零安全区域",
+		"life": 24,
+		"max_mass": 1350000000,
+		"jump_mass": 3000000000,
+		"regen_mass": 0
+	},
+	"Z457": {
+		"goto": "虫洞等级4级",
+		"life": 16,
+		"max_mass": 300000000,
+		"jump_mass": 2000000000,
+		"regen_mass": 0
+	},
+	"Z647": {
+		"goto": "虫洞等级1级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 500000000,
+		"regen_mass": 0
+	},
+	"Z971": {
+		"goto": "虫洞等级1级",
+		"life": 16,
+		"max_mass": 20000000,
+		"jump_mass": 100000000,
+		"regen_mass": 0
+	}
+}

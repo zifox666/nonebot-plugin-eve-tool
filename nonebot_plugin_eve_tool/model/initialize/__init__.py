@@ -1,3 +1,6 @@
+from pathlib import Path
+
+from ...model.common import data_path
 from ...database.mysql import MysqlArray
 from ...database.redis import RedisArray
 from ...model.config import plugin_config
@@ -28,6 +31,8 @@ async def create_db(MYSQL: MysqlArray):
 
     await MYSQL.execute(Sql.alias_items)
 
+    await MYSQL.execute(Sql.set_limit_time)
+
     if await check_eve_sde_path(plugin_config.eve_sde_path):
         await load_sde_to_mysql(MYSQL, plugin_config.eve_sde_path)
 
@@ -38,6 +43,7 @@ async def init_data(RA: RedisArray, MYSQL: MysqlArray) -> bool:
     """
     初始化数据到Redis
     """
+    Path(data_path / 'KillMailHtml').mkdir(parents=True, exist_ok=True)
     await load_sde_to_redis(RA, MYSQL)
     await load_listener_to_redis(RA, MYSQL)
     await load_alias_to_redis(RA, MYSQL)

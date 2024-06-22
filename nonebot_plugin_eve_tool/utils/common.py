@@ -1,15 +1,18 @@
+import base64
 import io
 import json
 import os
 import random
 import re
+from datetime import datetime
 from pathlib import Path
 from typing import (Dict, Literal,
                     Union, Optional, Tuple, Iterable, List, Any)
 
 import aiohttp
 import yaml
-from qrcode import QRCode
+import qrcode
+from nonebot.adapters import Event
 from nonebot.log import logger
 
 
@@ -24,22 +27,38 @@ except ImportError:
     Logger = None
     pass
 
-from ..model import plugin_config, data_path
+from ..model import data_path, plugin_path
 
 
-def generate_qr_img(data: str):
+async def get_group_info(event: Event) -> Tuple[str | None, str | None]:
+    user_id, group_id = event.user_id, event.group_id
+    if str(user_id) == "3815647974":
+        return user_id, group_id
+    else:
+        return None, None
+
+
+async def generate_qrcode(text: str) -> str:
     """
-    生成二维码图片
-
-    :param data: 二维码数据
+    生成文本二维码
+    :param text:
+    :return: base64 encoded
     """
-    qr_code = QRCode(border=2)
-    qr_code.add_data(data)
-    qr_code.make()
-    image = qr_code.make_image()
-    image_bytes = io.BytesIO()
-    image.save(image_bytes)
-    return image_bytes.getvalue()
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+    )
+    qr.add_data(text)
+    qr.make(fit=True)
+
+    img = qr.make_image(fill_color="rgb(25,25,25)", back_color="white")
+
+    buffer = io.BytesIO()
+    img.save(buffer, format="PNG")
+
+    return base64.b64encode(buffer.getvalue()).decode()
 
 
 def is_chinese(word: str) -> bool:
@@ -77,7 +96,8 @@ async def get_currency_code(currency: str) -> Optional[str]:
     :return:
     """
     # 打开currency_code.json文件
-    with open(data_path + '/currency_code.json', 'r', encoding='utf-8') as f:
+    file_path = plugin_path / 'src' / 'other' / 'currency_code.json'
+    with open(file_path, 'r', encoding='utf-8') as f:
         currency_code = json.load(f)
     # 获取货币代码
     if currency.upper() in list(currency_code.keys()):
@@ -172,4 +192,37 @@ def format_price(price):
 def pack_strings(words):
     packed_string = str(''.join([word.strip() for word in words if word.strip()]))
     return packed_string
+
+
+async def check_id(event) -> dict[str, str]:
+    """
+    判断用户权限及群聊或者私聊
+    """
+    result = {}
+    if event.sub_type == "normal":
+        if event.sender.role == "member":
+            result = {
+                "type": "c",
+                "gid": event.group_id,
+                "uid": event.sender.user_id
+            }
+        else:
+            result = {
+                "type": "group_admin",
+                "gid": event.group_id,
+                "uid": event.sender.user_id
+            }
+    if event.sub_type == "friend":
+        result = {
+            "type": "friend",
+            "gid": event.user_id,
+            "uid": event.user_id
+        }
+    return result
+
+
+async def time_change(time_str: str) -> str:
+    utc_time = datetime.strptime(time_str, "%Y-%m-%dT%H:%M:%SZ")
+
+    return utc_time.strftime("%Y-%m-%d %H:%M:%S")
 

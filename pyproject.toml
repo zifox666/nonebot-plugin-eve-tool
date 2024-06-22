@@ -1,6 +1,6 @@
 [project]
 name = "EVE_TEST_BOT"
-version = "0.2.1"
+version = "0.2.2"
 description = "EVE_TEST_BOT"
 readme = "README.md"
 requires-python = ">=3.8, <4.0"
@@ -14,7 +14,7 @@ builtin_plugins = []
 
 [tool.poetry]
 name = "nonebot-plugin-eve-tool"
-version = "0.2.1"
+version = "0.2.2"
 description = "A NoneBot based plugin provides information query services for EVE online."
 authors = ["zifox666 <zifox666@gmail.com>"]
 license = "GPL-3.0 license"
@@ -30,7 +30,6 @@ tqdm = "^4.66.4"
 qrcode = "^7.4.2"
 matplotlib = "^3.9.0"
 scipy = "^1.13.1"
-Jinja2 = "^3.1.4"
 aiofiles = "^23.2.1"
 nonebot-plugin-alconna = "^0.47.1"
 nonebot-plugin-apscheduler = "^0.4.0"

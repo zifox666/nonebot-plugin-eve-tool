@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      {css}
+    </style>
+  </head>
+
+  <body class="font-sans antialiased">
+    <div class="container mx-auto p-10">
+      <div class="rounded-lg bg-white bg-opacity-80 p-6 shadow-md">
+        <div class="float-right flex">
+          <div class="flex-grow">
+            <img src="https://images.evetech.net/characters/{charId}/portrait?size=128" alt="charImage" class="rounded-xl" style="max-width: 100px;" />
+          </div>
+        </div>
+        <h1 class="mb-4 text-2xl font-bold">{charName}</h1>
+
+        <div class="mb-4">
+          <ul>
+            <li class="ml-6 list-item">公司：{corporation_name} [{corporation_ticker}]</li>
+            <li class="ml-6 list-item">联盟：{alliance_name} &lt;{alliance_ticker}&gt;</li>
+            <li class="ml-6 list-item">头衔：{nick_title}</li>
+            <li class="ml-6 list-item">安等：{sec_status}</li>
+            <li class="ml-6 list-item">船分比：{pointb}</li>
+            <li class="ml-6 list-item">七天常用船型：{top_ships}</li>
+          </ul>
+        </div>
+
+        <div class="flex">
+          <div class="mb-4 mr-4" style="width: 300px;">
+            <p>危险度：</p>
+            <div id="danger_progress" class="w-full rounded-full bg-green-500">
+              <div id="dangerBar" class="rounded-full bg-orange-500 py-1 text-center text-xs leading-none text-white" style="width: {dangerRatio}%;">{dangerRatio}%</div>
+            </div>
+          </div>
+          <div class="mb-4" style="width: 300px;">
+            <p>Solo：{soloKills}</p>
+            <div id="solo_progress" class="w-full rounded-full bg-green-500">
+              <div id="soloBar" class="rounded-full bg-orange-500 py-1 text-center text-xs leading-none text-white" style="width: {gangRatio}%;">gangRatio:{gangRatio}%</div>
+            </div>
+          </div>
+        </div>
+        <div class="float-end flex">
+          <div class="flex-grow">
+            <img src="https://www.olzz.com/qr/?text=https://zkillboard.com/character/{charId}/&size=80" alt="charImage" class="" style="max-width: 100px;" />
+          </div>
+        </div>
+        <div class="mb-4">
+          <br>
+          <p>签名总价值（{shipsDestroyed}）：<span class="font-bold">{iskDestroyed} isk</span></p>
+          <p>损失总价值（{shipsLost}）：<span class="font-bold">{iskLost} isk</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

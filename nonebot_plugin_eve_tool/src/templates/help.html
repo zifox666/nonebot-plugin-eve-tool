@@ -1,0 +1,121 @@
+<html><head><link rel="stylesheet" type="text/css" href="https://unpkg.com/vditor@3.8.15/dist/index.css"/>
+<script src="https://unpkg.com/vditor@3.8.15/dist/js/i18n/zh_CN.js"></script>
+<script src="https://unpkg.com/vditor@3.8.15/dist/method.min.js"></script></head>
+<body><div class="vditor-reset" id="preview"><h1>机器人功能列表</h1>
+<p>唤醒指令包括/ ! . ！</p>
+<h2>吉他查询 仅支持欧服</h2>
+<ol>
+<li>
+<p>基础指令<br />
+ojita [物品名]*[数量(可选参数)]</p>
+<blockquote>
+<p>/ojita 凡晶石*100</p>
+</blockquote>
+</li>
+<li>
+<p>进阶指令<br />
+ojita [物品名]*[数量]<br />
+--use [esi|tycoon|esi_cache]<br />
+--history [follow|only|none]</p>
+<blockquote>
+<p>--use [esi|tycoon|esi_cache |ceve]<br />
+选择一个查询接口<br />
+默认esi_cache每30min刷新一次<br />
+你可以选择esi或者tycoon查询最新价格<br />
+--history [follow|only|none]<br />
+选择历史价格图片状态<br />
+默认follow，附在价格后面<br />
+你可以选择只发送历史价格折线图或者不发送</p>
+</blockquote>
+</li>
+<li>
+<p>翻译物品<br />
+trans [物品名称] --num [数量] (num可选)</p>
+<blockquote>
+<p>trans 毒蜥级<br />
+--num查询翻译列表返回多少项，默认6项</p>
+</blockquote>
+</li>
+</ol>
+<h2>zkilboard功能系列</h2>
+<ol>
+<li>
+<p>查询角色zkb信息<br />
+zkb [角色名]</p>
+<blockquote>
+<p>/zkb Redeovg</p>
+</blockquote>
+</li>
+<li>
+<p>查询指定军团签名排行<br />
+rank [军团名] (支持缩写)</p>
+<blockquote>
+<p>/rank THXFC</p>
+</blockquote>
+</li>
+<li>
+<p>订阅高价值击杀<br />
+/高价值击杀订阅 add|remove -l/--limit[value]</p>
+<blockquote>
+<p>/高价值击杀订阅 add -l20000000000<br />
+请一定把[]去掉，是-l不是-1</p>
+</blockquote>
+</li>
+<li>
+<p>订阅指定角色km<br />
+/击杀订阅<br />
+add|remove --corp|--char [name] -a[value] -v[value]</p>
+<blockquote>
+<p>/击杀订阅 add --char  Redeovg<br />
+进阶用法：<br />
+/击杀订阅 add --char  Redeovg -a15000000 -v30000000<br />
+-a是订阅的击杀最低限度推送价格<br />
+默认15m，最低10m<br />
+-v是订阅的损失最低限度推送价格<br />
+默认30m，最低10m<br />
+这个命令请写在一行，这里写不下了所以换行了<br />
+看清楚是订阅的角色（char）还是军团（corp）<br />
+订阅联盟需要联系管理员<br />
+恶意订阅直接拉进黑名单</p>
+</blockquote>
+</li>
+</ol>
+<h2>其他功能</h2>
+<ol>
+<li>/汇率 [金额] [货币代码] （看起来目前是坏的）</li>
+</ol>
+<blockquote>
+<p>常见的有USD - 美元,EUR - 欧元，JPY - 日元</p>
+</blockquote>
+<ol start="2">
+<li>/evetime</li>
+</ol>
+<blockquote>
+<p>查询eve服务器时间</p>
+</blockquote>
+<ol start="3">
+<li>/feedback</li>
+</ol>
+<blockquote>
+<p>feedback 后面写你要找作者说的话，也可以直接加作者qq</p>
+</blockquote>
+</div>
+<script>
+    const previewElement = document.getElementById('preview')
+    Vditor.setContentTheme('light', 'https://unpkg.com/vditor@3.8.15/dist/css/content-theme');
+    Vditor.codeRender(previewElement);
+    Vditor.highlightRender({"enable":true,"lineNumber":false,"style":"github"}, previewElement, 'https://unpkg.com/vditor@3.8.15');
+    Vditor.mathRender(previewElement, {
+        cdn: 'https://unpkg.com/vditor@3.8.15',
+        math: {"engine":"KaTeX","inlineDigit":false,"macros":{}},
+    });
+    Vditor.mermaidRender(previewElement, 'https://unpkg.com/vditor@3.8.15', 'classic');
+    Vditor.flowchartRender(previewElement, 'https://unpkg.com/vditor@3.8.15');
+    Vditor.graphvizRender(previewElement, 'https://unpkg.com/vditor@3.8.15');
+    Vditor.chartRender(previewElement, 'https://unpkg.com/vditor@3.8.15', 'classic');
+    Vditor.mindmapRender(previewElement, 'https://unpkg.com/vditor@3.8.15', 'classic');
+    Vditor.abcRender(previewElement, 'https://unpkg.com/vditor@3.8.15');
+    Vditor.mediaRender(previewElement);
+    Vditor.speechRender(previewElement);
+</script>
+<script src="https://unpkg.com/vditor@3.8.15/dist/js/icons/ant.js"></script></body></html>
