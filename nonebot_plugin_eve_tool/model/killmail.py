@@ -1,8 +1,8 @@
 import yaml
 
-from .common import data_path
+from .common import data_path, plugin_path
 
-bsd_path = data_path / "sde" / "bsd"
+file_path = plugin_path / "src" / "other"
 
 
 class KillMailDetails:
@@ -35,7 +35,7 @@ class PersonalLocationFlagEnumV4:
     _flag_map = {}
 
     @classmethod
-    def load_from_yaml(cls, yaml_file=bsd_path / "invFlags.yaml"):
+    def load_from_yaml(cls, yaml_file=file_path / "invFlags.yaml"):
         with open(yaml_file, 'r') as file:
             data = yaml.safe_load(file)
             for item in data:
