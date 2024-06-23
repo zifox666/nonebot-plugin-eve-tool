@@ -11,6 +11,8 @@ from ..api import get_exchange_rate
 
 from nonebot import require
 
+from ..utils.mission import refresh_price_cache
+
 require("nonebot_plugin_alconna")
 
 from nonebot_plugin_alconna import (
@@ -61,3 +63,10 @@ async def _(bot: Bot, event: Event):
     await bot.send_private_msg(user_id=next(iter({int(uid) for uid in config.superusers})), message=msg)
     await feed_back.finish("已向作者发送消息")
 
+
+refresh = on_command("refresh_market", priority=5)
+
+
+@refresh.handle()
+async def _():
+    await refresh_price_cache()

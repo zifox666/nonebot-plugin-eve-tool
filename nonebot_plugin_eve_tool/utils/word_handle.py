@@ -34,11 +34,11 @@ async def replace_word(word):
     return word
 
 
-async def cut_word(word):
+async def jieba_cut_word(word):
     word = await replace_word(word)
     words = jieba.lcut(word)
     result = " ".join(words)
-    logger.info(result)
+    logger.debug(f"jieba分词结果:\n{result}")
     regex = '.*' + '.*'.join(f'(?=.*{re.escape(word)})' for word in result.split()) + '.*'
     return regex
 

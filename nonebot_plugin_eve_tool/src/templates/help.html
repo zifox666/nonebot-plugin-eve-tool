@@ -55,25 +55,26 @@ rank [军团名] (支持缩写)</p>
 </li>
 <li>
 <p>订阅高价值击杀<br />
-/高价值击杀订阅 add|remove -l/--limit[value]</p>
+/高价值击杀订阅 add|remove [value]</p>
 <blockquote>
-<p>/高价值击杀订阅 add -l20000000000<br />
-请一定把[]去掉，是-l不是-1</p>
+<p>/高价值击杀订阅 add 20000000000<br />
+请一定把[]去掉 add和价值之间有空格<br />
+最低限度8b</p>
 </blockquote>
 </li>
 <li>
 <p>订阅指定角色km<br />
 /击杀订阅<br />
-add|remove --corp|--char [name] -a[value] -v[value]</p>
+add|remove --corp|--char [name] -a|--attack [value] -v|--victim [value]</p>
 <blockquote>
 <p>/击杀订阅 add --char  Redeovg<br />
 进阶用法：<br />
-/击杀订阅 add --char  Redeovg -a15000000 -v30000000<br />
+/击杀订阅 add --char  Redeovg -a 15000000 -v 30000000<br />
 -a是订阅的击杀最低限度推送价格<br />
 默认15m，最低10m<br />
 -v是订阅的损失最低限度推送价格<br />
 默认30m，最低10m<br />
-这个命令请写在一行，这里写不下了所以换行了<br />
+这个命令请写在一行，-a和-v与价值之间有空格<br />
 看清楚是订阅的角色（char）还是军团（corp）<br />
 订阅联盟需要联系管理员<br />
 恶意订阅直接拉进黑名单</p>

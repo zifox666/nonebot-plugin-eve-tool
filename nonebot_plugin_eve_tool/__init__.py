@@ -7,7 +7,7 @@ __version__ = _version.__version__
 
 from nonebot import init
 from nonebot import get_driver
-from nonebot.plugin import inherit_supported_adapters
+
 
 from .model.config import plugin_config, Config
 from .database.redis.RedisArray import RedisArray
@@ -46,21 +46,13 @@ MYSQL = MysqlArray(
     database=plugin_config.eve_mysql_db
 )
 
-logger.info("""
-
-                                                                           .-'''-.        .-'''-.          
-                                                                          '   _    \     '   _    \  .---. 
-       __.....__   .----.     .----.   __.....__                        /   /` '.   \  /   /` '.   \ |   | 
-   .-''         '.  \    \   /    /.-''         '.                     .   |     \  ' .   |     \  ' |   | 
-  /     .-''"'-.  `. '   '. /'   //     .-''"'-.  `.                .| |   '      |  '|   '      |  '|   | 
- /     /________\   \|    |'    //     /________\   \             .' |_\    \     / / \    \     / / |   | 
- |                  ||    ||    ||                  |           .'     |`.   ` ..' /   `.   ` ..' /  |   | 
- \    .-------------''.   `'   .'\    .-------------'          '--.  .-'   '-...-'`       '-...-'`   |   | 
-  \    '-.____...---. \        /  \    '-.____...---.             |  |                               |   | 
-   `.             .'   \      /    `.             .'              |  |                               |   | 
-     `''-...... -'      '----'       `''-...... -'                |  '.'                             '---' 
-                                                                  |   /                                    
-                                                                  `'-'                                     
+logger.info("""\n
+ _____ _   _ _____   _____ _____  _____ _     
+|  ___| | | |  ___| |_   _|  _  ||  _  | |    
+| |__ | | | | |__     | | | | | || | | | |    
+|  __|| | | |  __|    | | | | | || | | | |    
+| |___\ \_/ / |___    | | \ \_/ /\ \_/ / |____
+\____/ \___/\____/    \_/  \___/  \___/\_____/\n                                     
 """)
 
 
@@ -79,7 +71,6 @@ async def startup():
 @driver.on_shutdown
 async def shutdown():
     await stop_wss()
-    await RA.execute('FLUSHDB')
     await RA.close()
     await MYSQL.close()
 
@@ -87,6 +78,7 @@ async def shutdown():
 @driver.on_bot_connect
 async def bot_connect(bot: Bot):
     await start_wss(bot)
+    return
 
 
 @driver.on_bot_disconnect

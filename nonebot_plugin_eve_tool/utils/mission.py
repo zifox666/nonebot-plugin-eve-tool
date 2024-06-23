@@ -19,6 +19,7 @@ file_path = data_path / "price_list.json"
 
 @scheduler.scheduled_job('cron', minute='*/30', id='001')
 async def refresh_price_cache():
+    logger.info("定时任务：开始拉取市场列表")
     skip = False
     if file_path.exists():
         logger.info("市场初始化文件存在，使用市场初始化文件")
@@ -29,14 +30,14 @@ async def refresh_price_cache():
     else:
         data = await fetch_all_price_pages()
     if data:
-        await RA.hdel("market_price", None)
         if skip:
             datas = data
         else:
             datas = await process_all(data)
         for _id, _dict in datas.items():
-            key = f"@eve_type:{_id}"
-            await RA.hset('market_price', key, json.dumps(_dict))
+            key = f"market_price:{_id}"
+            await RA.hset(key, key, json.dumps(_dict))
+        logger.success("市场列表更新完成")
 
 
 

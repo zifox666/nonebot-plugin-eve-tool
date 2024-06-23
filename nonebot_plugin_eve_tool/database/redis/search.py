@@ -83,7 +83,8 @@ async def get_price_from_cache(ids: list[int]) -> dict:
     result = {}
     for _id in ids:
         try:
-            result[str(_id)] = json.loads(await RA.hget('market_price', f"@eve_type:{_id}"))
+            key = f"market_price:{_id}"
+            result[str(_id)] = json.loads(await RA.hget(key, key))
             if not result[str(_id)]["name"]:
                 result[str(_id)]["name"] = await get_names_for_redis(str(_id))
         except Exception as e:

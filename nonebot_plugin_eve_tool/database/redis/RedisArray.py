@@ -163,15 +163,19 @@ class RedisArray:
             logger.error(f"Error executing command {command} with args {args}: {e}")
             return None
 
-    async def hdel(self, hash_name, *key):
+    async def hdel(self, hash_name, key):
         try:
             if not key:
                 keys = await self.aioClient.hkeys(hash_name)
-                return await self.aioClient.hdel(hash_name, keys)
+                for key in keys:
+                    await self.aioClient.hdel(hash_name, key)
+                return
             else:
-                return await self.aioClient.hdel(hash_name, *key)
+                await self.aioClient.hdel(hash_name, key)
+                return
+
         except Exception as e:
-            logger.error(f"Error hdel command {hash_name} with args {key}: {e}")
+            logger.error(f"Error hdel command {hash_name} with args {keys}: {e}")
             return None
 
     async def lrange(self, keyname, key, start=0, end=-1):

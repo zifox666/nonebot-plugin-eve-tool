@@ -12,8 +12,10 @@ from typing import (Dict, Literal,
 import aiohttp
 import yaml
 import qrcode
+from nonebot import Bot
 from nonebot.adapters import Event
 from nonebot.log import logger
+import nonebot
 
 
 import os
@@ -29,10 +31,13 @@ except ImportError:
 
 from ..model import data_path, plugin_path
 
+bots = nonebot.get_bots()
 
-async def get_group_info(event: Event) -> Tuple[str | None, str | None]:
+
+async def get_group_info(event: Event, bot: Bot) -> Tuple[str | None, str | None]:
     user_id, group_id = event.user_id, event.group_id
-    if str(user_id) == "3815647974":
+    bot_id = bot.self_id
+    if int(user_id) == int(bot_id):
         return user_id, group_id
     else:
         return None, None

@@ -27,7 +27,7 @@ async def search_eve_types_for_mysql(
 
     if lagrange == "zh":
         sql = f"SELECT id, name, name_en FROM eve_type WHERE name REGEXP %s {market_sql}"
-        regex = await word_handle.cut_word(type_name) if fuzzy else f".*(?=.*{type_name}).*"
+        regex = await word_handle.jieba_cut_word(type_name) if fuzzy else f".*(?=.*{type_name}).*"
     else:
         sql = f"SELECT id, name, name_en FROM eve_type WHERE name_en REGEXP %s {market_sql}"
         regex = '.*' + '.*'.join(f'(?=.*{re.escape(word)})' for word in type_name.split()) + '.*'

@@ -81,7 +81,7 @@ async def get_alliance_name(alliance_id: int) -> Tuple[str, str]:
     try:
         url = f"https://esi.evetech.net/latest/alliances/{str(alliance_id)}/?datasource=tranquility"
         data = await aioClient.get(url)
-        logger.info(data)
+        logger.debug(data)
         alliance_name = data['name']
         alliance_ticker = data['ticker']
         return alliance_name, alliance_ticker
