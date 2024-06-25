@@ -1,4 +1,7 @@
+import gc
 import json
+import tracemalloc
+
 
 from ..api.esi.market import fetch_all_price_pages
 from ..database.redis.RedisArray import RedisArray
@@ -17,10 +20,16 @@ RA = RedisArray(plugin_config.eve_redis_url)
 file_path = data_path / "price_list.json"
 
 
+"""def log_memory_usage(stage):
+    process = psutil.Process(os.getpid())
+    logger.debug(f"[{stage}] Current memory usage: {process.memory_info().rss / (1024 * 1024):.2f} MB")"""
+
+
 @scheduler.scheduled_job('cron', minute='*/30', id='001')
 async def refresh_price_cache():
     logger.info("定时任务：开始拉取市场列表")
     skip = False
+    data = None
     if file_path.exists():
         logger.info("市场初始化文件存在，使用市场初始化文件")
         skip = True
@@ -29,6 +38,7 @@ async def refresh_price_cache():
             data = json.loads(data)
     else:
         data = await fetch_all_price_pages()
+
     if data:
         if skip:
             datas = data
@@ -39,6 +49,22 @@ async def refresh_price_cache():
             await RA.hset(key, key, json.dumps(_dict))
         logger.success("市场列表更新完成")
 
+        del data
+        gc.collect()
+
+        logger.info("eve_type数据写入Redis完成")
+        return
 
 
+@scheduler.scheduled_job('cron', minute='*/5', id='002')
+async def _gc():
+    current, peak = tracemalloc.get_traced_memory()
+    snapshot = tracemalloc.take_snapshot()
+    top_stats = snapshot.statistics('lineno')
+    logger.debug(f"Current memory usage is {current / 10 ** 6}MB; Peak was {peak / 10 ** 6}MB")
+    gc.collect()
+    logger.debug(f"------gc-------\n{gc.get_stats()}")
+    logger.debug(f"------Top10-------\n")
+    for stat in top_stats[:10]:
+        logger.debug(f"{stat}\n")
 

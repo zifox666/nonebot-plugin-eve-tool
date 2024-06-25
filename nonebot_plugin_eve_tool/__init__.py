@@ -1,3 +1,6 @@
+import gc
+import tracemalloc
+
 from nonebot.plugin import PluginMetadata
 from nonebot import logger
 
@@ -58,6 +61,7 @@ logger.info("""\n
 
 @driver.on_startup
 async def startup():
+    tracemalloc.start()
     await RA.create_pool()
     echo = await MYSQL.create_pool()
     logger.info(echo)
@@ -66,6 +70,7 @@ async def startup():
         await initialize.create_db(MYSQL)
 
     await initialize.init_data(RA, MYSQL)
+    gc.collect()
 
 
 @driver.on_shutdown

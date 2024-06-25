@@ -1,3 +1,4 @@
+import gc
 from pathlib import Path
 
 from nonebot import logger
@@ -65,6 +66,15 @@ async def load_sde_to_mysql(MYSQL: MysqlArray, sde_path: Path):
 
     await MYSQL.executemany(insert_query, transformed_data)
     logger.success("SDE已写入数据库")
+
+    del eve_type_data
+    del meta_groups
+    del market_groups
+    del groups
+    del categories
+    del transformed_data
+    gc.collect()
+    return
 
 
 

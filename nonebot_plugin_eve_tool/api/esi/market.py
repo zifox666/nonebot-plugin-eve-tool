@@ -98,7 +98,6 @@ async def get_price_history(type_id: int) -> dict[int, dict[str, int | float | s
 
 
 base_url = "https://esi.evetech.net/latest/markets/10000002/orders/?datasource&order_type&page={}"
-all_data = []
 
 
 async def fetch_data(session, page):
@@ -113,6 +112,7 @@ async def fetch_data(session, page):
 
 async def fetch_all_price_pages():
     pages = 350
+    all_data = []
     async with aiohttp.ClientSession() as session:
         while True:
             tasks = [fetch_data(session, page) for page in range(1, pages + 1)]

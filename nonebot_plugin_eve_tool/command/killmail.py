@@ -1,4 +1,5 @@
 import asyncio
+import gc
 import json
 import re
 import traceback
@@ -60,6 +61,8 @@ async def km(bot: Bot):
                         echo = await message_handler(bot, kill_mail_details)
                         if echo:
                             logger.info(f'{kill_id} send success')
+                            del kill_mail_details
+                            gc.collect()
 
         except websockets.ConnectionClosed:
             logger.error("WebSocket 连接断开，尝试重新连接...")
@@ -83,3 +86,4 @@ async def handle_killmail(event: Event):
             kill_mail_details.pic = await html2pic(str(html_template), width=660, height=1080)
             kill_mail_details = await process_image(kill_mail_details)
             await killmail_matcher.finish(MessageSegment.image(kill_mail_details.img))
+            del kill_mail_details

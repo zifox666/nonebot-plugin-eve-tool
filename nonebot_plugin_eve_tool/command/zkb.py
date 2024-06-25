@@ -1,3 +1,5 @@
+import traceback
+
 from ..src import use_kb_info_html
 from ..model.config import plugin_config
 from ..api import get_character_id
@@ -51,7 +53,7 @@ async def handle_get_zkb(
             else:
                 await zkb.finish(f"未找到[{char_name}]，可能是未绑定zkb网")
         except Exception as e:
-            logger.error(e)
+            logger.error(f"zkb error:{e}\n{traceback.format_exc()}")
     else:
         await zkb.finish("名称错误")
 
