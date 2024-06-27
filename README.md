@@ -1,3 +1,4 @@
+简体中文 | [English](README_US.md)
 ```text
                                                                            .-'''-.        .-'''-.          
                                                                           '   _    \     '   _    \  .---. 
@@ -22,10 +23,10 @@ _✨ NoneBot EVE信息查询插件 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
+    <img src="https://img.shields.io/github/license/zifox666/nonebot-plugin-eve-tool" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-template">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-template.svg" alt="pypi">
+<a href="https://pypi.org/project/nonebot-plugin-eve-tool/">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-eve-tool.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
 
@@ -125,4 +126,6 @@ docker run -itd --name redis -p 6379:6379 redis/redis-stack-server:latest
 |:-----:|:----:|:----:|:--:|:--:|
 | /help | 群员 | 否 | 全部 | 无  |
 
+<br>
 
+> All [EVE related materials](https://zkillboard.com/information/legal/) are property of [CCP Games](https://www.ccpgames.com/)
