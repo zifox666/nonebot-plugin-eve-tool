@@ -1,5 +1,9 @@
+import asyncio
 import json
 from functools import wraps
+
+from httpx import TimeoutException
+from nonebot import logger
 
 from ...model.config import plugin_config
 from .RedisArray import RedisArray
@@ -47,3 +51,20 @@ def cache_async(cache_expiry_seconds=-1):
 
     return decorator
 
+
+def retry_on_timeout_async(retries=3, delay=1, exceptions=(TimeoutException,)):
+    def decorator(func):
+        @wraps(func)
+        async def wrapper(*args, **kwargs):
+            attempt = 0
+            while attempt < retries:
+                try:
+                    return await func(*args, **kwargs)
+                except exceptions as e:
+                    attempt += 1
+                    if attempt == retries:
+                        raise
+                    logger.debug(f"第 {attempt} 次尝试失败: {e}，等待 {delay} 秒后重试...")
+                    await asyncio.sleep(delay)
+        return wrapper
+    return decorator
