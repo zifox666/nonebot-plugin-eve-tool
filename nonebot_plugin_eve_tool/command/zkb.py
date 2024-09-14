@@ -3,7 +3,7 @@ import traceback
 from ..src import use_kb_info_html
 from ..model.config import plugin_config
 from ..api import get_character_id
-from ..utils.png import html2pic
+from ..utils.png import html2pic, render
 from nonebot import require, logger
 
 from ..utils.zkb import get_character_kb
@@ -45,11 +45,10 @@ async def handle_get_zkb(
             if char_id == "":
                 await zkb.finish("角色名称错误")
             if char_id:
-                char_info = await get_character_kb(char_id)
-                echo = await use_kb_info_html(char_info)
-                pic = await html2pic(echo)
+                char_json = await get_character_kb(char_id)
+                echo = await render(char_json)
                 if echo:
-                    await zkb.finish(UniMessage.image(pic))
+                    await zkb.finish(UniMessage.image(echo))
             else:
                 await zkb.finish(f"未找到[{char_name}]，可能是未绑定zkb网")
         except Exception as e:

@@ -5,6 +5,9 @@ import os
 import random
 import re
 from datetime import datetime
+
+import httpx
+from dateutil import parser
 from pathlib import Path
 from typing import (Dict, Literal,
                     Union, Optional, Tuple, Iterable, List, Any)
@@ -21,7 +24,7 @@ import nonebot
 import os
 from zipfile import ZipFile
 from tqdm.asyncio import tqdm
-
+from urllib3.util import Url
 
 try:
     from loguru import Logger
@@ -29,7 +32,7 @@ except ImportError:
     Logger = None
     pass
 
-from ..model import data_path, plugin_path
+from ..model import data_path, plugin_path, plugin_config
 
 bots = nonebot.get_bots()
 
@@ -231,3 +234,46 @@ async def time_change(time_str: str) -> str:
 
     return utc_time.strftime("%Y-%m-%d %H:%M:%S")
 
+
+def time_difference(target_time_str: str) -> str:
+    """
+    返回时间差值
+    """
+    target_time = parser.parse(target_time_str)
+
+    now = datetime.utcnow()
+
+    difference = now - target_time
+
+    seconds = difference.total_seconds()
+
+    if seconds < 60:
+        return f"{int(seconds)} 秒前"
+    elif seconds < 3600:
+        minutes = seconds / 60
+        return f"{int(minutes)} 分钟前"
+    elif seconds < 86400:
+        hours = seconds / 3600
+        return f"{int(hours)} 小时前"
+    else:
+        days = seconds / 86400
+        return f"{int(days)} 天前"
+
+
+async def get_lolicon_image() -> str:
+    async with httpx.AsyncClient() as client:
+        response = await client.get("https://api.lolicon.app/setu/v2")
+    return response.json()["data"][0]["urls"]["original"]
+
+
+async def get_background_image() -> str | Url:
+
+    match plugin_config.eve_background_png:
+        case "LoliAPI":
+            background_image = "https://www.loliapi.com/acg/pe/"
+        case "Lolicon":
+            background_image = await get_lolicon_image()
+        case _:
+            background_image = "https://www.loliapi.com/acg/pe/"
+
+    return background_image

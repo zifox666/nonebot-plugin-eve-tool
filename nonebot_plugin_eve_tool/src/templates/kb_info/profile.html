@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Wakatime User Profile</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji" />
+  <link rel="stylesheet" href="./index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body class="background px-10 pt-20 pb-10" style="background-image: url({{ background_image }});">
+
+  <!-- Profile -->
+  <header class="frosted-glass relative w-auto">
+    <div class="absolute -top-10 ml-6 w-24 h-24 rounded-full overflow-hidden border-4 border-white">
+      <img src="{{ avatar }}" alt="Avatar" class="w-full h-full object-cover">
+    </div>
+    <div class="flex items-center ml-32 mt-6">
+      <h1 class="text-l text-white font-semibold">@{{ name }}</h1>
+      <div class="ml-3 px-3 py-0.5 text-[#4e4e4e] bg-white rounded-tl-full rounded-tr-full rounded-br-full font-noto">{{ title }}</div>
+    </div>
+    <div class="details">
+      <div class="content">
+        <div class="title font-noto">所在势力 </div><div class="result">{{ org }}</div>
+      </div>
+      <div class="content">
+        <div class="title font-noto">船分比</div><div class="result">{{ pointb }}</div>
+      </div>
+      <div class="content">
+        <div class="title font-noto">出生时间 📅</div><div class="result">{{ birthday }}</div>
+      </div>
+      {% if sec %}
+        <div class="content">
+          <div class="title">安等 </div><div class="result">{{ sec }}</div>
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <!-- Insights -->
+  <section class="frosted-glass mt-5 p-5">
+    <div class="grid gap-y-4 grid-cols-1">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+            <span class="text-white">危险度</span>
+            <div class="flex items-center space-x-0.5">
+            {% for i in range(31) %}
+                {% if i < (31 * (dangerRatio / 100)) %}
+                    <div class="w-1 h-2.5 rounded-full bg-orange-500"></div>
+                {% else %}
+                    <div class="w-1 h-2.5 rounded-full bg-green-500"></div>
+                {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <span class="text-white">{{ dangerRatio }} %</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+          <span class="text-white">团伙度</span>
+          <div class="flex items-center space-x-0.5">
+            {% for i in range(31) %}
+                {% if i < (31 * (gangRatio / 100)) %}
+                    <div class="w-1 h-2.5 rounded-full bg-orange-500"></div>
+                {% else %}
+                    <div class="w-1 h-2.5 rounded-full bg-green-500"></div>
+                {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      <span class="text-white">Solo: {{ solo }}</span>
+      </div>
+    </div>
+  </section>
+
+  {% if solo %}
+    <section class="frosted-glass flex justify-between mt-5 p-5">
+
+      <div class="flex items-center">
+        <div class="frosted-glass relative size-10 mr-2">
+          <svg class="size-full -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="8" fill="none" class="stroke-current text-gray-600" stroke-width="2"></circle>
+            <circle cx="18" cy="18" r="8" fill="none" class="stroke-current text-white" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="50" stroke-linecap="round"></circle>
+          </svg>
+        </div>
+        <div>
+          <div class="text-white text-sm font-light">签名({{ shipDestroyed }})</div>
+          <div class="text-white">{{ iskDestroyed }} isk</div>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <div class="frosted-glass relative size-10 mr-2">
+          <svg class="size-full -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="8" fill="none" class="stroke-current text-gray-600" stroke-width="2"></circle>
+            <circle cx="18" cy="18" r="8" fill="none" class="stroke-current text-white" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="50" stroke-linecap="round"></circle>
+          </svg>
+        </div>
+        <div>
+          <div class="text-white text-sm font-light">损失({{shipsLost}})</div>
+          <div class="text-white">{{ iskLost }} isk</div>
+        </div>
+      </div>
+     </section>
+  {% endif %}
+
+  <!-- Languages -->
+  {%  if killsAll %}
+    <section class="frosted-glass2 flex justify-between mt-5 p-5">
+
+      {% for topShip in topShips[:3] %}
+        <div class="relative size-28">
+          <svg class="rotate-[135deg] size-full" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="16" fill="none" class="stroke-current text-gray-200" stroke-width="1" stroke-dasharray="75 100" stroke-linecap="round"></circle>
+            <circle cx="18" cy="18" r="16" fill="none" class="stroke-current text-sky-500" stroke-width="2" stroke-dasharray="{{ ( topShip["kills"] / killsAll ) * 75 | int }} 100" stroke-linecap="round"></circle>
+          </svg>
+          <div class="absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+            <span class="text-2xl font-bold text-sky-500">{{ topShip["kills"] }}</span>
+            <span class="text-sky-500 block">{{ topShip["shipName"] }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+  <footer class="mt-10 text-sm text-white text-center font-normal">Generated by evebot</footer>
+</body>
