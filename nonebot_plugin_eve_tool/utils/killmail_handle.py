@@ -6,6 +6,7 @@ from typing import List, Dict, Any, Tuple
 
 from nonebot import logger
 
+from .common import time_difference
 from ..model.config import plugin_config
 from ..utils import time_change, generate_qrcode
 from ..api import get_names, get_region_name, get_constellation_name, get_system_name, get_char_name, get_corp_name, \
@@ -94,7 +95,7 @@ async def judgment_listener(kill_mail_details):
 
 async def extract_item_ids(items) -> list[int] | None:
     item_ids = []
-    black_list_id = [27459, 27465, 27471, 27477, 27483, 27489, 27495, 27501, 27507, 27513, 27519, 27525]
+    black_list_id = []
     for item in items:
         if item['item_type_id'] in black_list_id:
             logger.debug('物品黑名单')
@@ -283,7 +284,7 @@ async def generate_attacker_list(attackers, damage_taken, following='following')
 async def get_sec_color(sec):
     match str(sec):
         case '1.0':
-            return '--00sec-color'
+            return '--10sec-color'
         case '0.9':
             return '--09sec-color'
         case '0.8':
@@ -385,6 +386,7 @@ async def kill_mail_handle(
     kill_mail_details.drop_value = message_json['zkb']['droppedValue']
 
     kill_mail_details.time = await time_change(message_json['killmail_time'])
+    kill_mail_details.time_difference = time_difference(kill_mail_details.time)
 
     kill_mail_details.LastDamageAttackerHtml = await generate_attacker_template(
         kill_mail_details.LastDamageAttacker,

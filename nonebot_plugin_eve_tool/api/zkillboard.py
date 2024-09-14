@@ -1,4 +1,4 @@
-from ..database.redis.cache import cache_async
+from ..database.redis.cache import cache_async, retry_on_timeout_async
 from .aioclient import aioClient
 
 from nonebot import logger
@@ -6,6 +6,7 @@ from typing import *
 
 
 @cache_async(cache_expiry_seconds=86400)
+@retry_on_timeout_async(retries=3, delay=0.5)
 async def get_zkb_info(killID: str):
     """
     获取角色zkb信息

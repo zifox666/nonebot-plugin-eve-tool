@@ -258,7 +258,7 @@ async def group_innotice(bot: Bot, event: GroupIncreaseNoticeEvent):
         return
     await insert_high_listener('group', str(group_id), 18000000000)
     await bot.send_group_msg(group_id=group_id,
-                             message=f'欢迎使用eve bot插件，已经自动增加高价值击杀订阅，默认18b，如需更多订阅，请输入/help查询机器人详细命令')
+                             message=f'欢迎使用eve bot插件，已经自动增加高价值击杀订阅，请输入/help查询机器人详细命令\n本机器人支持订阅角色/军团km')
 
 
 @group_decrease_notice.handle()

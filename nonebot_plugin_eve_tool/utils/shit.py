@@ -33,7 +33,7 @@ async def process_push_items(push_items, subscription_type, kill_mail_details, b
             kill_mail_details.title = f"{push_item['title']} {subscription_type}"
         except:
             kill_mail_details.title = "高价值击杀"
-            delay_time = random.randint(1, 3)
+            delay_time = random.randint(0, 1)
         target_id = int(push_item['push_to'])
         # 推送限速器
         echo = await speed_limit(kill_mail_details.kill_mail_id, target_id)
