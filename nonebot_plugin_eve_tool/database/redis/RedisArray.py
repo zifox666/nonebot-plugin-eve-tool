@@ -209,3 +209,23 @@ class RedisArray:
         except Exception as e:
             logger.error(f"{name}/{values}报错: {str(e)}")
             return None
+
+    async def scan(self, cursor, match, count):
+        try:
+            return await self.aioClient.scan(
+                cursor=cursor,
+                match=match,
+                count=count
+            )
+        except Exception as e:
+            logger.error(f"报错: {str(e)}")
+            return None
+
+    async def delete(self, *param):
+        try:
+            return await self.aioClient.delete(
+                *param
+            )
+        except Exception as e:
+            logger.error(f"报错: {str(e)}")
+            return None

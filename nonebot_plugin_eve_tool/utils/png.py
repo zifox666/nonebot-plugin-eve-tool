@@ -2,6 +2,8 @@ from nonebot import require
 from PIL import Image
 from io import BytesIO
 
+from ..model import plugin_path
+
 from nonebot import require
 
 require("nonebot_plugin_htmlrender")
@@ -12,6 +14,8 @@ from nonebot_plugin_htmlrender import (
     template_to_pic,
     get_new_page,
 )
+
+templates_path = plugin_path / 'src' / 'templates' / 'kb_info'
 
 
 async def md2pic(content):
@@ -69,3 +73,16 @@ async def html2pic_element(html_content: str = None, url: str = None, element: s
         with BytesIO() as output:
             stitched_image.save(output, format="PNG")
             return output.getvalue()
+
+
+async def render(char_json) -> bytes:
+
+    return await template_to_pic(
+        template_path=str(templates_path),
+        template_name="profile.html",
+        templates=char_json,
+        pages={
+            "viewport": {"width": 550, "height": 10},
+            "base_url": f"file://{templates_path}",
+        },
+    )

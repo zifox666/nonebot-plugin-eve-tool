@@ -4,7 +4,6 @@ from nonebot import logger
 
 from .RedisArray import RedisArray
 from ...model.config import plugin_config
-from ...utils.common import pack_strings
 
 RA = RedisArray(plugin_config.eve_redis_url)
 
