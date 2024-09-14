@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Literal
 
 import nonebot
 from nonebot import get_plugin_config
@@ -41,7 +41,7 @@ class Config(BaseModel):
     eve_proxy: str = None
 
     """市场设置"""
-    eve_market_preference: str = 'esi_cache'
+    eve_market_preference: str = 'esi'
     eve_janice_api_key: str = 'G9KwKq3465588VPd6747t95Zh94q3W2E'
     eve_word_cut: str = 'jieba'
     eve_history_preference: str = 'follow'
@@ -70,7 +70,7 @@ class Config(BaseModel):
     eve_km_speed_limit: int = 0
     eve_km_send_delay: int = 3
 
-    eve_kb_info_background_url: str = 'https://www.loliapi.com/acg/'
+    eve_background_png: Literal["LoliAPI", "Lolicon"] = "LoloAPI"
 
     """SDE存放位置"""
     eve_sde_path: str = data_path / 'sde'

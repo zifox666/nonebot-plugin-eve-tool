@@ -29,3 +29,5 @@ async def use_killmail_html(kill_mail_details: KillMailDetails) -> str:
 
     await save_html_to_file(template_killmail.format(**vars(kill_mail_details)), path_out)
     return template_killmail.format(**vars(kill_mail_details))
+
+
