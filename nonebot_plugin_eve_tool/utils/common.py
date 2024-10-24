@@ -171,8 +171,7 @@ async def download_sde(directory):
     sde文件更新
     """
     local_zip_path = os.path.join(directory, 'sde.zip')
-    if not os.path.isfile(local_zip_path):
-        await download_file("https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/sde.zip", local_zip_path)
+    await download_file("https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/sde.zip", local_zip_path)
     with ZipFile(local_zip_path, 'r') as zip_file:
         zip_file.extractall(directory)
     logger.success(f"SDE已下载并解压到 '{directory}'")

@@ -1,5 +1,4 @@
 import aiohttp
-import httpx
 from pydantic import BaseModel
 from ..model import plugin_config
 
@@ -9,16 +8,16 @@ class AsyncHttpClient:
         self.proxy = plugin_config.eve_proxy
 
     async def _request(self, uri, method, params=None):
-        async with httpx.AsyncClient(proxies=self.proxy, timeout=120.0) as client:
+        async with aiohttp.ClientSession() as session:
             if method == "GET":
-                response = await client.get(uri)
-                return response.json()
+                async with session.get(uri, proxy=self.proxy) as response:
+                    return await response.json()
             elif method == "POST":
-                response = await client.post(uri, json=params)
-                return response.json()
+                async with session.post(uri, json=params, proxy=self.proxy) as response:
+                    return await response.json()
             elif method == "PUT":
-                response = await client.put(uri, json=params)
-                return response.json()
+                async with session.put(uri, json=params, proxy=self.proxy) as response:
+                    return await response.json()
             else:
                 raise ValueError(f"Unsupported method: {method}")
 

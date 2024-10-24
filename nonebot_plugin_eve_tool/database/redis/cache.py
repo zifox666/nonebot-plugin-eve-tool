@@ -29,6 +29,25 @@ async def write_to_cache(name: str, params: str, data: dict, cache_type: str, ex
         await RA.expire(key, expire_seconds)
 
 
+async def delete_empty_cache_entries():
+    # 假设你有一个获取所有key的函数，或者直接从Redis获取相关key
+    keys = await RA.keys("fuzzy_list:*")  # 获取所有cache_type为fuzzy_list的keys
+    for key in keys:
+        # 分解key，假设key格式为: fuzzy_list:{name}:{params}
+        parts = key.split(":")
+        if len(parts) == 3:
+            cache_type, name, params = parts
+            if name in ["market", "trans"]:
+                # 读取缓存数据
+                cached_data = await RA.hget(key, key)
+                if cached_data:
+                    cached_data = json.loads(cached_data)
+                    # 检查total是否为0
+                    if cached_data.get("total") == 0:
+                        # 删除该缓存条目
+                        await RA.delete(key)
+
+
 def cache_async(cache_expiry_seconds=-1):
     def decorator(func):
         @wraps(func)

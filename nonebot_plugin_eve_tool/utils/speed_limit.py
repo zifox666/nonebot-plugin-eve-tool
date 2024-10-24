@@ -5,7 +5,7 @@ from nonebot import logger
 from ..database.redis.RedisArray import RedisArray
 from ..model.config import plugin_config
 
-EXPIRATION_TIME = timedelta(minutes=30)
+EXPIRATION_TIME = timedelta(minutes=720)
 RA = RedisArray(plugin_config.eve_redis_url)
 
 

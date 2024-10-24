@@ -177,3 +177,4 @@ pyrightconfig.json
 /.idea/
 /utils/test.py
 /poetry.lock
+/nonebot_plugin_eve_tool/utils/test.py

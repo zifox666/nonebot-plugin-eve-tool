@@ -162,9 +162,17 @@ async def remove_listener(sub_type, entity_id, push_type, push_to):
         logger.debug(e)
         existing_data = []
     logger.debug(f"existing_data:\n{existing_data}")
-    # 删除指定 push_to 的监听器数据
-    updated_data = [item for item in existing_data if item['push_to'] != push_to or item['push_type'] != push_type or item['type'] != sub_type]
-    logger.debug(f"update:\n{updated_data}")
+    logger.debug(f"Trying to remove sub_type={sub_type}, push_type={push_type}, push_to={push_to}")
+
+    updated_data = [
+        item for item in existing_data
+        if not (
+                str(item['push_to']) == str(push_to) and
+                str(item['push_type']) == str(push_type) and
+                str(item['type']) == str(sub_type)
+        )
+    ]
+    logger.debug(f"Filtered data: {updated_data}")
     # 更新 Redis
     if updated_data:
         redis_value = json.dumps(updated_data)

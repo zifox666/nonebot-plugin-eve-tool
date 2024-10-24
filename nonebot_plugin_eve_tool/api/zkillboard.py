@@ -1,8 +1,13 @@
+import httpx
+
 from ..database.redis.cache import cache_async, retry_on_timeout_async
-from .aioclient import aioClient
+from ..model import plugin_config
 
 from nonebot import logger
 from typing import *
+
+
+proxy = plugin_config.eve_proxy
 
 
 @cache_async(cache_expiry_seconds=86400)
@@ -14,7 +19,9 @@ async def get_zkb_info(killID: str):
     :return:
     """
     url = f"https://zkillboard.com/api/stats/characterID/{str(killID)}/"
-    return await aioClient.get(url)
+    async with httpx.AsyncClient(proxies=proxy, timeout=120.0) as client:
+        r = await client.get(url)
+        return r.json()
 
 
 @cache_async(cache_expiry_seconds=86400)
@@ -25,4 +32,6 @@ async def get_corp_info(corp_id: str):
     :return:
     """
     url = f'https://zkillboard.com/api/stats/corporationID/{corp_id}/'
-    return await aioClient.get(url)
+    async with httpx.AsyncClient(proxies=proxy, timeout=120.0) as client:
+        r = await client.get(url)
+        return r.json()

@@ -80,13 +80,12 @@ async def _query_price(
         if history == "follow" or history == "only":
             history_data = await get_price_history(int(first_item))
             if history_data:
-                line = await draw_price_history(history_data,
-                                                await get_names_for_redis(first_item),
-                                                True if history == 'follow' else False)
-                if history == "follow":
-                    pic = await md2pic(f"{result}\n{line}")
-                else:
-                    pic = f"{line}"
+                line = await draw_price_history(
+                    history_data,
+                    await get_names_for_redis(first_item),
+                    True
+                )
+                pic = await md2pic(f"{result if history == 'follow' else ''}\n{line}")
         else:
             pic = await md2pic(result)
         if not pic:

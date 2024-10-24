@@ -229,3 +229,10 @@ class RedisArray:
         except Exception as e:
             logger.error(f"报错: {str(e)}")
             return None
+
+    async def keys(self, pattern="*", **kwargs):
+        try:
+            return await self.aioClient.keys(pattern, **kwargs)
+        except Exception as e:
+            logger.error(f"报错: {str(e)}")
+            return None

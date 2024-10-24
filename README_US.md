@@ -92,6 +92,22 @@ Add the mandatory configuration items in the table below to the `.env` file in t
 ```text
 eve_mysql_password='your_password'
 eve_proxy='http://127.0.0.1:7890' #Strongly recommended in China
+
+# Important settings
+eve_zkillboard_method='websocket'
+eve_zkillboard_link='wss://zkillboard.com/websocket/'
+# It will blocked by cloudflare when zkillboard upgrade their servers
+# python websocket will block by cloudflare
+```
+
+### redisQ setting
+
+```bash
+# You can choose websocket if you not know how to use node.js
+cd ./redis
+yarn install
+# Please remember check proxy and redis link
+node app.js
 ```
 
 <details>
@@ -126,13 +142,14 @@ docker run -itd --name redis -p 6379:6379 redis/redis-stack-server:latest
 
 ## 🎉 Usage
 ### Command List
-| Command | Permission | Scope |              Description               |
-|:-------:|:----------:|:-----:|:--------------------------------------:|
-| /ojita  |   Member   |  All  |            Qurry jita price            |
-|  /help  |   Member   |  All  |                  None                  |
-|  /zkb   |   Member   |  All  |        Qurry character zkb info        |
-|  /rank  |   Member   |  All  | Show a corp member rank in last 7 days |
-| /trans  |   Member   |  All  |       Trans eve items to chinese       |
+| Command | Permission |   Scope    |              Description              |
+|:-------:|:----------:|:----------:|:-------------------------------------:|
+| /ojita  |   Member   |    All     |            Qurry jita price           |
+|  /help  |   Member   |    All     |                  None                 |
+|  /zkb   |   Member   |    All     |        Qurry character zkb info       |
+|  /rank  |   Member   |    All     | Show a corp member rank in last 7 days |
+| /trans  |   Member   |    All     |       Trans eve items to chinese      |
+| /更新sde  | SuperAdmin | SuperAdmin |              Update SDE               |
 
 <br>
 

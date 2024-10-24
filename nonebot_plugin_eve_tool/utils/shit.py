@@ -43,7 +43,7 @@ async def process_push_items(push_items, subscription_type, kill_mail_details, b
         # kill_mail_details.pic = await html2pic_element(html_content=str(html_template), element="container")
         kill_mail_details.pic = await html2pic(str(html_template), width=680, height=1080)
         await message_send(bot, push_item, kill_mail_details)
-        await asyncio.sleep(delay_time)
+        # await asyncio.sleep(delay_time)
 
 
 async def message_handler(bot: Bot, kill_mail_details: KillMailDetails) -> bool:
