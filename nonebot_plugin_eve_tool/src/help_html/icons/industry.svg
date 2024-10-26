@@ -1,0 +1,8 @@
+<symbol id="industry">
+            <clipPath id="industry-A">
+              <path d="M91.869 89.182h-6.812v-15.57h6.812zm-11.679 0h-6.814v-15.57h6.814zm13.024-25.387v-7.368l-21.572 7.368v-7.368l-21.578 7.368-3.29-34.796H37.23l-3.293 34.796-5.402 5.405v29.799h70.083V69.2z" fill-rule="evenodd"/>
+            </clipPath>
+            <g clip-path="url(#industry-A)">
+              <rect x="28" y="29" width="71" height="70" class="shape"/>
+            </g>
+          </symbol>

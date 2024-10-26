@@ -1,0 +1,42 @@
+<symbol id="cargo">
+            <path d="M78.397 19.36L66.268 31.426l-7.758 7.779L70.64 27.14zM70.61 37.383l-8.055 8.019-.978.98-15.199 15.242.04.017z" fill="gray"/>
+            <clipPath id="cargo-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#cargo-A)">
+              <clipPath id="cargo-B">
+                <path d="M52.71 96.579h55.856V28.433H52.711z"/>
+              </clipPath>
+              <g clip-path="url(#cargo-B)">
+                <clipPath id="cargo-C">
+                  <path d="M84.672 43.416L60.474 67.68l-.005-.011-7.758 7.779 9.02 21.131 7.759-7.78-3.018-7.068 15.262-15.303 8.94-8.964zm23.894 6.154l-7.758 7.78-9.02-21.138 7.758-7.78z"/>
+                </clipPath>
+                <g clip-path="url(#cargo-C)">
+                  <rect x="52" y="28" width="57" height="69" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <path d="M39.32 58.596L27.192 70.654l-7.759 7.779 12.129-12.058z" fill="gray"/>
+            <clipPath id="cargo-D">
+              <path d="M52.711 75.448l-21.149-9.073-12.128 12.058 9.028 21.135 21.149 9.072 12.12-12.061zm39.077-39.236l9.02 21.138-12.12 12.061-6.954-2.983 8.94-8.964-6.002-14.048-14.063-6.033-8.053 8.019-.979.981-3.067-7.178 12.129-12.066z"/>
+            </clipPath>
+            <g clip-path="url(#cargo-D)">
+              <rect x="19" y="27" width="82" height="82" class="shape"/>
+            </g>
+            <clipPath id="E">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#cargo-E)">
+              <clipPath id="F">
+                <path d="M31.562 75.448h67.984V19.36H31.562z"/>
+              </clipPath>
+              <g clip-path="url(#cargo-F)">
+                <clipPath id="cargo-G">
+                  <path d="M52.711 75.448l7.758-7.779.005.011 24.198-24.264-14.063-6.033-24.191 24.258-.04-.017-7.058-3.028-7.758 7.779zm17.928-48.309l7.758-7.779 21.149 9.072-7.758 7.78z"/>
+                </clipPath>
+                <g clip-path="url(#cargo-G)">
+                  <rect x="31" y="19" width="69" height="57" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

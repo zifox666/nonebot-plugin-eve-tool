@@ -1,0 +1,55 @@
+<symbol id="employmenthistory">
+            <clipPath id="employmenthistory-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#employmenthistory-A)">
+              <clipPath id="employmenthistory-B">
+                <path d="M19 92.054h55.037V17.736H19z"/>
+              </clipPath>
+              <g clip-path="url(#employmenthistory-B)">
+                <clipPath id="employmenthistory-C">
+                  <path d="M69.367 70.537c-2.911-3.403-1.972-9.805-1.972-9.805s1.627-1.511 2.034-4.117l.863-5.577s1.371.261 2.035-1.461c.657-1.718.812-2.344 1.218-4.272s1.109-6.431-.61-6.308c-.176.015-.94.547-.91-.497 0 0 2.461-20.764-16.003-20.764S40.019 38.5 40.019 38.5c.03 1.044-.734.512-.909.497-1.719-.123-1.018 4.378-.611 6.308s.561 2.554 1.219 4.272c.664 1.722 2.034 1.461 2.034 1.461l.864 5.577c.406 2.606 2.033 4.117 2.033 4.117s1.309 8.808-3.825 11.256C34.542 74.983 19 81.298 19 81.298v10.756h42.776a28.41 28.41 0 0 1-.095-2.213c0-7.467 2.926-14.259 7.686-19.304"/>
+                </clipPath>
+                <g clip-path="url(#employmenthistory-C)">
+                  <rect x="19" y="17" width="56" height="76" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="employmenthistory-D">
+              <path d="M86.339 82.829H74.995l.321.234h-.429l9.202 6.682-3.426 10.535.067-.048-.133.409 9.243-6.715 9.243 6.715-.133-.409.066.048-3.422-10.535 9.199-6.68h-.429l.322-.233-11.342-.003-3.504-10.786zm24.458 3.744c0 9.637-6.514 17.734-15.373 20.182l-2.221 5.999C104.399 111.125 113 101.49 113 89.841c0-6.463-2.65-12.306-6.921-16.507a20.86 20.86 0 0 1 4.718 13.239m-44.116 3.268c0 11.649 8.6 21.284 19.797 22.913l-2.221-5.998c-8.859-2.447-15.374-10.545-15.374-20.183a20.87 20.87 0 0 1 4.716-13.238 23.09 23.09 0 0 0-6.918 16.506"/>
+            </clipPath>
+            <g clip-path="url(#employmenthistory-D)">
+              <rect x="66" y="72" width="47" height="41" class="shape"/>
+            </g>
+            <clipPath id="employmenthistory-E">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#employmenthistory-E)">
+              <g opacity=".8">
+                <clipPath id="employmenthistory-F">
+                  <path d="M74.887 73.221h29.907V44.78H74.887z"/>
+                </clipPath>
+                <g clip-path="url(#employmenthistory-F)">
+                  <clipPath id="employmenthistory-G">
+                    <path d="M82.649 66.91l-2.052 6.311 9.242-6.715 9.244 6.715-2.05-6.31-1.481-4.556.095-.069 9.147-6.641-11.425-.002-3.53-10.864-3.526 10.864H74.887l9.147 6.643.095.069z"/>
+                  </clipPath>
+                  <g clip-path="url(#employmenthistory-G)">
+                    <rect x="74" y="44" width="31" height="30" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="employmenthistory-H">
+                  <path d="M74.887 46.442h29.907V18H74.887z"/>
+                </clipPath>
+                <g clip-path="url(#employmenthistory-H)">
+                  <clipPath id="employmenthistory-I">
+                    <path d="M80.597 46.443l9.242-6.716 9.244 6.716-3.531-10.867 9.242-6.709-11.425-.002L89.839 18l-3.526 10.865H74.887l9.242 6.711z"/>
+                  </clipPath>
+                  <g clip-path="url(#employmenthistory-I)">
+                    <rect x="74" y="18" width="31" height="29" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </symbol>

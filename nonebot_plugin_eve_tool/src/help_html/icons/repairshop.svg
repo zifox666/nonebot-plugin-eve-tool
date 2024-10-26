@@ -1,0 +1,39 @@
+<symbol id="repairshop">
+            <clipPath id="repairshop-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#repairshop-A)">
+              <g opacity=".8">
+                <clipPath id="repairshop-B">
+                  <path d="M28.568 103.156h32.253V70.898H28.568z"/>
+                </clipPath>
+                <g clip-path="url(#repairshop-B)">
+                  <clipPath id="repairshop-C">
+                    <path d="M46.099 81.278l-8.946 3.448-8.585 11.104 7.329 7.326 11.101-8.588 3.445-8.945 10.378-10.144-4.583-4.581z"/>
+                  </clipPath>
+                  <g clip-path="url(#repairshop-C)">
+                    <rect x="28" y="70" width="33" height="34" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="repairshop-D">
+                  <path d="M69.362 62.36h31.726V30.61H69.362z"/>
+                </clipPath>
+                <g clip-path="url(#repairshop-D)">
+                  <clipPath id="repairshop-E">
+                    <path d="M97.17 30.61l-.07.018-4.137.433-.281.282-23.32 23.319 7.699 7.699 23.363-23.363.195-.193.45-4.207.019-.071z"/>
+                  </clipPath>
+                  <g clip-path="url(#repairshop-E)">
+                    <rect x="69" y="30" width="33" height="33" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="repairshop-F">
+              <path d="M34.793 23.974l10.383 10.385-1.116 9.567-9.567 1.115-10.381-10.385c-1.931 5.94-.382 12.512 4.053 16.949 3.116 3.129 7.354 4.882 11.77 4.869a16.63 16.63 0 0 0 5.928-1.082l.218-.083 43.398 43.397.219.22 4.956.453 4.791-4.791-.459-4.973-.197-.198-43.379-43.38.117-.308c2.324-6.129.837-13.076-3.789-17.7-3.114-3.131-7.351-4.886-11.767-4.874-1.77 0-3.507.276-5.178.819"/>
+            </clipPath>
+            <g clip-path="url(#repairshop-F)">
+              <rect x="22" y="23" width="78" height="77" class="shape"/>
+            </g>
+          </symbol>

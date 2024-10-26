@@ -1,0 +1,74 @@
+<symbol id="bleedchannel">
+            <clipPath id="bleedchannel-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#bleedchannel-A)">
+              <g opacity=".8">
+                <clipPath id="bleedchannel-B">
+                  <use href="#bleedchannel-M"/>
+                </clipPath>
+                <g clip-path="url(#bleedchannel-B)">
+                  <clipPath id="bleedchannel-C">
+                    <path d="M106.101 43.72v39.574H90.913v22.04l6.477 6.04V91.377h15.188V43.72z"/>
+                  </clipPath>
+                  <g clip-path="url(#bleedchannel-C)">
+                    <rect x="90" y="43" width="23" height="69" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="bleedchannel-D">
+                  <use href="#bleedchannel-M"/>
+                </clipPath>
+                <g clip-path="url(#bleedchannel-D)">
+                  <clipPath id="bleedchannel-E">
+                    <path d="M41.148 83.294v8.083h29.844l-8.671-8.083z"/>
+                  </clipPath>
+                  <g clip-path="url(#bleedchannel-E)">
+                    <rect x="41" y="83" width="30" height="9" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="bleedchannel-F">
+                  <use href="#bleedchannel-M"/>
+                </clipPath>
+                <g clip-path="url(#bleedchannel-F)">
+                  <clipPath id="bleedchannel-G">
+                    <path d="M41.148 73.774H27.855v6.111h30.812l-6.553-6.111z"/>
+                  </clipPath>
+                  <g clip-path="url(#bleedchannel-G)">
+                    <rect x="27" y="73" width="32" height="7" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="bleedchannel-H">
+                  <use href="#bleedchannel-M"/>
+                </clipPath>
+                <g clip-path="url(#bleedchannel-H)">
+                  <clipPath id="bleedchannel-I">
+                    <path d="M95.874 28.817v44.957H80.686v21.965l6.817 6.357V79.885h15.189V28.817z"/>
+                  </clipPath>
+                  <g clip-path="url(#bleedchannel-I)">
+                    <rect x="80" y="28" width="23" height="75" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="bleedchannel-J">
+              <path d="M63.664 79.885l13.613 12.693v-.018L63.683 79.885z"/>
+            </clipPath>
+            <g clip-path="url(#bleedchannel-J)">
+              <rect x="63" y="79" width="15" height="14" class="shape"/>
+            </g>
+            <clipPath id="bleedchannel-K">
+              <path d="M17.627 19.299v51.067h35.829l10.208 9.519h.019L77.277 92.56V70.366h15.188V19.299z"/>
+            </clipPath>
+            <g clip-path="url(#bleedchannel-K)">
+              <rect x="17" y="19" width="76" height="74" class="shape"/>
+            </g>
+            <defs>
+              <path id="bleedchannel-M" d="M26.326 111.374h92.445V28.817H26.326z"/>
+            </defs>
+          </symbol>

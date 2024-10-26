@@ -1,0 +1,30 @@
+<symbol id="corporationstandings">
+            <clipPath id="corporationstandings-A">
+              <path d="M57.224 48.221H35.275L53.03 61.113l-6.786 20.875 17.754-12.9 17.755 12.9-6.781-20.875 17.752-12.887-21.946-.005-6.78-20.87zm47.325 7.244c0 2.979-.33 5.881-.94 8.677l2.6 2.788 2.003 2.147c.388-2.373.599-4.805.599-7.288 0-12.493-5.118-23.788-13.364-31.915a40.37 40.37 0 0 1 9.102 25.591m-85.36 6.324c0 22.538 16.642 41.182 38.306 44.333L53.21 94.554c-17.155-4.726-29.76-20.431-29.76-39.089a40.37 40.37 0 0 1 9.099-25.587c-8.244 8.127-13.36 19.42-13.36 31.911"/>
+            </clipPath>
+            <g clip-path="url(#corporationstandings-A)">
+              <rect x="19" y="27" width="90" height="80" class="shape"/>
+            </g>
+            <clipPath id="corporationstandings-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#corporationstandings-B)">
+              <clipPath id="corporationstandings-C">
+                <path d="M71.323 116.936h28.816V91.835H71.323z"/>
+              </clipPath>
+              <g clip-path="url(#corporationstandings-C)">
+                <clipPath id="corporationstandings-D">
+                  <path d="M86.231 116.936l13.908-15.982h-8.352v-9.119H79.5v9.119h-8.177z"/>
+                </clipPath>
+                <g clip-path="url(#corporationstandings-D)">
+                  <rect x="71" y="91" width="30" height="26" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="corporationstandings-E">
+              <path d="M88.645 86.322h8.352v9.119h12.286v-9.119h8.178L102.552 70.34z"/>
+            </clipPath>
+            <g clip-path="url(#corporationstandings-E)">
+              <rect x="88" y="70" width="30" height="26" class="shape"/>
+            </g>
+          </symbol>

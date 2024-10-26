@@ -1,0 +1,184 @@
+/* 隐藏滚动条 */
+body {
+    overflow: -moz-scrollbars-none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    scrollbar-width: none;
+    /* Firefox 64+ */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 5px;
+}
+
+@font-face {
+    font-family: "HYWenHei";
+    src: url("./font/HYWenHei-55W.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-size: 16px;
+    color: #1e1f20;
+    transform: scale(1.5);
+    transform-origin: 0 0;
+    width: 788px;
+}
+
+
+.container {
+    width: 788px;
+    padding: 15px 15px 15px 15px;
+    background-image: url('./img/sgktsj_img_d7d5047.jpg');
+    background-size: cover; /* 将背景图设置为覆盖整个容器 */
+    background-repeat: no-repeat; /* 防止背景图平铺 */
+    background-position: center; /* 居中显示背景图 */
+}
+
+.head_box {
+    border-radius: 15px;
+    font-family: HYWenHei;
+    padding: 20px 15px;
+    position: relative;
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+    background:
+            linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)),
+            url('./img/eve_head.webp') center center no-repeat;
+}
+
+.head_box .id_text {
+    font-size: 24px;
+}
+
+.head_box .day_text {
+    font-size: 20px;
+}
+
+.head_box .Help_logo {
+    position: absolute;
+    top: -6px;
+    right: 15px;
+    width: 97px;
+}
+
+.base_info {
+    position: relative;
+    padding-left: 10px;
+}
+
+.uid {
+    font-family: HYWenHei;
+}
+
+.data_box {
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 20px 0px 5px 0px;
+    background: rgba(169, 169, 240, 0.1); /* 使用半透明的灰色作为背景 */
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+    position: relative;
+    backdrop-filter: blur(2px); /* 设置模糊半径，调整这个值以达到你想要的效果 */
+}
+
+.tab_lable {
+    position: absolute;
+    top: -10px;
+    left: -8px;
+    background: rgba(212, 185, 140, 0.8);      /*#d4b98c*/
+    backdrop-filter: blur(10px); /* 设置模糊半径，调整这个值以达到你想要的效果 */
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 10px;
+    border-radius: 15px 0px 15px 15px;
+    z-index: 20;
+}
+
+.data_line {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 14px;
+}
+
+.data_line_item {
+    width: 100px;
+    text-align: center;
+    /*margin: 0 20px;*/
+}
+
+.num {
+    font-size: 24px;
+}
+
+.data_box .lable {
+    font-size: 14px;
+    color: #7f858a;
+    line-height: 1;
+    margin-top: 3px;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.list .item {
+    width: 365px;
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 8px 6px 8px 6px;
+    border-radius: 8px;
+    margin: 0 0px 10px 10px;
+    background: rgba(250, 250, 250, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.list .item .icon {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.list .item .title {
+    font-size: 16px;
+    margin-left: 6px;
+    line-height: 20px;
+}
+
+.list .item .title .dec {
+    font-size: 12px;
+    color: #999;
+    margin-top: 2px;
+}
+
+.logo {
+    font-size: 14px;
+    font-family: "HYWenHei";
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    /*新增半透明框*/
+    background: rgba(212, 185, 140, 0.8);
+    backdrop-filter: blur(4px);
+}

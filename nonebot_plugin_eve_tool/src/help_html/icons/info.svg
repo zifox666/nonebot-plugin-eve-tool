@@ -1,0 +1,8 @@
+<symbol id="info">
+            <clipPath id="info-A">
+              <path d="M24 64.001C24 86.091 41.909 104 64 104s40-17.909 40-39.999S86.09 24 64 24 24 41.909 24 64.001M59.714 39h10v10.001h-10zm-2.857 16.667h12.857V79h1.429v10H58.286V79h1.428V65.668h-2.857z"/>
+            </clipPath>
+            <g clip-path="url(#info-A)">
+              <rect x="24" y="24" width="80" height="80" class="shape"/>
+            </g>
+          </symbol>

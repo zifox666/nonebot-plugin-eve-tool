@@ -1,0 +1,90 @@
+<symbol id="folder_cargo">
+            <clipPath id="folder_cargo-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#folder_cargo-A)">
+              <mask id="folder_cargo-B">
+                <g clip-path="url(#folder_cargo-C)">
+                  <path transform="matrix(1 0 0 -1 0 128)" d="M21.421 108.686h84.955V19.315H21.421z"/>
+                  <g clip-path="url(#folder_cargo-D)">
+                    <path transform="matrix(1 0 0 -1 0 128)" d="M128 0H0v128h128z"/>
+                    <g clip-path="url(#folder_cargo-E)" opacity=".6">
+                      <path transform="matrix(1 0 0 -1 15.306 89.657)" d="M0 0l48.593 21.767L97.186 0 48.593-21.768z" class="shape"/>
+                      <path transform="matrix(1 0 0 -1 63.898 65.151)" d="M0 0l-2.044-.915-42.477-19.028-10.187-4.564 10.187-4.562 42.477-19.029L0-49.013l2.044.915 42.477 19.029 10.187 4.562-10.187 4.564L2.044-.915zm0-5.479l42.478-19.028L0-43.534-42.477-24.507z"/>
+                    </g>
+                    <path transform="matrix(1 0 0 -1 15.306 76.83)" d="M0 0l48.593 21.768L97.186 0 48.593-21.767z" class="shape" fill-opacity=".7"/>
+                    <path transform="matrix(1 0 0 -1 63.898 52.322)" d="M0 0l-2.044-.916-42.477-19.027-10.187-4.564 10.187-4.562 42.477-19.029L0-49.014l2.044.916 42.477 19.029 10.187 4.562-10.187 4.564L2.044-.916zm0-5.479l42.478-19.028L0-43.534-42.477-24.507z"/>
+                    <path transform="matrix(1 0 0 -1 15.306 64)" d="M0 0l48.593 21.768L97.186 0 48.593-21.767z" class="shape" fill-opacity=".8"/>
+                    <path transform="matrix(1 0 0 -1 63.898 39.493)" d="M0 0l-2.044-.916-42.477-19.027-10.187-4.564 10.187-4.563 42.477-19.028L0-49.014l2.044.916L44.521-29.07l10.187 4.563-10.187 4.564L2.044-.916zm0-5.479l42.478-19.028L0-43.535-42.477-24.507z"/>
+                    <path transform="matrix(1 0 0 -1 15.306 51.17)" d="M0 0l48.593 21.767L97.186 0 48.593-21.768z" class="shape" fill-opacity=".9"/>
+                    <path transform="matrix(1 0 0 -1 63.898 26.664)" d="M0 0l-2.044-.916-42.477-19.028-10.187-4.563 10.187-4.563 42.477-19.028L0-49.014l2.044.916L44.521-29.07l10.187 4.563-10.187 4.563L2.044-.916zm0-5.479l42.478-19.028L0-43.535-42.477-24.507z"/>
+                    <path transform="matrix(1 0 0 -1 15.306 38.342)" d="M0 0l48.593 21.767L97.186 0 48.593-21.768z" class="shape"/>
+                    <path transform="matrix(1 0 0 -1 63.898 13.836)" d="M0 0l-2.044-.915-42.477-19.028-10.187-4.563 10.187-4.563 42.477-19.029L0-49.013l2.044.915 42.477 19.029 10.187 4.563-10.187 4.563L2.044-.915zm0-5.479l42.478-19.027L0-43.534-42.477-24.506z"/>
+                    <path transform="matrix(1 0 0 -1 115.781 66.863)" d="M0 0l-16.811 7.214-9.206-9.16-6.746-6.764 1.709-4-3.617-3.628-3.919 1.681-9.208-9.155-6.745-6.763 7.178-16.804 16.81-7.212 9.202 9.157 6.745 6.764-1.682 3.94 3.653 3.662 3.863-1.658 9.202 9.158 6.745 6.762z"/>
+                  </g>
+                </g>
+              </mask>
+              <clipPath id="folder_cargo-C">
+                <path d="M21.421 108.686h84.955V19.314H21.421z"/>
+              </clipPath>
+              <clipPath id="folder_cargo-D">
+                <path d="M21.42 108.686h84.956V19.314H21.421z"/>
+              </clipPath>
+              <clipPath id="folder_cargo-E">
+                <path d="M9.19 114.164h109.416V65.151H9.19z"/>
+              </clipPath>
+              <g mask="url(#folder_cargo-B)">
+                <clipPath id="folder_cargo-F">
+                  <path transform="matrix(1 0 0 -1 0 128)" d="M21.421 19.314h84.955v89.372H21.421z"/>
+                </clipPath>
+                <g clip-path="url(#folder_cargo-F)">
+                  <clipPath id="folder_cargo-G">
+                    <path transform="matrix(1 0 0 -1 0 128)" d="M106.376 108.686H21.421V19.315h84.955z"/>
+                  </clipPath>
+                  <g clip-path="url(#folder_cargo-G)">
+                    <rect x="21" y="19" width="86" height="90" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <path d="M99.695 65.98l-6.807 6.772-4.354 4.366 6.807-6.772zM95.324 76.095l-4.52 4.5-.549.551-8.53 8.554.022.01z" fill="gray"/>
+            <clipPath id="folder_cargo-H">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#folder_cargo-H)">
+              <clipPath id="folder_cargo-I">
+                <path d="M85.279 109.318h31.348V71.072H85.279z"/>
+              </clipPath>
+              <g clip-path="url(#folder_cargo-I)">
+                <clipPath id="folder_cargo-J">
+                  <path d="M103.217 79.481L89.636 93.099l-.003-.006-4.354 4.366 5.062 11.859 4.355-4.366-1.694-3.967 8.566-8.588 5.017-5.031zm13.41 3.454l-4.354 4.367-5.063-11.864 4.355-4.366z"/>
+                </clipPath>
+                <g clip-path="url(#folder_cargo-J)">
+                  <rect x="85" y="71" width="32" height="39" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <path d="M77.763 88l-6.807 6.768-4.354 4.366 6.807-6.767z" fill="gray"/>
+            <clipPath id="folder_cargo-K">
+              <path d="M85.279 97.459l-11.87-5.092-6.807 6.767 5.067 11.862 11.87 5.092 6.802-6.77zm21.931-22.021l5.063 11.864-6.803 6.769-3.902-1.674 5.017-5.031-3.368-7.885-7.893-3.386-4.52 4.501-.549.551-1.721-4.029 6.807-6.772z"/>
+            </clipPath>
+            <g clip-path="url(#folder_cargo-K)">
+              <rect x="66" y="70" width="47" height="47" class="shape"/>
+            </g>
+            <clipPath id="folder_cargo-L">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#folder_cargo-L)">
+              <clipPath id="folder_cargo-M">
+                <path d="M73.41 97.459h38.155V65.98H73.409z"/>
+              </clipPath>
+              <g clip-path="url(#folder_cargo-M)">
+                <clipPath id="folder_cargo-N">
+                  <path d="M85.279 97.459l4.354-4.366.003.006 13.581-13.618-7.893-3.386L81.747 89.71l-.022-.01-3.962-1.699-4.354 4.366zm10.062-27.113l4.354-4.366 11.87 5.092-4.355 4.366z"/>
+                </clipPath>
+                <g clip-path="url(#folder_cargo-N)">
+                  <rect x="73" y="65" width="39" height="33" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

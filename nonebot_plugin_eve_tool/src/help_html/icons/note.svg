@@ -1,0 +1,24 @@
+<symbol id="note">
+            <clipPath id="note-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#note-A)">
+              <clipPath id="note-B">
+                <path d="M78.432 108.037h20.107V89.31H78.432z"/>
+              </clipPath>
+              <g clip-path="url(#note-B)">
+                <clipPath id="note-C">
+                  <path d="M78.432 89.311v18.726l.027-.026L98.5 89.348l.039-.037H98.5z"/>
+                </clipPath>
+                <g clip-path="url(#note-C)">
+                  <rect x="78" y="89" width="21" height="20" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="note-D">
+              <path d="M43.756 73.288h25.337v5.568H43.756zm0-13.06h35.803v5.57H43.756zm0-12.939h35.803v5.571H43.756zm0-13.049h35.803v5.57H43.756zm54.771 45.962V19.963H29.489v60.239h-.028v27.809l45.994.026V86.346h23.084v-6.144z"/>
+            </clipPath>
+            <g clip-path="url(#note-D)">
+              <rect x="29" y="19" width="70" height="90" class="shape"/>
+            </g>
+          </symbol>

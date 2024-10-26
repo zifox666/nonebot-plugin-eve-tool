@@ -1,0 +1,24 @@
+<symbol id="smallfolder">
+            <clipPath id="smallfolder-A">
+              <path d="M56.371 27.847H18.527v11.108h49.985z"/>
+            </clipPath>
+            <g clip-path="url(#smallfolder-A)">
+              <rect x="18" y="27" width="51" height="12" class="shape"/>
+            </g>
+            <clipPath id="smallfolder-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".9" clip-path="url(#smallfolder-B)">
+              <clipPath id="smallfolder-C">
+                <path d="M18.527 100.152h90.946V38.955H18.527z"/>
+              </clipPath>
+              <g clip-path="url(#smallfolder-C)">
+                <clipPath id="smallfolder-D">
+                  <path d="M68.512 38.955H18.527v61.198h90.946V38.955z"/>
+                </clipPath>
+                <g clip-path="url(#smallfolder-D)">
+                  <rect x="18" y="38" width="92" height="63" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

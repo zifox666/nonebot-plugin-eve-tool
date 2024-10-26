@@ -1,0 +1,34 @@
+<symbol id="replyall">
+            <clipPath id="replyall-A">
+              <path d="M35.571 63.5l35.164 29.133V76.856h11.554c23.973.857 23.823 10.362 26.466 18.281.123.368.674.271.674-.117V67.728c0-17.288-19.096-19.596-27.14-19.596-3.653 0 0-.028 0-.028H70.735V32.632z"/>
+            </clipPath>
+            <g clip-path="url(#replyall-A)">
+              <mask id="replyall-B">
+                <g clip-path="url(#replyall-C)">
+                  <rect x="35" y="32" width="75" height="64" class="shape"/>
+                </g>
+              </mask>
+              <clipPath id="replyall-C">
+                <path d="M-32768 32896h65535v-65535h-65535z"/>
+              </clipPath>
+              <g mask="url(#replyall-B)">
+                <rect x="35" y="32" width="75" height="64" class="shape"/>
+              </g>
+            </g>
+            <clipPath id="replyall-D">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#replyall-D)">
+              <clipPath id="replyall-E">
+                <path d="M18.57 92.633h35.164v-60H18.571z"/>
+              </clipPath>
+              <g clip-path="url(#replyall-E)">
+                <clipPath id="replyall-F">
+                  <path d="M30.571 63.5l23.163-20.334V32.633L18.571 63.5l35.163 29.133v-9.942z"/>
+                </clipPath>
+                <g clip-path="url(#replyall-F)">
+                  <rect x="18" y="32" width="36" height="61" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

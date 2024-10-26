@@ -1,0 +1,40 @@
+<symbol id="cargocontainerlocked">
+            <clipPath id="cargocontainerlocked-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#cargocontainerlocked-A)">
+              <clipPath id="cargocontainerlocked-B">
+                <path d="M19.048 108.952h89.904V19.048H19.048z"/>
+              </clipPath>
+              <g clip-path="url(#cargocontainerlocked-B)">
+                <clipPath id="cargocontainerlocked-C">
+                  <path d="M42.25 77.258H23.951l-4.903 18.298 13.396 13.396 18.298-4.903V85.75zm43.5 0l-8.492 8.492v18.299l18.298 4.903 13.396-13.396-4.903-18.298zm0-26.516h18.299l4.903-18.298-13.396-13.396-18.298 4.903V42.25zm-43.5 0H23.951l-4.903-18.298 13.396-13.396 18.298 4.903V42.25z"/>
+                </clipPath>
+                <g clip-path="url(#cargocontainerlocked-C)">
+                  <rect x="19" y="19" width="90" height="90" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="cargocontainerlocked-D">
+              <path d="M55.62 44.271l-.167.168-11.066 11.064-.117.117h.117v16.877l11.066 11.065.167.167h16.76l.168-.167 11.066-11.065.116-.117V55.62l-.116-.117-11.066-11.064-.168-.168zm5.576 20.08a6.36 6.36 0 0 1-3.564-5.711 6.37 6.37 0 0 1 9.552-5.515 6.37 6.37 0 0 1 3.184 5.515 6.36 6.36 0 0 1-3.565 5.711v11.007h-5.607z"/>
+            </clipPath>
+            <g clip-path="url(#cargocontainerlocked-D)">
+              <rect x="44" y="44" width="40" height="40" class="shape"/>
+            </g>
+            <clipPath id="cargocontainerlocked-E">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#cargocontainerlocked-E)">
+              <clipPath id="cargocontainerlocked-F">
+                <path d="M23.951 104.048h80.098V23.951H23.951z"/>
+              </clipPath>
+              <g clip-path="url(#cargocontainerlocked-F)">
+                <clipPath id="cargocontainerlocked-G">
+                  <path d="M55.62 104.048h16.76V83.729H55.62zm48.429-48.428H83.73v16.76h20.319zM72.38 23.951H55.62v20.32h16.76zM44.387 72.496H23.951V55.62h20.436z"/>
+                </clipPath>
+                <g clip-path="url(#cargocontainerlocked-G)">
+                  <rect x="23" y="23" width="82" height="82" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

@@ -1,0 +1,33 @@
+<symbol id="cargocontainer">
+            <clipPath id="cargocontainer-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#cargocontainer-A)">
+              <g opacity=".8">
+                <clipPath id="cargocontainer-B">
+                  <path d="M23.951 104.152h80.098V24.055H23.951z"/>
+                </clipPath>
+                <g clip-path="url(#cargocontainer-B)">
+                  <clipPath id="cargocontainer-C">
+                    <path d="M83.73 55.724l-.117-.117-11.065-11.065-.168-.168V24.055H55.62v20.319l-.168.168-11.065 11.065-.117.117H23.951v16.759H44.27l.117.117 11.065 11.065.168.168v20.319h16.76V83.833l.168-.168L83.613 72.6l.117-.117h20.319V55.724z"/>
+                  </clipPath>
+                  <g clip-path="url(#cargocontainer-C)">
+                    <rect x="23" y="24" width="82" height="81" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="cargocontainer-D">
+                  <path d="M19.048 109.055h89.904V19.152H19.048z"/>
+                </clipPath>
+                <g clip-path="url(#cargocontainer-D)">
+                  <clipPath id="cargocontainer-E">
+                    <path d="M42.25 77.361H23.951L19.048 95.66l13.396 13.395 18.298-4.903V85.854zm43.5 0l-8.492 8.493v18.298l18.298 4.903 13.396-13.395-4.903-18.299zm0-26.515h18.299l4.903-18.299-13.396-13.395-18.298 4.903v18.298zm-43.5 0H23.951l-4.903-18.299 13.396-13.395 18.298 4.903v18.298z"/>
+                  </clipPath>
+                  <g clip-path="url(#cargocontainer-E)">
+                    <rect x="19" y="19" width="90" height="91" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </symbol>

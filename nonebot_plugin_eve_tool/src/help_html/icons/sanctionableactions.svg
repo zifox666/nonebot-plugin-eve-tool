@@ -1,0 +1,20 @@
+<symbol id="sanctionableactions">
+            <clipPath id="sanctionableactions-A">
+              <path d="M77.11 46.843c17.22 3.992 15.693 16.545 30.76 16.73.309-.027.612-.046.927-.085-3.899-2.996-5.73-10.443-7.826-17.308 0 0 10.679 3.238 18.261-5.071-15.848.529-14.09-12.662-31.645-16.732z"/>
+            </clipPath>
+            <g clip-path="url(#sanctionableactions-A)">
+              <rect x="77" y="24" width="43" height="40" class="shape"/>
+            </g>
+            <clipPath id="sanctionableactions-B">
+              <path d="M8.768 41.109c7.583 8.309 18.262 5.071 18.262 5.071-2.096 6.865-3.925 14.312-7.828 17.308.314.039.616.058.926.085 15.068-.184 13.542-12.738 30.763-16.73L40.415 24.377c-17.557 4.07-15.802 17.261-31.647 16.732"/>
+            </clipPath>
+            <g clip-path="url(#sanctionableactions-B)">
+              <rect x="8" y="24" width="43" height="40" class="shape"/>
+            </g>
+            <clipPath id="sanctionableactions-C">
+              <path d="M63.999 62.115L47.585 20.887l-4.699 2.192 16.057 39.604C47.729 64.933 39.274 74.9 39.274 86.858c0 13.619 10.96 24.658 24.476 24.658s24.473-11.039 24.473-24.658c0-11.794-8.226-21.648-19.211-24.075l16.105-39.704-4.704-2.192zm-6.11 27.428L48 82.359h12.222L64 70.735l3.776 11.624H80l-9.89 7.184 3.777 11.625L64 93.984l-9.889 7.184z"/>
+            </clipPath>
+            <g clip-path="url(#sanctionableactions-C)">
+              <rect x="39" y="20" width="50" height="92" class="shape"/>
+            </g>
+          </symbol>

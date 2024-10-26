@@ -81,19 +81,8 @@ class Config(BaseModel):
     """常规设置"""
     eve_command_start: List[str] = ["/", "", "！", ".", "!", "#"]
 
-    """超级管理员id"""
+    """作者id"""
     SUPERUSERS: int = 123456
-
-    """zkillboard监听方式"""
-    eve_zkillboard_link: str = "wss://zkillboard.com/websocket/"
-    eve_zkillboard_method: str = "websocket"
-
-    @field_validator('eve_zkillboard_method')
-    def check_eve_history_preference(cls, v):
-        allowed_values = {'websocket', 'redisQ'}
-        if v not in allowed_values:
-            raise ValueError(f'eve_zkillboard_method must be one of {allowed_values}')
-        return v
 
 
 plugin_config = get_plugin_config(Config)

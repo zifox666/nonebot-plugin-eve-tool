@@ -1,0 +1,24 @@
+<symbol id="shiphangar">
+            <clipPath id="shiphangar-A">
+              <path d="M87.719 72.831v4.074h-1.817v-9.929l-1.797 1.796h-.021v8.133l-2.271 2.274v1.738l-5.874-1.984v-2.188l-4.525-2.664v-8.375l1.051-3.922V53.46l1.25-4.684V38.042l-4.303-.766-4.305.766v10.734l2.299 19.094v10.785L64 75.722l-3.408 2.929V67.87l2.299-19.094V38.042l-4.303-.766-4.305.766v10.734l1.252 4.684v8.324l1.049 3.926v8.371l-4.531 2.664v2.188l-5.869 1.984v-1.738l-2.272-2.274v-8.133h-.019l-1.799-1.796v9.929h-1.817v-4.074l-1.533-1.535v17.207l1.533 1.531V87.05h2.34l14.992 2.308V87.05h2.42v2.043L64 91.479l3.967-2.386V87.05h2.422v2.308l14.99-2.308h2.34v2.984l1.533-1.531V71.296z"/>
+            </clipPath>
+            <g clip-path="url(#shiphangar-A)">
+              <rect x="38" y="37" width="52" height="55" class="shape"/>
+            </g>
+            <clipPath id="shiphangar-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#shiphangar-B)">
+              <clipPath id="shiphangar-C">
+                <path d="M18.664 109.714h90.668V19.042H18.664z"/>
+              </clipPath>
+              <g clip-path="url(#shiphangar-C)">
+                <clipPath id="shiphangar-D">
+                  <path d="M103.33 59.878h5v-5h-5zm-83.664 0h5v-5h-5zm83.664 14h5v-5h-5zm-83.664 0h5v-5h-5zm53.832 29.832h-5v5h5zm0-83.664h-5v5h5zm-14 83.664h-5v5h5zm0-83.664h-5v5h5zm42.834 5.996v15.406l7 7V26.214l-6.84-7.172H79.93l7 7zm0 76.672H86.93l-7 7h22.234l7.168-6.844V80.308l-7 7zm-76.668 0V87.308l-7-7v22.234l6.84 7.172h22.562l-7-7zm0-61.266l-7 7V25.886l7.168-6.844h22.234l-7 7H25.664z"/>
+                </clipPath>
+                <g clip-path="url(#shiphangar-D)">
+                  <rect x="18" y="19" width="92" height="91" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

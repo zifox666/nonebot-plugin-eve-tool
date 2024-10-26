@@ -1,0 +1,18 @@
+<symbol id="reply">
+            <clipPath id="reply-A">
+              <path d="M24.07 63.5l35.164 29.133V76.856h17.554c23.974.857 23.824 10.362 26.467 18.281.124.368.674.271.674-.117V67.728c0-17.288-19.096-19.596-27.141-19.596-3.652 0 0-.028 0-.028H59.234V32.632z"/>
+            </clipPath>
+            <g clip-path="url(#reply-A)">
+              <mask id="reply-B">
+                <g clip-path="url(#reply-C)">
+                  <rect x="24" y="32" width="80" height="64" class="shape"/>
+                </g>
+              </mask>
+              <clipPath id="reply-C">
+                <path d="M-32768 32896h65535v-65535h-65535z"/>
+              </clipPath>
+              <g mask="url(#reply-B)">
+                <rect x="24" y="32" width="80" height="64" class="shape"/>
+              </g>
+            </g>
+          </symbol>

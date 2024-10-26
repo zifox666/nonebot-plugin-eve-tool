@@ -1,0 +1,24 @@
+<symbol id="redeem">
+            <clipPath id="redeem-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#redeem-A)">
+              <clipPath id="redeem-B">
+                <path d="M25.5 101.5h77v-77h-77z"/>
+              </clipPath>
+              <g clip-path="url(#redeem-B)">
+                <clipPath id="redeem-C">
+                  <path d="M45.906 24.499v25.873l25.873-25.873zm36 36V34.627L56.033 60.499zM66.5 65.501v25.871l25.872-25.871zm36 36V75.626l-25.875 25.875zm-41-25.875l-25.875 25.875H61.5zM51.372 65.501L25.5 91.372V65.501z"/>
+                </clipPath>
+                <g clip-path="url(#redeem-C)">
+                  <rect x="25" y="24" width="78" height="78" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="redeem-D">
+              <path d="M81.906 29.677v-5.178h-5.177L45.906 55.321v5.178h5.178zM102.5 65.501h-5.179L66.5 96.323v5.178h5.176l30.822-30.823zm-41.002 5.177l-30.822 30.823H25.5v-5.178l30.821-30.822H61.5z"/>
+            </clipPath>
+            <g clip-path="url(#redeem-D)">
+              <rect x="25" y="24" width="78" height="78" class="shape"/>
+            </g>
+          </symbol>

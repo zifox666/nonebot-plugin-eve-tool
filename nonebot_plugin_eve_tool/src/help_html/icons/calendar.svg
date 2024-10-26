@@ -1,0 +1,24 @@
+<symbol id="calendar">
+            <clipPath id="calendar-A">
+              <path d="M50.435 98.357H61V87.793H50.435zm0 0H61V87.793H50.435zm-16.563 0h10.563V87.793H33.872zm0 0h10.563V87.793H33.872zm60.256-27.128H83.564v10.564h10.564zm0 0H83.564v10.564h10.564zM67 81.793h10.563V71.229H67zm0 0h10.563V71.229H67zm-16.565 0H61V71.229H50.435zm0 0H61V71.229H50.435zm-16.563 0h10.563V71.229H33.872zm0 0h10.563V71.229H33.872zm60.256-27.127H83.564v10.563h10.564zm0 0H83.564v10.563h10.564zM67 65.229h10.563V54.666H67zm0 0h10.563V54.666H67zm-16.565 0H61V54.666H50.435zm0 0H61V54.666H50.435zm-16.563 0h10.563V54.666H33.872zm0 0h10.563V54.666H33.872zM87.824 22.92H75.848v10h11.976zm-35.83 0H40.015v10h11.979zM100 44.775H28V28h7.016v9.92h21.978V28h13.854v9.92h21.976V28H100z"/>
+            </clipPath>
+            <g clip-path="url(#calendar-A)">
+              <rect x="28" y="22" width="72" height="77" class="shape"/>
+            </g>
+            <clipPath id="calendar-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".25" clip-path="url(#calendar-B)">
+              <clipPath id="calendar-C">
+                <path d="M28 104h72V49.023H28z"/>
+              </clipPath>
+              <g clip-path="url(#calendar-C)">
+                <clipPath id="calendar-D">
+                  <path d="M84.027 104L100 88.027V104zm-6.464-38.771H67V54.666h10.563zm0 16.564H67V71.229h10.563zM61 65.229H50.435V54.666H61zm0 16.564H50.435V71.229H61zm0 16.564H50.435V87.793H61zM44.435 65.229H33.872V54.666h10.563zm0 16.564H33.872V71.229h10.563zm0 16.564H33.872V87.793h10.563zm39.128-27.128h10.564v10.564H83.563zm0-16.563h10.564v10.563H83.563zm12.902 29.826L100 80.957V49.023H28V104h48.957l3.535-3.535z"/>
+                </clipPath>
+                <g clip-path="url(#calendar-D)">
+                  <rect x="28" y="49" width="72" height="55" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

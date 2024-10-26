@@ -1,0 +1,35 @@
+<symbol id="medical">
+            <clipPath id="medical-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#medical-A)">
+              <clipPath id="medical-B">
+                <path d="M21.25 104.5h85.499V90.934H21.251z"/>
+              </clipPath>
+              <g clip-path="url(#medical-B)" class="shape" opacity="0.8">
+                <path d="M21.25 104.5h8.778l-3.305-13.566zm80.027-13.566L97.971 104.5h8.778z" class="shape" opacity="0.8"/>
+              </g>
+            </g>
+            <clipPath id="medical-C">
+              <path d="M64 23.269H44.552L23.159 76.3l6.87 28.2h67.943l6.87-28.2-21.394-53.031zM28.026 76.653l19.661-48.738h32.625l19.662 48.738-5.652 23.201H33.678zm20.8-18.194c.029.989-.696.485-.862.471-1.63-.117-.965 4.15-.579 5.981s.532 2.421 1.156 4.051c.629 1.632 1.928 1.385 1.928 1.385l.819 5.288c.386 2.47 1.928 3.904 1.928 3.904s0 .246-.338 3.457-4.046 3.708-4.046 3.708l-12.117 3.919.998 4.096h52.574l.998-4.096-12.117-3.919s-3.709-.496-4.046-3.708l-.338-3.457s1.542-1.434 1.928-3.904l.819-5.288s1.299.247 1.928-1.385.771-2.223 1.156-4.051 1.051-6.098-.579-5.981c-.166.014-.891.518-.862-.471 0 0 2.334-19.689-15.174-19.689S48.826 58.459 48.826 58.459m2.218-.619H60.5v-9.455h7v9.455h9.455v7.001H67.5v9.455h-7v-9.455h-9.456z"/>
+            </clipPath>
+            <g clip-path="url(#medical-C)">
+              <rect x="23" y="23" width="82" height="82" class="shape"/>
+            </g>
+            <clipPath id="medical-D">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".25" clip-path="url(#D)">
+              <clipPath id="medical-E">
+                <path d="M51.044 74.296h25.912V48.385H51.044z"/>
+              </clipPath>
+              <g clip-path="url(#medical-E)">
+                <clipPath id="medical-F">
+                  <path d="M60.5 74.296V64.84h-9.456v-7H60.5v-9.455h7v9.455h9.456v7H67.5v9.456z"/>
+                </clipPath>
+                <g clip-path="url(#medical-F)">
+                  <rect x="51" y="48" width="26" height="27" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

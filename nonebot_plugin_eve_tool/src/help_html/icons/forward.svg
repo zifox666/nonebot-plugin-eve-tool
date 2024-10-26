@@ -1,0 +1,8 @@
+<symbol id="forward">
+            <clipPath id="forward-A">
+              <path d="M24.641 78.223h43.554V94l35.164-29.133L68.195 34v15.472H24.641z"/>
+            </clipPath>
+            <g clip-path="url(#forward-A)">
+              <rect x="24" y="34" width="80" height="60" class="shape"/>
+            </g>
+          </symbol>

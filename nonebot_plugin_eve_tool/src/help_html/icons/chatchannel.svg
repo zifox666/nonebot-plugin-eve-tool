@@ -1,0 +1,8 @@
+<symbol id="chatchannel">
+            <clipPath id="chatchannel-A">
+              <path d="M29.435 28v7h69.131v42.725H63.011l-2.017 1.879-14.686 13.695V77.725H29.435V28l-7.001 7v49.725h16.874v24.673l26.46-24.673h32.798l7-7V28z"/>
+            </clipPath>
+            <g clip-path="url(#chatchannel-A)">
+              <rect x="22" y="28" width="84" height="82" class="shape"/>
+            </g>
+          </symbol>

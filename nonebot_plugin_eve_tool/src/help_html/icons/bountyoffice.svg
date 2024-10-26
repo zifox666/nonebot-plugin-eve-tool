@@ -1,0 +1,24 @@
+<symbol id="bountyoffice">
+            <clipPath id="bountyoffice-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#bountyoffice-A)">
+              <clipPath id="bountyoffice-B">
+                <path d="M21.369 110.736h85.261V19.263H21.369z"/>
+              </clipPath>
+              <g clip-path="url(#bountyoffice-B)">
+                <clipPath id="bountyoffice-C">
+                  <path d="M63.999 96.219c-17.794 0-32.219-14.426-32.219-32.22s14.425-32.22 32.219-32.22 32.22 14.426 32.22 32.22-14.425 32.22-32.22 32.22m42.631-54.956l-9.5-13.5c-29.5 0-33.131-8.5-33.131-8.5s-3.63 8.5-33.13 8.5l-9.5 13.5s9.031 11 4.531 30.5 38.099 38.973 38.099 38.973 42.599-19.473 38.099-38.973 4.532-30.5 4.532-30.5"/>
+                </clipPath>
+                <g clip-path="url(#bountyoffice-C)">
+                  <rect x="21" y="19" width="86" height="92" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="bountyoffice-D">
+              <path d="M37.375 63.998c0 14.681 11.944 26.625 26.625 26.625s26.624-11.944 26.624-26.625S78.68 37.375 64 37.375 37.375 49.318 37.375 63.998M66.5 53.565V42.524c9.928 1.149 17.826 9.046 18.975 18.974H74.434v5.001h11.041c-1.149 9.928-9.047 17.826-18.975 18.975v-11.04h-5v11.04c-9.929-1.149-17.827-9.047-18.975-18.975h11.039v-5.001H42.525c1.148-9.928 9.046-17.825 18.975-18.974v11.041z"/>
+            </clipPath>
+            <g clip-path="url(#bountyoffice-D)">
+              <rect x="37" y="37" width="54" height="54" class="shape"/>
+            </g>
+          </symbol>

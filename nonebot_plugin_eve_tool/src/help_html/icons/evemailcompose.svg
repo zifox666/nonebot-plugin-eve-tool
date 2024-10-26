@@ -1,0 +1,8 @@
+<symbol id="evemailcompose">
+            <clipPath id="evemailcompose-A">
+              <path d="M56.078 37.374l-14.887 3.827-3.821 14.88L33.543 41.2l-14.88-3.826 14.88-3.826 3.827-14.882 3.821 14.881zm-1.395 16.864h35.92v4.435h-35.92zm35.92 13.391h-35.92v-4.435h35.92zm0 8.957h-35.92v-4.434h35.92zm9.394-31.005H45.289v54.418h54.708z"/>
+            </clipPath>
+            <g clip-path="url(#evemailcompose-A)">
+              <rect x="18" y="18" width="82" height="82" class="shape"/>
+            </g>
+          </symbol>

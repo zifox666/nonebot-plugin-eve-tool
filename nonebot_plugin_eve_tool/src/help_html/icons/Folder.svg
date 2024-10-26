@@ -1,0 +1,49 @@
+<symbol id="Folder">
+            <clipPath id="Folder-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#Folder-A)">
+              <mask id="Folder-B">
+                <g clip-path="url(#Folder-C)">
+                  <path transform="matrix(1 0 0 -1 0 128)" d="M21.522 109.082h84.955V19.711H21.522z"/>
+                  <g clip-path="url(#Folder-D)">
+                    <path transform="matrix(1 0 0 -1 0 128)" d="M128 .648H0v128h128z"/>
+                    <g clip-path="url(#Folder-E)" opacity=".6">
+                      <path transform="matrix(1 0 0 -1 15.407 89.262)" d="M0 0l48.593 21.768L97.186 0 48.593-21.767z" class="shape"/>
+                      <path transform="matrix(1 0 0 -1 64 64.755)" d="M0 0l-2.044-.915-42.477-19.028-10.187-4.563 10.187-4.563 42.477-19.029L0-49.013l2.044.915 42.477 19.029 10.187 4.563-10.187 4.563L2.044-.915zm0-5.479l42.478-19.027L0-43.534-42.478-24.506z"/>
+                    </g>
+                    <path transform="matrix(1 0 0 -1 15.407 76.433)" d="M0 0l48.593 21.767L97.186 0 48.593-21.768z" class="shape" fill-opacity=".8"/>
+                    <path transform="matrix(1 0 0 -1 64 51.926)" d="M0 0l-2.044-.916-42.477-19.027-10.187-4.564 10.187-4.562 42.477-19.029L0-49.013l2.044.915 42.477 19.029 10.187 4.562-10.187 4.564L2.044-.916zm0-5.479l42.478-19.028L0-43.534-42.478-24.507z"/>
+                    <path transform="matrix(1 0 0 -1 15.407 63.603)" d="M0 0l48.593 21.767L97.186 0 48.593-21.768z" class="shape" fill-opacity=".9"/>
+                    <path transform="matrix(1 0 0 -1 64 39.097)" d="M0 0l-2.044-.916-42.477-19.027-10.187-4.564 10.187-4.563 42.477-19.028L0-49.014l2.044.916L44.521-29.07l10.187 4.563-10.187 4.564L2.044-.916zm0-5.479l42.478-19.028L0-43.534-42.478-24.507z"/>
+                    <path transform="matrix(1 0 0 -1 15.407 50.774)" d="M0 0l48.593 21.767L97.186 0 48.593-21.768z" class="shape" fill-opacity="1"/>
+                    <path transform="matrix(1 0 0 -1 64 26.268)" d="M0 0l-2.044-.916-42.477-19.028-10.187-4.563 10.187-4.563 42.477-19.028L0-49.014l2.044.916L44.521-29.07l10.187 4.563-10.187 4.563L2.044-.916zm0-5.479l42.478-19.028L0-43.535-42.478-24.507z"/>
+                    <path transform="matrix(1 0 0 -1 15.407 37.946)" d="M0 0l48.593 21.768L97.186 0 48.593-21.767z" class="shape"/>
+                    <path transform="matrix(1 0 0 -1 64 13.44)" d="M0 0l-2.044-.915-42.477-19.028-10.187-4.563 10.187-4.563 42.477-19.029L0-49.013l2.044.915 42.477 19.029 10.187 4.563-10.187 4.563L2.044-.915zm0-5.479l42.478-19.027L0-43.534-42.478-24.506z"/>
+                  </g>
+                </g>
+              </mask>
+              <clipPath id="Folder-C">
+                <path d="M21.523 108.289h84.954V18.918H21.523z"/>
+              </clipPath>
+              <clipPath id="Folder-D">
+                <path d="M21.523 108.29h84.955V18.918H21.522z"/>
+              </clipPath>
+              <clipPath id="Folder-E">
+                <path d="M9.292 113.768h109.416V64.755H9.292z"/>
+              </clipPath>
+              <g mask="url(#Folder-B)">
+                <clipPath id="Folder-F">
+                  <path transform="matrix(1 0 0 -1 0 128)" d="M21.523 19.711h84.954v89.371H21.523z"/>
+                </clipPath>
+                <g clip-path="url(#Folder-F)">
+                  <clipPath id="Folder-G">
+                    <path transform="matrix(1 0 0 -1 0 128)" d="M106.477 109.082H21.522V19.711h84.955z"/>
+                  </clipPath>
+                  <g clip-path="url(#Folder-G)">
+                    <rect x="21" y="18" width="86" height="91" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </symbol>

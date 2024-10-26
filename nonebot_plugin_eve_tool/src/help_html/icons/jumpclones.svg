@@ -1,0 +1,36 @@
+<symbol id="jumpclones">
+            <clipPath id="jumpclones-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#jumpclones-A)">
+              <clipPath id="jumpclones-B">
+                <path d="M21.295 108.938h85.41V95.386h-85.41z"/>
+              </clipPath>
+              <g clip-path="url(#jumpclones-B)" fill="#797979" opacity="0.8">
+                <path d="M21.295 108.938h8.768L26.76 95.386zm76.641 0h8.77l-5.467-13.553-1.466 6.014-1.836 7.539z" class="shape" opacity="0.8"/>
+              </g>
+            </g>
+            <path d="M83.825 41.193l.061.152v-.152z" class="shape"/>
+            <clipPath id="jumpclones-C">
+              <path d="M88.055 18.492l-6.263 6.265 18.532-.002.002 18.532 6.264-6.264-.001-18.531zM64 27.79H44.572L23.2 80.767l6.864 28.17h67.873l1.837-7.538 5.026-20.632-10.027-24.855-2.349 2.349-1.221 1.22 8.729 21.639-5.645 23.172H33.713L28.068 81.12l19.639-48.685h19.335l4.645-4.645zm12.618 2.139l-6.263 6.265 18.531-.001.002 18.533 6.264-6.264-.001-18.533zM64 99.167h26.26l1.831-7.513-14.133-4.57s-3.413-.456-3.723-3.413l-.312-3.181s1.421-1.319 1.775-3.592l.753-4.866s1.197.226 1.775-1.276.709-2.045 1.063-3.727.969-5.611-.532-5.504c-.153.014-.82.477-.794-.434 0 0 2.148-18.118-13.963-18.118z"/>
+            </clipPath>
+            <g clip-path="url(#jumpclones-C)">
+              <rect x="23" y="18" width="84" height="91" class="shape"/>
+            </g>
+            <clipPath id="jumpclones-D">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#jumpclones-D)">
+              <clipPath id="jumpclones-E">
+                <path d="M35.91 99.167H64V42.974H35.91z"/>
+              </clipPath>
+              <g clip-path="url(#jumpclones-E)">
+                <clipPath id="jumpclones-F">
+                  <path d="M50.037 61.092c.026.91-.641.446-.794.433-1.5-.107-.888 3.82-.533 5.504s.49 2.228 1.064 3.728c.579 1.502 1.775 1.274 1.775 1.274l.753 4.867c.355 2.273 1.775 3.592 1.775 3.592s0 .227-.312 3.182-3.723 3.412-3.723 3.412l-14.133 4.57 1.831 7.513H64V42.974c-16.111 0-13.963 18.118-13.963 18.118"/>
+                </clipPath>
+                <g clip-path="url(#jumpclones-F)">
+                  <rect x="35" y="42" width="29" height="58" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

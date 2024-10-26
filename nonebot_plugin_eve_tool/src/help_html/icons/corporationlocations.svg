@@ -1,0 +1,24 @@
+<symbol id="corporationlocations">
+            <clipPath id="corporationlocations-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#corporationlocations-A)">
+              <clipPath id="corporationlocations-B">
+                <path d="M33.5 81.843h73.826V16.465H33.499z"/>
+              </clipPath>
+              <g clip-path="url(#corporationlocations-B)">
+                <clipPath id="corporationlocations-C">
+                  <path d="M79.898 63.499l11.066-11.066c6.059 1.177 12.141-.252 16.362-4.474L91.579 32.212 75.832 16.465c-4.223 4.221-5.651 10.302-4.474 16.362L56.249 47.935c-2.655-.849-5.358-1.278-7.996-1.278-5.56.001-10.828 1.913-14.754 5.84l18.897 18.897 10.448 10.449c2.508-8.448 8.876-15.247 17.054-18.344"/>
+                </clipPath>
+                <g clip-path="url(#corporationlocations-C)">
+                  <rect x="33" y="16" width="75" height="66" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="corporationlocations-D">
+              <path d="M17.684 106.106l35.069-27.653-3.707-3.708-3.709-3.708zm68.655-23.277H74.995l9.176 6.664-3.508 10.788 9.176-6.667 9.177 6.667-3.505-10.788 9.175-6.661-11.342-.003-3.505-10.786zm24.458 3.744c0 9.637-6.514 17.734-15.373 20.182l-2.221 5.999C104.399 111.125 113 101.49 113 89.841c0-6.463-2.65-12.306-6.921-16.507a20.86 20.86 0 0 1 4.718 13.239m-44.116 3.268c0 11.649 8.6 21.285 19.797 22.913l-2.221-5.998c-8.859-2.447-15.374-10.545-15.374-20.183a20.87 20.87 0 0 1 4.716-13.238 23.09 23.09 0 0 0-6.918 16.506"/>
+            </clipPath>
+            <g clip-path="url(#corporationlocations-D)">
+              <rect x="17" y="71" width="96" height="42" class="shape"/>
+            </g>
+          </symbol>

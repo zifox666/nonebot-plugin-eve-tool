@@ -1,0 +1,82 @@
+<symbol id="trainingqueue">
+            <clipPath id="trainingqueue-A">
+              <path d="M57.442 99.589H37.589v.124h28.978v-.124z"/>
+            </clipPath>
+            <g clip-path="url(#trainingqueue-A)">
+              <rect x="37" y="99" width="30" height="1" class="shape"/>
+            </g>
+            <clipPath id="trainingqueue-B">
+              <path d="M48.472 51.801l7.293 8.238v-.018z"/>
+            </clipPath>
+            <g clip-path="url(#trainingqueue-B)">
+              <rect x="48" y="51" width="8" height="10" class="shape"/>
+            </g>
+            <clipPath id="trainingqueue-C">
+              <path d="M59.119 60.039l7.271-8.213-7.271 8.195z"/>
+            </clipPath>
+            <g clip-path="url(#trainingqueue-C)">
+              <rect x="59" y="51" width="8" height="10" class="shape"/>
+            </g>
+            <clipPath id="trainingqueue-D">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#trainingqueue-D)">
+              <g opacity=".2">
+                <clipPath id="trainingqueue-E">
+                  <path d="M37.589 92.797h39.706V27.494H37.589z"/>
+                </clipPath>
+                <g clip-path="url(#trainingqueue-E)">
+                  <clipPath id="trainingqueue-F">
+                    <path d="M52.166 49.399h10.552l5.736-4.407h3.985l4.856-5.485V27.494H37.589v12.013l4.855 5.485h3.985zm6.953 34.116l7.448 3.804V75.73l-7.448-8.32zm-3.354 0l-18.176 9.282v-5.082L55.765 67.41z"/>
+                  </clipPath>
+                  <g clip-path="url(#trainingqueue-F)">
+                    <rect x="37" y="27" width="41" height="66" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="trainingqueue-G">
+                  <path d="M37.562 99.59h34.891V44.992h-34.89z"/>
+                </clipPath>
+                <g clip-path="url(#trainingqueue-G)">
+                  <clipPath id="trainingqueue-H">
+                    <path d="M59.119 67.41v-7.389l7.271-8.195 6.063-6.834h-3.999l-5.736 4.407H52.166l-5.737-4.407h-3.998l6.041 6.809 7.293 8.22v23.494l-18.176 9.282-.027.013v6.779h29.005v-12.27l-7.448-3.804z"/>
+                  </clipPath>
+                  <g clip-path="url(#trainingqueue-H)">
+                    <rect x="37" y="44" width="36" height="56" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="trainingqueue-I">
+                  <path d="M71.567 107.729h41.182V63.206H71.567z"/>
+                </clipPath>
+                <g clip-path="url(#trainingqueue-I)">
+                  <clipPath id="trainingqueue-J">
+                    <path d="M79.066 63.206l-7.499 7.499v.191h5.203l4.576-4.576h27.971v41.409l3.432-3.432V63.206z"/>
+                  </clipPath>
+                  <g clip-path="url(#trainingqueue-J)">
+                    <rect x="71" y="63" width="42" height="45" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="trainingqueue-K">
+              <path d="M112.749 63.206H79.066l-7.499 7.499 7.499-7.499z"/>
+            </clipPath>
+            <g clip-path="url(#trainingqueue-K)">
+              <rect x="71" y="63" width="42" height="8" class="shape"/>
+            </g>
+            <clipPath id="trainingqueue-L">
+              <path d="M112.749 63.206H79.066l-7.499 7.499 7.499-7.499z"/>
+            </clipPath>
+            <g clip-path="url(#trainingqueue-L)">
+              <rect x="71" y="63" width="42" height="8" class="shape"/>
+            </g>
+            <clipPath id="trainingqueue-M">
+              <path d="M71.567 112.349h33.129V70.896H71.567zm-5-7.636H32.589V85.804l19.762-22.077-19.762-22.325V22.494h49.706v18.908L62.532 63.727l4.224 4.718-.189.189v7.096l-7.448-8.32v-7.371l7.271-8.213 6.063-6.834h-.014l4.856-5.485V27.494H37.589v12.013l4.855 5.485h-.013l6.041 6.809 7.293 8.238v7.371L37.589 87.715v5.082l-.027.013v6.779h.027v.124h28.978z"/>
+            </clipPath>
+            <g clip-path="url(#trainingqueue-M)">
+              <rect x="32" y="22" width="73" height="91" class="shape"/>
+            </g>
+          </symbol>

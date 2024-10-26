@@ -1,0 +1,50 @@
+<symbol id="certificates">
+            <clipPath id="certificates-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".95" clip-path="url(#certificates-A)">
+              <clipPath id="certificates-B">
+                <path d="M46.855 66.794h34.36v-34.36h-34.36z"/>
+              </clipPath>
+              <g clip-path="url(#certificates-B)">
+                <path d="M64.035 32.434c-9.472 0-17.18 7.705-17.18 17.18s7.708 17.18 17.18 17.18 17.18-7.709 17.18-17.18-7.705-17.18-17.18-17.18" class="shape" opacity="0.9"/>
+              </g>
+            </g>
+            <clipPath id="certificates-C">
+              <path d="M56.939 22.766H48.74l-4.102 7.095-7.098 4.104v8.196l-4.099 7.102 4.099 7.1v8.193l7.098 4.102 4.102 7.097h8.199l7.098 4.104 7.102-4.104h8.195l4.101-7.097 7.099-4.102v-8.193l4.096-7.1-4.096-7.102v-8.196l-7.099-4.104-4.101-7.095h-8.195l-7.102-4.099zm-13.55 26.849c0-11.228 9.135-20.358 20.36-20.358s20.357 9.13 20.357 20.358-9.133 20.357-20.357 20.357-20.36-9.133-20.36-20.357"/>
+            </clipPath>
+            <g clip-path="url(#certificates-C)">
+              <rect x="33" y="18" width="62" height="62" class="shape"/>
+            </g>
+            <clipPath id="certificates-D">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#certificates-D)">
+              <g opacity=".6">
+                <clipPath id="certificates-E">
+                  <path d="M18.434 110.451h39.895V66.214H18.434z"/>
+                </clipPath>
+                <g clip-path="url(#certificates-E)">
+                  <clipPath id="certificates-F">
+                    <path d="M49.031 79.154h-1.964l-.982-1.696-3.642-6.31-6.311-3.65-1.7-.978v-.306L18.434 98.008l16.188-1.367 8.549 13.81 15.158-30.135-2.012-1.162z"/>
+                  </clipPath>
+                  <g clip-path="url(#certificates-F)">
+                    <rect x="18" y="66" width="41" height="45" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="certificates-G">
+                  <path d="M70.323 110.451h39.895V66.214H70.323z"/>
+                </clipPath>
+                <g clip-path="url(#certificates-G)">
+                  <clipPath id="certificates-H">
+                    <path d="M94.224 66.214v.306l-1.7.978-6.311 3.65-3.646 6.31-.979 1.696h-9.249l-2.016 1.165 15.163 30.132 8.548-13.81 16.184 1.367z"/>
+                  </clipPath>
+                  <g clip-path="url(#certificates-H)">
+                    <rect x="70" y="66" width="41" height="45" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </symbol>

@@ -1,0 +1,57 @@
+<symbol id="assetscorp">
+            <clipPath id="assetscorp-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#assetscorp-A)">
+              <g opacity=".8">
+                <clipPath id="assetscorp-B">
+                  <path d="M42.332 70.678h13.06V57.619h-13.06z"/>
+                </clipPath>
+                <g clip-path="url(#assetscorp-B)">
+                  <clipPath id="assetscorp-C">
+                    <path d="M48.862 57.619a6.53 6.53 0 0 0-6.53 6.526c0 3.607 2.923 6.531 6.53 6.533a6.53 6.53 0 0 0 6.529-6.533c0-1.731-.688-3.392-1.912-4.616s-2.885-1.911-4.617-1.91"/>
+                  </clipPath>
+                  <g clip-path="url(#assetscorp-C)">
+                    <rect x="42" y="57" width="14" height="14" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="assetscorp-D">
+                  <path d="M81.583 59.022h8.505V25.74h-8.505z"/>
+                </clipPath>
+                <g clip-path="url(#assetscorp-D)">
+                  <clipPath id="assetscorp-E">
+                    <path d="M90.088 58.652V25.74l-8.505 8.508v24.774a28.68 28.68 0 0 1 8.505-.37"/>
+                  </clipPath>
+                  <g clip-path="url(#assetscorp-E)">
+                    <rect x="81" y="25" width="10" height="35" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="assetscorp-F">
+              <path d="M87.266 22.246H33.863l-8.508 8.508h53.402z"/>
+            </clipPath>
+            <g clip-path="url(#assetscorp-F)">
+              <rect x="25" y="22" width="63" height="9" class="shape"/>
+            </g>
+            <clipPath id="assetscorp-G">
+              <path d="M47.229 47.993v7.121a9.1 9.1 0 0 0-3.598 1.491l-5.035-5.032-2.308 2.304 5.034 5.034a9.13 9.13 0 0 0-1.491 3.601h-7.12v3.265h7.12a9.09 9.09 0 0 0 1.491 3.601l-5.034 5.032 2.308 2.311 5.033-5.034a9.21 9.21 0 0 0 3.6 1.49v7.118h3.266v-7.118a9.21 9.21 0 0 0 3.603-1.49l5.033 5.034 2.307-2.311-5.032-5.032c.75-1.079 1.257-2.307 1.487-3.601h7.122v-3.265h-7.122c-.232-1.293-.739-2.522-1.489-3.601l5.034-5.034-2.307-2.304-5.035 5.032c-1.079-.751-2.307-1.26-3.601-1.491v-7.121zm-4.898 16.152a6.53 6.53 0 0 1 12.564-2.493 6.53 6.53 0 0 1-8.536 8.529 6.53 6.53 0 0 1-4.028-6.036"/>
+            </clipPath>
+            <g clip-path="url(#assetscorp-G)">
+              <rect x="32" y="47" width="34" height="34" class="shape"/>
+            </g>
+            <clipPath id="assetscorp-H">
+              <path d="M20.111 35.392v57.505h4.068v4.349h10.307v-4.349h24.662c-.321-1.536-.515-3.095-.58-4.663H24.773V40.056h48.18v22.173c1.487-.85 3.048-1.562 4.664-2.129V35.392z"/>
+            </clipPath>
+            <g clip-path="url(#assetscorp-H)">
+              <rect x="20" y="35" width="58" height="63" class="shape"/>
+            </g>
+            <clipPath id="assetscorp-I">
+              <path d="M83.228 79.829H71.885l9.175 6.663-3.506 10.788 9.175-6.667 9.177 6.667-3.505-10.788 9.175-6.661-11.343-.002-3.504-10.786zm24.46 3.743c0 9.638-6.514 17.736-15.374 20.183l-2.221 5.998c11.196-1.629 19.797-11.264 19.797-22.912 0-6.464-2.65-12.306-6.921-16.508a20.86 20.86 0 0 1 4.719 13.239m-44.117 3.269c0 11.649 8.6 21.284 19.798 22.912l-2.222-5.997c-8.86-2.447-15.374-10.546-15.374-20.184a20.86 20.86 0 0 1 4.716-13.237c-4.432 4.348-6.925 10.298-6.918 16.506"/>
+            </clipPath>
+            <g clip-path="url(#assetscorp-I)">
+              <rect x="63" y="69" width="47" height="41" class="shape"/>
+            </g>
+          </symbol>

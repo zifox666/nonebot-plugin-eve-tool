@@ -1,0 +1,103 @@
+<symbol id="dogtags">
+            <clipPath id="dogtags-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#dogtags-A)">
+              <path d="M71.586 47.573a3.27 3.27 0 11-2.37 6.096 3.27 3.27 0 012.37-6.096" class="shape"/>
+            </g>
+            <clipPath id="dogtags-B">
+              <path d="M58.606 30.597l-1.149.121-.818.818-36.306 36.306-.818.817-.122 1.151c-.047.439-1.034 10.858 8.108 20s19.562 8.155 20.001 8.108l1.15-.121.818-.818 36.305-36.306.819-.817.122-1.151c.046-.439 1.034-10.858-8.109-20-7.387-7.388-15.609-8.161-18.724-8.161a12.83 12.83 0 0 0-1.277.053m7.839 20.27c-1.367-1.312-1.918-3.262-1.44-5.096s1.911-3.266 3.745-3.744 3.783.074 5.095 1.442c1.972 2.055 1.937 5.31-.077 7.323s-5.269 2.047-7.323.075"/>
+            </clipPath>
+            <g clip-path="url(#dogtags-B)">
+              <rect x="18" y="30" width="70" height="69" class="shape"/>
+            </g>
+            <clipPath id="dogtags-C">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#dogtags-C)">
+              <clipPath id="dogtags-D">
+                <path d="M36.301 107h51.553V61.993H36.3z"/>
+              </clipPath>
+              <g clip-path="url(#dogtags-D)">
+                <clipPath id="dogtags-E">
+                  <path d="M87.395 62.292L51.089 98.598l-.818.817-.572.573-.805.085-1.151.122c-.314.033-5.282.503-11.442-1.9a25.33 25.33 0 0 0 5.639 4.812c9.737 6.15 18.497 3.172 18.497 3.172l27.417-43.411s-.038-.318-.161-.875z"/>
+                </clipPath>
+                <g clip-path="url(#dogtags-E)">
+                  <rect x="36" y="61" width="52" height="46" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="dogtags-F">
+              <path d="M100.19 25.843a3.27 3.27 0 1 0 6.415 1.275 3.27 3.27 0 1 0-6.415-1.275"/>
+            </clipPath>
+            <g clip-path="url(#dogtags-F)">
+              <mask id="dogtags-G">
+                <g clip-path="url(#dogtags-H)">
+                  <rect x="99" y="23" width="8" height="8" class="shape"/>
+                </g>
+              </mask>
+              <clipPath id="dogtags-H">
+                <use href="#dogtags-T"/>
+              </clipPath>
+              <g mask="url(#dogtags-G)">
+                <rect x="99" y="23" width="8" height="8" class="shape"/>
+              </g>
+            </g>
+            <clipPath id="dogtags-I">
+              <path d="M92.255 23.038a3.27 3.27 0 1 0 .998 6.466 3.27 3.27 0 1 0-.998-6.466"/>
+            </clipPath>
+            <g clip-path="url(#dogtags-I)">
+              <mask id="dogtags-J">
+                <g clip-path="url(#dogtags-K)">
+                  <rect x="89" y="23" width="8" height="7" class="shape"/>
+                </g>
+              </mask>
+              <clipPath id="dogtags-K">
+                <use href="#dogtags-T"/>
+              </clipPath>
+              <g mask="url(#dogtags-J)">
+                <rect x="89" y="23" width="8" height="7" class="shape"/>
+              </g>
+            </g>
+            <clipPath id="dogtags-L">
+              <path d="M81.046 27.506a3.27 3.27 0 0 0-.123 5.663 3.27 3.27 0 0 0 4.86-3.608 3.27 3.27 0 0 0-3.167-2.458c-.532 0-1.071.13-1.57.404"/>
+            </clipPath>
+            <g clip-path="url(#dogtags-L)">
+              <mask id="dogtags-M">
+                <g clip-path="url(#dogtags-N)">
+                  <rect x="78" y="27" width="9" height="8" class="shape"/>
+                </g>
+              </mask>
+              <clipPath id="dogtags-N">
+                <use href="#dogtags-T"/>
+              </clipPath>
+              <g mask="url(#dogtags-M)">
+                <rect x="78" y="27" width="9" height="8" class="shape"/>
+              </g>
+            </g>
+            <clipPath id="dogtags-O">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#dogtags-O)">
+              <path d="M72.946 36.256a3.27 3.27 0 104.917 4.312 3.27 3.27 0 00-4.917-4.312" class="shape"/>
+            </g>
+            <clipPath id="dogtags-P">
+              <path d="M108.592 32.241a3.27 3.27 0 0 0 5.594 3.393 3.27 3.27 0 0 0-5.594-3.393"/>
+            </clipPath>
+            <g clip-path="url(#dogtags-P)">
+              <mask id="dogtags-Q">
+                <g clip-path="url(#dogtags-R)">
+                  <rect x="107" y="30" width="9" height="8" class="shape"/>
+                </g>
+              </mask>
+              <clipPath id="dogtags-R">
+                <use href="#dogtags-T"/>
+              </clipPath>
+              <g mask="url(#dogtags-Q)">
+                <rect x="107" y="30" width="9" height="8" class="shape"/>
+              </g>
+            </g>
+            <defs>
+              <path id="dogtags-T" d="M-32768 32896h65535v-65535h-65535z"/>
+            </defs>
+          </symbol>

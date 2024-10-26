@@ -16,6 +16,7 @@ from nonebot_plugin_htmlrender import (
 )
 
 templates_path = plugin_path / 'src' / 'templates' / 'kb_info'
+help_templates_path = plugin_path / 'src' / 'help_html'
 
 
 async def md2pic(content):
@@ -83,6 +84,19 @@ async def render(char_json) -> bytes:
         templates=char_json,
         pages={
             "viewport": {"width": 550, "height": 10},
+            "base_url": f"file://{templates_path}",
+        },
+    )
+
+
+async def render_help(_json) -> bytes:
+
+    return await template_to_pic(
+        template_path=str(help_templates_path),
+        template_name="help.html",
+        templates=_json,
+        pages={
+            "viewport": {"width": 790, "height": 10},
             "base_url": f"file://{templates_path}",
         },
     )

@@ -1,0 +1,8 @@
+<symbol id="twitch">
+            <clipPath id="twitch-A">
+              <path d="M82.986 66.381H76.91V46.637h6.076zm-21.263 0h-4.557V46.637h4.557zm31.896 3.168L83.653 81.57H65.102l-10.975 8.686V81.57H38.938V32.965h54.681zM32.113 26.891l-3.807 12.818v52.494h16.708v9.113h12.884l9.411-9.113h13.825L99.695 71.77V26.891z"/>
+            </clipPath>
+            <g clip-path="url(#twitch-A)">
+              <rect x="28" y="26" width="72" height="76" class="shape"/>
+            </g>
+          </symbol>

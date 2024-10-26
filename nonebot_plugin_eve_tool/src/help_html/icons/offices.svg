@@ -1,0 +1,68 @@
+<symbol id="offices">
+            <clipPath id="offices-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#offices-A)">
+              <clipPath id="offices-B">
+                <path d="M29.712 104.5h53.42V14.287h-53.42z"/>
+              </clipPath>
+              <g clip-path="url(#offices-B)">
+                <clipPath id="offices-C">
+                  <path d="M81.686 62.889l1.445-2.547-.92-1.414h-7.175L71.478 39.87h5.591v-3.314h-6.363l-.842-4.972h10.378c0-9.114-7.747-17.297-17.3-17.297S45.645 22.47 45.645 31.584H56.03l-.845 4.972h-6.288v3.314h5.516l-3.556 19.058h-4.575l-2.643 2.721 1.679 2.945.989 1.732-.987 1.723-.819 1.42-.775 1.175-.991 1.541H29.712l1.127 21.543h2.303l.983-18.229h21.424l.99 8.286H43.983c0 4.972 5.825 8.795 13.778 10.082l1.288 10.633h6.758c-2.704-4.411-4.132-9.485-4.126-14.659 0-12.693 8.442-23.447 20.005-26.952"/>
+                </clipPath>
+                <g clip-path="url(#offices-C)">
+                  <rect x="29" y="14" width="55" height="91" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="offices-D">
+              <path d="M42.352 66.404L33.625 51.47l8.709 14.962z"/>
+            </clipPath>
+            <g clip-path="url(#offices-D)">
+              <rect x="33" y="51" width="10" height="16" class="shape"/>
+            </g>
+            <clipPath id="offices-E">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#offices-E)">
+              <clipPath id="offices-F">
+                <path d="M40.756 68.87h1.596v-2.438h-1.596z"/>
+              </clipPath>
+              <g clip-path="url(#offices-F)">
+                <clipPath id="offices-G">
+                  <path d="M40.756 68.871l.779-1.169.817-1.237-.018-.033-.799 1.211z"/>
+                </clipPath>
+                <g clip-path="url(#offices-G)">
+                  <rect x="40" y="66" width="3" height="3" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="offices-H">
+              <path d="M103.757 65.375l.05.028-8.143-13.933z"/>
+            </clipPath>
+            <g clip-path="url(#offices-H)">
+              <rect x="95" y="51" width="9" height="15" class="shape"/>
+            </g>
+            <clipPath id="offices-I">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#offices-I)">
+              <clipPath id="offices-J">
+                <path d="M21.63 68.87h82.127v-17.4H21.63z"/>
+              </clipPath>
+              <g clip-path="url(#offices-J)">
+                <clipPath id="offices-K">
+                  <path d="M89.84 61.68a27.98 27.98 0 0 1 13.917 3.695L95.663 51.47h-3.269L86.32 61.908a28.39 28.39 0 0 1 3.52-.228m-49.084 7.191H23.223l-.778-1.228-.816-1.239 8.725-14.934h3.271l8.709 14.962-.799 1.211z"/>
+                </clipPath>
+                <g clip-path="url(#offices-K)">
+                  <rect x="21" y="51" width="83" height="18" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="offices-L">
+              <path d="M86.339 82.829H74.995l9.176 6.664-3.508 10.788 9.176-6.667 9.177 6.667-3.505-10.788 9.174-6.661-11.341-.003-3.505-10.786zm24.458 3.744c0 9.637-6.514 17.734-15.373 20.182l-2.221 5.999C104.399 111.125 113 101.49 113 89.841c0-6.464-2.65-12.307-6.921-16.508 3.057 3.735 4.724 8.414 4.718 13.24M66.68 89.841c0 11.649 8.601 21.285 19.798 22.913l-2.221-5.998c-8.859-2.447-15.374-10.545-15.374-20.183a20.87 20.87 0 0 1 4.716-13.238 23.09 23.09 0 0 0-6.919 16.506"/>
+            </clipPath>
+            <g clip-path="url(#offices-L)">
+              <rect x="66" y="72" width="47" height="41" class="shape"/>
+            </g>
+          </symbol>

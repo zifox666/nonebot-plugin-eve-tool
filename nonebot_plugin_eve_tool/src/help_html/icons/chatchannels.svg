@@ -1,0 +1,24 @@
+<symbol id="chatchannels">
+            <clipPath id="chatchannels-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#chatchannels-A)">
+              <clipPath id="chatchannels-B">
+                <path d="M40 116.844h81.5v-78H40z"/>
+              </clipPath>
+              <g clip-path="url(#chatchannels-B)">
+                <clipPath id="chatchannels-C">
+                  <path d="M103.62 38.844v43.747H62.272L50.846 93.247h17.83l25.305 23.597V93.247h18.613V38.844z"/>
+                </clipPath>
+                <g clip-path="url(#chatchannels-C)">
+                  <rect x="50" y="38" width="63" height="79" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="chatchannels-D">
+              <path d="M33.586 100.328l25.377-23.663h38.17V22.262H17.406v54.403h16.18z"/>
+            </clipPath>
+            <g clip-path="url(#chatchannels-D)">
+              <rect x="17" y="22" width="81" height="79" class="shape"/>
+            </g>
+          </symbol>

@@ -1,0 +1,34 @@
+<symbol id="clonebay">
+            <clipPath id="clonebay-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#clonebay-A)">
+              <g opacity=".6">
+                <clipPath id="clonebay-B">
+                  <path d="M36.106 94.583H64.26V38.261H36.106z"/>
+                </clipPath>
+                <g clip-path="url(#clonebay-B)">
+                  <clipPath id="clonebay-C">
+                    <path d="M50.271 82.472l-14.165 4.581 1.834 7.53h26.321V38.261c-16.148 0-13.996 18.16-13.996 18.16.027.912-.641.447-.795.435-1.503-.108-.89 3.827-.534 5.516s.49 2.233 1.066 3.736 1.779 1.278 1.779 1.278l.755 4.877c.356 2.279 1.779 3.6 1.779 3.6s0 .228-.312 3.19-3.732 3.419-3.732 3.419"/>
+                  </clipPath>
+                  <g clip-path="url(#clonebay-C)">
+                    <rect x="36" y="38" width="29" height="57" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="clonebay-D">
+                  <path d="M21.458 104.376h85.606V90.793H21.458z"/>
+                </clipPath>
+                <g clip-path="url(#clonebay-D)" class="shape" opacity="0.8">
+                  <path d="M21.458 104.376h8.788l-3.31-13.583zm80.127-13.583l-3.31 13.583h8.789z" class="shape" opacity="0.8"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="clonebay-E">
+              <path d="M64.261 23.042H44.788l-21.42 53.1 6.878 28.235h68.029l6.879-28.235-21.421-53.1zM28.235 76.494l19.688-48.806h32.675l19.688 48.806-5.661 23.237H33.896zm36.026 18.089h26.32l1.835-7.53-14.165-4.58s-3.421-.458-3.732-3.42l-.312-3.19s1.423-1.321 1.778-3.6l.755-4.877s1.199.228 1.78-1.278c.576-1.503.711-2.05 1.065-3.737s.97-5.623-.534-5.515c-.153.012-.821.477-.794-.435 0 0 2.152-18.16-13.996-18.16z"/>
+            </clipPath>
+            <g clip-path="url(#clonebay-E)">
+              <rect x="23" y="23" width="83" height="82" class="shape"/>
+            </g>
+          </symbol>

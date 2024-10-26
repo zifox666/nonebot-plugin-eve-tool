@@ -55,15 +55,8 @@ async def stop_wss():
     running = False
 
 
-async def km(bot: Bot):
-    if plugin_config.eve_zkillboard_method == "websocket":
-        await km_websocket(bot)
-    else:
-        await km_redisQ(bot)
-
-
-async def km_websocket(bot: Bot):
-    uri = plugin_config.eve_zkillboard_link
+"""async def km(bot: Bot):
+    uri = "wss://zkillboard.com/websocket/"
     global km_recv
     while running:
         try:
@@ -90,11 +83,11 @@ async def km_websocket(bot: Bot):
             await asyncio.sleep(5)
         except Exception as e:
             logger.error(f"wss发生错误：{e}\n{traceback.format_exc()}")
-            await asyncio.sleep(5)
+            await asyncio.sleep(5)"""
 
 
-async def km_redisQ(bot: Bot):
-    uri = plugin_config.eve_zkillboard_link
+async def km(bot: Bot):
+    uri = "http://192.168.0.110:18920/killmail"
     client_id = "001"
     global km_recv
 

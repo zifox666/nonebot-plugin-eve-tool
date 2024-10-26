@@ -1,0 +1,45 @@
+<symbol id="corpdeliveries">
+            <clipPath id="corpdeliveries-A">
+              <path d="M38.297 63.111l.002-.001-.039-.022v29.766L64 107.715V77.948z"/>
+            </clipPath>
+            <g clip-path="url(#corpdeliveries-A)">
+              <rect x="38" y="63" width="26" height="45" class="shape"/>
+            </g>
+            <clipPath id="corpdeliveries-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#corpdeliveries-B)">
+              <g opacity=".25">
+                <clipPath id="corpdeliveries-C">
+                  <path d="M38.297 77.948h51.402V48.93H38.297z"/>
+                </clipPath>
+                <g clip-path="url(#corpdeliveries-C)">
+                  <clipPath id="corpdeliveries-D">
+                    <path d="M64 77.948l25.699-14.837-13.855-8.001 1.029 3.173-12.87-9.353-12.872 9.349 1.031-3.173-13.863 8.004-.002.001z"/>
+                  </clipPath>
+                  <g clip-path="url(#corpdeliveries-D)">
+                    <rect x="38" y="48" width="52" height="30" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="corpdeliveries-E">
+                  <path d="M64 107.715h25.736V63.09H64z"/>
+                </clipPath>
+                <g clip-path="url(#corpdeliveries-E)">
+                  <clipPath id="corpdeliveries-F">
+                    <path d="M89.699 63.111L64 77.948v29.767l25.736-14.861V63.09z"/>
+                  </clipPath>
+                  <g clip-path="url(#corpdeliveries-F)">
+                    <rect x="64" y="63" width="26" height="45" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="corpdeliveries-G">
+              <path d="M64.003 48.93l12.87 9.353-1.029-3.173-3.885-11.964 12.871-9.348-15.914-.006-4.913-15.126-4.913 15.132-15.92-.006 12.877 9.354-3.885 11.96-1.031 3.173z"/>
+            </clipPath>
+            <g clip-path="url(#corpdeliveries-G)">
+              <rect x="43" y="18" width="42" height="41" class="shape"/>
+            </g>
+          </symbol>

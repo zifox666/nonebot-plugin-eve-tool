@@ -1,0 +1,24 @@
+<symbol id="corphangar">
+            <clipPath id="corphangar-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#corphangar-A)">
+              <clipPath id="corphangar-B">
+                <path d="M18.347 109.008h90.668V18.336H18.347z"/>
+              </clipPath>
+              <g clip-path="url(#corphangar-B)">
+                <clipPath id="corphangar-C">
+                  <path d="M103.013 59.172h5v-5h-5zm-83.664 0h5v-5h-5zm83.664 14h5v-5h-5zm-83.664 0h5v-5h-5zm53.832 29.832h-5v5h5zm0-83.664h-5v5h5zm-14 83.664h-5v5h5zm0-83.664h-5v5h5zm42.834 5.996v15.406l7 7V25.508l-6.84-7.172H79.613l7 7zm0 76.672H86.613l-7 7h22.234l7.168-6.844V79.602l-7 7zm-76.668 0V86.602l-7-7v22.234l6.84 7.172h22.562l-7-7zm0-61.266l-7 7V25.18l7.168-6.844h22.234l-7 7H25.347z"/>
+                </clipPath>
+                <g clip-path="url(#corphangar-C)">
+                  <rect x="18" y="18" width="92" height="92" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="corphangar-D">
+              <path d="M63.685 75.475l16.991 12.348-1.359-4.188-5.128-15.795 16.992-12.342-21.01-.007-6.486-19.971-6.486 19.978-21.018-.007 17 12.349-5.128 15.789-1.362 4.188z"/>
+            </clipPath>
+            <g clip-path="url(#corphangar-D)">
+              <rect x="36" y="35" width="56" height="53" class="shape"/>
+            </g>
+          </symbol>

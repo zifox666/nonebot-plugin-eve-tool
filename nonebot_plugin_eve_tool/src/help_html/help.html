@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="./help.css" />
+  <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="head_box">
+      <div class="id_text">猫猫鲨 BOT</div>
+      <h2 class="day_text">使用说明</h2>
+      <!--<img class="Help_logo" src="../../../plugins/help-plugin/resources/logo.png"/>-->
+    </div>
+    {% for val in helpData %}
+    <div class="data_box">
+      <div class="tab_lable">{{ val.group }}</div>
+      <div class="list">
+        {% for item in val.list %}
+        <div class="item">
+          <img class="icon" src="./icon/{{ item.icon }}" />
+          <div class="title">
+            <div class="text">{{ item.title }}</div>
+            <div class="dec">{{ item.desc }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    <div class="logo">Created By 猫猫鲨 BOT</div>
+  </div>
+</body>
+
+</html>

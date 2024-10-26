@@ -1,0 +1,94 @@
+<symbol id="corpmap">
+            <clipPath id="corpmap-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#corpmap-A)">
+              <g opacity=".6">
+                <clipPath id="corpmap-B">
+                  <path d="M51.194 59.19h14.739V37.295h-14.74z"/>
+                </clipPath>
+                <g clip-path="url(#corpmap-B)">
+                  <clipPath id="corpmap-C">
+                    <path d="M65.933 57.583L53.902 37.295c-.771.734-1.697 1.285-2.709 1.613L63.22 59.19c.723-.795 1.668-1.355 2.713-1.607"/>
+                  </clipPath>
+                  <g clip-path="url(#corpmap-C)">
+                    <rect x="51" y="37" width="15" height="23" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="corpmap-D">
+                  <path d="M67.86 58.742h7.949V46.011h-7.95z"/>
+                </clipPath>
+                <g clip-path="url(#corpmap-D)">
+                  <clipPath id="corpmap-E">
+                    <path d="M75.809 47.283a6.24 6.24 0 0 1-2.885-1.272L67.86 57.466a5.41 5.41 0 0 1 2.884 1.276z"/>
+                  </clipPath>
+                  <g clip-path="url(#corpmap-E)">
+                    <rect x="67" y="46" width="9" height="13" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="corpmap-F">
+                  <path d="M36.71 66.802h11.328V38.12H36.711z"/>
+                </clipPath>
+                <g clip-path="url(#corpmap-F)">
+                  <clipPath id="corpmap-G">
+                    <path d="M45.076 38.12l-8.365 22.959 1.271 5.723 10.056-27.601c-1.055-.137-2.067-.506-2.962-1.081"/>
+                  </clipPath>
+                  <g clip-path="url(#corpmap-G)">
+                    <rect x="36" y="38" width="13" height="29" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="corpmap-H">
+                  <path d="M77.933 64.399h10.97V45.967h-10.97z"/>
+                </clipPath>
+                <g clip-path="url(#corpmap-H)">
+                  <clipPath id="corpmap-I">
+                    <path d="M80.803 45.967c-.831.671-1.818 1.12-2.87 1.304l7.807 17.128c1.033-.278 2.087-.503 3.163-.664z"/>
+                  </clipPath>
+                  <g clip-path="url(#corpmap-I)">
+                    <mask id="corpmap-J">
+                      <g clip-path="url(#corpmap-K)">
+                        <rect x="77" y="45" width="12" height="20" class="shape"/>
+                      </g>
+                    </mask>
+                    <clipPath id="corpmap-K">
+                      <path d="M-32768 32896h65535v-65535h-65535z"/>
+                    </clipPath>
+                    <g mask="url(#corpmap-J)">
+                      <rect x="77" y="45" width="12" height="20" class="shape"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="corpmap-L">
+                  <path d="M40.764 70.314H62.69v-7.55H40.764z"/>
+                </clipPath>
+                <g clip-path="url(#corpmap-L)">
+                  <clipPath id="corpmap-M">
+                    <path d="M61.806 62.828l.003-.065-21.045 6.128 6.389 1.423 15.537-4.526c-.578-.879-.885-1.908-.884-2.96"/>
+                  </clipPath>
+                  <g clip-path="url(#corpmap-M)">
+                    <rect x="40" y="62" width="23" height="9" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="corpmap-N">
+              <path d="M41.757 32.058c0 2.455 1.251 4.74 3.319 6.062a7.2 7.2 0 0 0 2.962 1.081c1.061.142 2.14.041 3.156-.293a7.1 7.1 0 0 0 2.709-1.614 7.17 7.17 0 0 0 2.266-5.236 7.21 7.21 0 0 0-7.204-7.208 7.21 7.21 0 0 0-7.208 7.208m28.77 9.009a6.29 6.29 0 0 0 2.397 4.944 6.24 6.24 0 0 0 2.885 1.272 6.15 6.15 0 0 0 1.023.091 6.07 6.07 0 0 0 1.101-.103 6.3 6.3 0 0 0 5.209-6.204 6.31 6.31 0 0 0-6.307-6.229 6.31 6.31 0 0 0-6.308 6.229M30.173 68.353l-18.34 4.08 18.34 4.075 4.08 18.342 4.075-18.338 18.345-4.079-9.52-2.119-6.389-1.423-2.437-.54-.344-1.549-1.272-5.722-2.458-11.069zm35.76-10.771c-1.044.253-1.989.813-2.712 1.608-.895.977-1.398 2.249-1.412 3.574l-.002.064c0 1.095.325 2.108.883 2.96.996 1.527 2.696 2.447 4.519 2.447a5.41 5.41 0 0 0 5.409-5.407c.001-1.57-.684-3.062-1.874-4.086-.813-.703-1.817-1.147-2.884-1.276l-.651-.043a5.36 5.36 0 0 0-1.276.159"/>
+            </clipPath>
+            <g clip-path="url(#corpmap-N)">
+              <rect x="11" y="24" width="73" height="71" class="shape"/>
+            </g>
+            <clipPath id="corpmap-O">
+              <path d="M87.505 79.829H76.162l9.175 6.663L81.83 97.28l9.175-6.667 9.178 6.667-3.506-10.788 9.175-6.661-11.342-.002-3.505-10.786zm24.459 3.743c0 9.638-6.515 17.736-15.373 20.183l-2.221 5.998c11.196-1.629 19.797-11.264 19.797-22.912 0-6.464-2.652-12.306-6.921-16.508 3.056 3.735 4.724 8.413 4.718 13.239m-44.118 3.269c0 11.649 8.602 21.284 19.799 22.912l-2.222-5.997C76.564 101.309 70.05 93.21 70.05 83.572a20.86 20.86 0 0 1 4.716-13.237c-4.269 4.201-6.92 10.043-6.92 16.506"/>
+            </clipPath>
+            <g clip-path="url(#corpmap-O)">
+              <rect x="67" y="69" width="48" height="41" class="shape"/>
+            </g>
+          </symbol>

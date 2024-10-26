@@ -1,0 +1,39 @@
+<symbol id="satellite">
+            <clipPath id="satellite-A">
+              <path d="M42.818 27.006l1.751 3.029a39.82 39.82 0 0 1 39.765 0l1.752-3.031c-6.577-3.796-14.039-5.792-21.633-5.786a43.2 43.2 0 0 0-21.635 5.788m5.067 8.775l1.674 2.897a29.84 29.84 0 0 1 29.785 0l1.674-2.897a33.09 33.09 0 0 0-16.565-4.43 33.11 33.11 0 0 0-16.568 4.43M59.45 46.768l10 .001a5 5 0 0 0-7.5-4.331 5 5 0 0 0-2.5 4.33m-2.057 5l-3.824 3.822v17.766l3.824 3.823H71.51l3.824-3.823V55.59l-3.824-3.822zm2.057 30.41a5 5 0 0 0 7.529 4.414 5 5 0 0 0 2.471-4.414zm-9.891 8.091l-1.674 2.897a33.1 33.1 0 0 0 16.567 4.429c5.815.004 11.529-1.523 16.566-4.429l-1.675-2.897c-9.184 5.311-20.597 5.311-29.784 0m-4.99 8.645l-1.751 3.029c6.577 3.797 14.039 5.793 21.633 5.787a43.21 43.21 0 0 0 21.635-5.787l-1.752-3.031c-12.264 7.092-27.5 7.094-39.765.002"/>
+            </clipPath>
+            <g clip-path="url(#satellite-A)">
+              <rect x="42" y="21" width="45" height="87" class="shape"/>
+            </g>
+            <clipPath id="satellite-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#satellite-B)">
+              <g opacity=".9">
+                <clipPath id="satellite-C">
+                  <path d="M77.2 75.014h32.773v-21.08H77.2z"/>
+                </clipPath>
+                <g clip-path="url(#satellite-C)">
+                  <clipPath id="satellite-D">
+                    <path d="M101.588 75.014H77.2l8.385-21.08h24.388z"/>
+                  </clipPath>
+                  <g clip-path="url(#satellite-D)">
+                    <rect x="77" y="53" width="33" height="23" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".9">
+                <clipPath id="satellite-E">
+                  <path d="M19.304 75.014h32.772v-21.08H19.304z"/>
+                </clipPath>
+                <g clip-path="url(#satellite-E)">
+                  <clipPath id="satellite-F">
+                    <path d="M43.691 75.014H19.304l8.384-21.08h24.388z"/>
+                  </clipPath>
+                  <g clip-path="url(#satellite-F)">
+                    <rect x="19" y="53" width="34" height="23" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </symbol>

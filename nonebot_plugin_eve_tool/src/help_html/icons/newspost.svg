@@ -1,0 +1,38 @@
+<symbol id="newspost">
+            <clipPath id="newspost-A">
+              <path d="M30.109 83.191h24.484V55.939H30.109z"/>
+            </clipPath>
+            <g clip-path="url(#newspost-A)">
+              <rect x="30" y="55" width="25" height="29" class="shape"/>
+            </g>
+            <clipPath id="newspost-B">
+              <path d="M30.082 49.921h50.079V44.81H30.082z"/>
+            </clipPath>
+            <g clip-path="url(#newspost-B)">
+              <rect x="30" y="44" width="51" height="6" class="shape"/>
+            </g>
+            <clipPath id="newspost-C">
+              <path d="M60.557 61.003H80.16v-5.11H60.557z"/>
+            </clipPath>
+            <g clip-path="url(#newspost-C)">
+              <rect x="60" y="55" width="21" height="7" class="shape"/>
+            </g>
+            <clipPath id="newspost-D">
+              <path d="M60.558 72.03h19.604v-5.109H60.558z"/>
+            </clipPath>
+            <g clip-path="url(#newspost-D)">
+              <rect x="60" y="66" width="21" height="7" class="shape"/>
+            </g>
+            <clipPath id="newspost-E">
+              <path d="M60.628 83.108h13.987V78.01H60.628z"/>
+            </clipPath>
+            <g clip-path="url(#newspost-E)">
+              <rect x="60" y="78" width="15" height="6" class="shape"/>
+            </g>
+            <clipPath id="newspost-F">
+              <path d="M17.278 27.681v61.638c0 6.076 4.904 11.001 10.953 11.001l71.514-.057c6.064-.013 10.977-4.932 10.977-10.999V37.97H92.965V27.681zm10.953 67.638c-3.282 0-5.952-2.691-5.952-6V31.838H88.81l-.042 57.426a10.91 10.91 0 0 0 1.844 6.067z"/>
+            </clipPath>
+            <g clip-path="url(#newspost-F)">
+              <rect x="17" y="27" width="94" height="74" class="shape"/>
+            </g>
+          </symbol>

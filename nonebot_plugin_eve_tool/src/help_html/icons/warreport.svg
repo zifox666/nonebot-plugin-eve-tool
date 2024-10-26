@@ -1,0 +1,38 @@
+<symbol id="warreport">
+            <clipPath id="warreport-A">
+              <path d="M100.78 76.609H83.806v-2.934h16.974zm0 6.813H83.806v-2.933h16.974zm0 6.873H83.806v-2.934h16.974zm-5.505 6.877H83.813v-2.933h11.462zm-18.696 11.015h31.302V66.444H76.579z"/>
+            </clipPath>
+            <g clip-path="url(#warreport-A)">
+              <rect x="76" y="66" width="32" height="43" class="shape"/>
+            </g>
+            <clipPath id="warreport-B">
+              <path d="M53.352 65.283l4.236-4.236L35.66 39.119l-7.541-3.306 3.303 7.541z"/>
+            </clipPath>
+            <g clip-path="url(#warreport-B)">
+              <rect x="28" y="35" width="30" height="31" class="shape"/>
+            </g>
+            <clipPath id="warreport-C">
+              <path d="M82.579 39.116L46.171 75.523a9.65 9.65 0 0 0 1.903.415l1.736.186.184 1.736c.073.646.212 1.282.414 1.9l36.406-36.406 3.305-7.541z"/>
+            </clipPath>
+            <g clip-path="url(#warreport-C)">
+              <rect x="46" y="35" width="45" height="45" class="shape"/>
+            </g>
+            <clipPath id="warreport-D">
+              <path d="M35.08 74.661l.898.898 1.664 1.664 3.415 3.414.474.476-1.53 1.529-9.366 9.366-.988-.989-1.528 1.532 1.163 4.097 4.099 1.163.003.002 1.527-1.528-.985-.987 9.366-9.366 1.53-1.531.472.472 3.415 3.415 1.664 1.664.898.898 4.761-1.702-2.561-2.561-1.213.433c-1.764-2.045-4.028-5.303-4.415-8.931-3.629-.389-6.888-2.653-8.933-4.415l.433-1.213-2.562-2.561z"/>
+            </clipPath>
+            <g clip-path="url(#warreport-D)">
+              <rect x="28" y="69" width="29" height="29" class="shape"/>
+            </g>
+            <clipPath id="warreport-E">
+              <path d="M70.395 78.089c-.389 3.628-2.652 6.887-4.415 8.933l-1.213-.433-2.561 2.562 4.761 1.701.898-.899 1.664-1.663 3.414-3.415.525-.529-.707.707.707-.707V77.31c-.98.377-2.007.665-3.073.779m3.073 6.257"/>
+            </clipPath>
+            <g clip-path="url(#warreport-E)">
+              <rect x="62" y="77" width="12" height="14" class="shape"/>
+            </g>
+            <clipPath id="warreport-F">
+              <path d="M60.648 72.58l7.181 7.181c.199-.621.346-1.256.414-1.903l.187-1.736 1.736-.184c.644-.069 1.28-.215 1.9-.413l-7.182-7.181z"/>
+            </clipPath>
+            <g clip-path="url(#warreport-F)">
+              <rect x="60" y="68" width="13" height="12" class="shape"/>
+            </g>
+          </symbol>

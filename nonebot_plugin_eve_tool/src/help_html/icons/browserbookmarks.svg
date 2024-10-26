@@ -1,0 +1,24 @@
+<symbol id="browserbookmarks">
+            <clipPath id="browserbookmarks-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#browserbookmarks-A)">
+              <clipPath id="browserbookmarks-B">
+                <path d="M26.965 75.094H55.1v-41.34H26.965z"/>
+              </clipPath>
+              <g clip-path="url(#browserbookmarks-B)">
+                <clipPath id="browserbookmarks-C">
+                  <path d="M55.101 41.217c0-3.847-2.925-7.022-6.667-7.422l-.8-.04c-11.416 0-20.669 9.255-20.669 20.669s9.253 20.67 20.669 20.67c2.636 0 5.148-.514 7.467-1.413v-2.603z"/>
+                </clipPath>
+                <g clip-path="url(#browserbookmarks-C)">
+                  <rect x="26" y="33" width="30" height="43" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="browserbookmarks-D">
+              <path d="M47.634 28.751A12.47 12.47 0 0 1 60.1 41.217v56.039l17.739-17.738 17.74 17.738V41.217a12.47 12.47 0 0 0-12.467-12.466zm25.404 31.088l-7.77-5.644h9.602l2.969-9.134 2.967 9.134h9.604l-7.77 5.644 2.967 9.133-7.768-5.646-7.77 5.646z"/>
+            </clipPath>
+            <g clip-path="url(#browserbookmarks-D)">
+              <rect x="47" y="28" width="49" height="70" class="shape"/>
+            </g>
+          </symbol>

@@ -1,0 +1,52 @@
+<symbol id="contractcourier">
+            <clipPath id="contractcourier-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#contractcourier-A)">
+              <g opacity=".25">
+                <clipPath id="contractcourier-B">
+                  <path d="M47.992 76.963h17.596V46.457H47.992z"/>
+                </clipPath>
+                <g clip-path="url(#contractcourier-B)">
+                  <clipPath id="contractcourier-C">
+                    <path d="M65.588 76.963L47.992 66.805V46.457l17.596 10.159z"/>
+                  </clipPath>
+                  <g clip-path="url(#contractcourier-C)">
+                    <rect x="47" y="46" width="19" height="31" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".6">
+                <clipPath id="contractcourier-D">
+                  <path d="M48.018 56.616h35.137V36.33H48.018z"/>
+                </clipPath>
+                <g clip-path="url(#contractcourier-D)">
+                  <clipPath id="contractcourier-E">
+                    <path d="M65.588 56.616l17.567-10.143L65.588 36.33l-17.57 10.143z"/>
+                  </clipPath>
+                  <g clip-path="url(#contractcourier-E)">
+                    <rect x="48" y="36" width="36" height="21" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="contractcourier-F">
+                  <path d="M65.588 76.963h17.594V46.46H65.588z"/>
+                </clipPath>
+                <g clip-path="url(#contractcourier-F)">
+                  <clipPath id="contractcourier-G">
+                    <path d="M65.588 56.616v20.347l17.594-10.158V46.46z"/>
+                  </clipPath>
+                  <g clip-path="url(#contractcourier-G)">
+                    <rect x="65" y="46" width="19" height="31" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="contractcourier-H">
+              <path d="M38.065 24.92c-5.544 0-10.035 4.494-10.035 10.036v10.037h7.57v-9.051c-.002-1.391-1.129-2.517-2.52-2.519v-5a7.53 7.53 0 0 1 7.52 7.519v9.051h-.004v48.05a10.04 10.04 0 0 0 10.037 10.037h39.302a10.04 10.04 0 0 0 10.036-10.037v-5.597H56.103v3.289a7.53 7.53 0 0 1-7.519 7.518v-4.999c1.391-.002 2.518-1.128 2.52-2.519v-8.289h39.472v-47.49A10.04 10.04 0 0 0 80.541 24.92zm27.523 11.41l17.568 10.143.026-.014v20.346L65.588 76.964 47.993 66.805V46.457l.026.016z"/>
+            </clipPath>
+            <g clip-path="url(#contractcourier-H)">
+              <rect x="28" y="24" width="72" height="80" class="shape"/>
+            </g>
+          </symbol>

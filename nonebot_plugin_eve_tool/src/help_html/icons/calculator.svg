@@ -1,0 +1,24 @@
+<symbol id="calculator">
+            <clipPath id="calculator-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#calculator-A)">
+              <clipPath id="calculator-B">
+                <path d="M30.026 98.014H98V29.987H30.026z"/>
+              </clipPath>
+              <g clip-path="url(#calculator-B)">
+                <clipPath id="calculator-C">
+                  <path d="M93.3 47.995H71.7v-5h21.6zM91 29.987H67v31h31V37.014zM51.395 91.918l-5.87-5.869-5.869 5.869-3.535-3.535 5.869-5.869-5.869-5.869 3.535-3.536 5.869 5.87 5.869-5.87 3.535 3.536-5.869 5.869 5.871 5.869zM30.026 67.014V90.98l7 7.034h24v-31zm26.299-19h-8.299v8.299h-5v-8.299h-8.3v-5h8.3v-8.3h5v8.3h8.299zm-19.326-18l-6.973 6.973v24.027h31v-31z"/>
+                </clipPath>
+                <g clip-path="url(#calculator-C)">
+                  <rect x="30" y="29" width="68" height="70" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="calculator-D">
+              <path d="M93.3 80.075H71.7v-5h21.6zm0 9.878H71.7v-5h21.6zM67 66.987v31h24l7-7v-24z"/>
+            </clipPath>
+            <g clip-path="url(#calculator-D)">
+              <rect x="67" y="66" width="31" height="32" class="shape"/>
+            </g>
+          </symbol>

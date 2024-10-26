@@ -1,6 +1,6 @@
 import re
 
-from nonebot import on_notice, logger, on_command
+from nonebot import on_notice, logger, on_command, on_request
 from nonebot.adapters import Bot, Event
 from nonebot.adapters.onebot.v11 import GroupIncreaseNoticeEvent, GroupDecreaseNoticeEvent
 
@@ -14,6 +14,7 @@ from ..utils.dataProcess import insert_high_listener, remove_high_listener, remo
     remove_listener
 from ..utils.killmail_handle import kill_mail_handle
 from ..utils.shit import message_handler
+from ..utils.rules import group_increase_notice, group_decrease_notice
 
 require("nonebot_plugin_alconna")
 
@@ -247,8 +248,8 @@ async def del_high_value_sub(
     await high_value_sub.finish(f"高价值订阅已删除\n{'Group' if check['type'] != 'friend' else 'Friend'}[{check['gid']}]")
 
 
-group_increase_notice = on_notice()
-group_decrease_notice = on_notice()
+group_increase_notice = on_request(group_increase_notice)
+group_decrease_notice = on_request(group_decrease_notice)
 
 
 @group_increase_notice.handle()

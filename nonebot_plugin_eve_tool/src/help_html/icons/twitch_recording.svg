@@ -1,0 +1,30 @@
+<symbol id="twitch_recording">
+            <clipPath id="twitch_recording-A">
+              <path d="M82.986 66.381H76.91V46.637h6.076zm-21.264 0h-4.556V46.637h4.556zm31.897 3.168L83.652 81.57h-18.55l-10.975 8.686V81.57H38.938V32.965h54.681zM32.113 26.891l-3.808 12.818v52.494h16.709v9.113h12.884l9.411-9.113h13.824L99.694 71.77V26.891z"/>
+            </clipPath>
+            <g clip-path="url(#twitch_recording-A)">
+              <rect x="28" y="26" width="72" height="76" class="shape"/>
+            </g>
+            <clipPath id="twitch_recording-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#twitch_recording-B)">
+              <clipPath id="twitch_recording-C">
+                <path d="M85 116.102h30v-30H84.999z"/>
+              </clipPath>
+              <g clip-path="url(#twitch_recording-C)">
+                <clipPath id="twitch_recording-D">
+                  <path d="M115.001 101.103c0 8.285-6.717 14.999-15.001 14.999s-15.001-6.714-15.001-14.999S91.715 86.102 100 86.102s15.001 6.716 15.001 15.001"/>
+                </clipPath>
+                <g clip-path="url(#twitch_recording-D)">
+                  <rect x="85" y="86" width="30" height="31" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="twitch_recording-E">
+              <path d="M90.5 101.102a9.5 9.5 0 1 0 19 0 9.5 9.5 0 0 0-9.5-9.499c-5.246 0-9.5 4.253-9.5 9.499"/>
+            </clipPath>
+            <g clip-path="url(#twitch_recording-E)">
+              <rect x="90" y="91" width="20" height="20" style="fill: red"/>
+            </g>
+          </symbol>

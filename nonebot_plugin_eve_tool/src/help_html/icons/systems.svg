@@ -1,0 +1,60 @@
+<symbol id="systems">
+            <mask id="systems-A">
+              <g clip-path="url(#systems-B)">
+                <rect width="128" height="128" class="shape"/>
+              </g>
+            </mask>
+            <clipPath id="systems-B">
+              <use href="#systems-L"/>
+            </clipPath>
+            <g mask="url(#systems-A)">
+              <mask id="systems-C" x="2.667" y="-17.336" width="119.024" height="83.86" maskUnits="userSpaceOnUse">
+                <path stroke-width="3" stroke-miterlimit="10" fill="none" class="shape" d="M91.69 36.524l-59.023-23.86"/>
+              </mask>
+              <g mask="url(#systems-C)">
+                <rect x="2" width="120" height="67" class="shape"/>
+              </g>
+            </g>
+            <mask id="systems-D">
+              <g clip-path="url(#systems-E)">
+                <rect width="128" height="128" class="shape"/>
+              </g>
+            </mask>
+            <clipPath id="systems-E">
+              <use href="#systems-L"/>
+            </clipPath>
+            <g mask="url(#systems-D)">
+              <mask id="systems-F" x="-8.024" y="-3.476" width="139.715" height="111.238" maskUnits="userSpaceOnUse">
+                <path stroke-width="4" stroke-miterlimit="10" fill="none" class="shape" d="M31.976 67.762L91.69 36.524"/>
+              </mask>
+              <g mask="url(#systems-F)">
+                <rect width="128" height="108" class="shape"/>
+              </g>
+            </g>
+            <clipPath id="systems-G">
+              <path d="M95.567 88.117l-.328-1.473-1.21-5.446-2.338-10.533-3.884 17.455-17.452 3.882 17.452 3.879 3.884 17.454 3.877-17.451 17.458-3.882-9.059-2.016-6.081-1.355z"/>
+            </clipPath>
+            <g clip-path="url(#systems-G)">
+              <rect x="70" y="70" width="44" height="44" class="shape"/>
+            </g>
+            <clipPath id="systems-H">
+              <path d="M49.259 72.569l-11.601-4.807-7.983 1.775 42.64 16.876 8.322-1.852z"/>
+            </clipPath>
+            <g clip-path="url(#systems-H)">
+              <mask id="systems-I">
+                <g clip-path="url(#systems-J)">
+                  <rect x="29" y="67" width="52" height="20" class="shape"/>
+                </g>
+              </mask>
+              <clipPath id="systems-J">
+                <use href="#systems-L"/>
+              </clipPath>
+              <g mask="url(#systems-I)">
+                <rect x="29" y="67" width="52" height="20" class="shape"/>
+              </g>
+            </g>
+            <path d="M93.629 34.583l-.165-.737-.604-2.723-1.17-5.266-1.941 8.727-8.726 1.942 8.726 1.939 1.942 8.727 1.938-8.726 8.73-1.94-4.53-1.01-3.04-.676zM34.7 64.47l-.23-1.036-.85-3.829-1.644-7.405-2.73 12.272-12.27 2.73 12.27 2.726 2.73 12.272 2.726-12.269 12.274-2.729-6.37-1.418-4.274-.953z" class="shape"/>
+            <defs>
+              <path id="systems-L" d="M-32768 32896h65535v-65535h-65535z"/>
+            </defs>
+          </symbol>

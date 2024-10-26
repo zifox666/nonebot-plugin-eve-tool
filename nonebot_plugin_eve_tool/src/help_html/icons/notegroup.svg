@@ -1,0 +1,39 @@
+<symbol id="notegroup">
+            <clipPath id="notegroup-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#notegroup-A)">
+              <g opacity=".6">
+                <clipPath id="notegroup-B">
+                  <path d="M35.328 99.508h71.454V17.552H35.328z"/>
+                </clipPath>
+                <g clip-path="url(#notegroup-B)">
+                  <clipPath id="notegroup-C">
+                    <path d="M37.213 17.553v6.616h60.795v75.339h6.889V17.553z"/>
+                  </clipPath>
+                  <g clip-path="url(#notegroup-C)">
+                    <rect x="37" y="17" width="68" height="83" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="notegroup-D">
+                  <path d="M73.088 110.448h19.264v-17.94H73.088z"/>
+                </clipPath>
+                <g clip-path="url(#notegroup-D)">
+                  <clipPath id="notegroup-E">
+                    <path d="M73.088 92.508v17.939l.025-.024 19.201-17.88.038-.035h-.038z"/>
+                  </clipPath>
+                  <g clip-path="url(#notegroup-E)">
+                    <rect x="73" y="92" width="20" height="19" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="notegroup-F">
+              <path d="M39.924 81.163h24.275v5.335H39.924zm0-12.513h34.301v5.336H39.924zm0-12.396h34.301v5.337H39.924zm0-12.502h34.301v5.336H39.924zM92.19 29.986H26.232V87.19h-.062v23.257h44.064v-20.78h21.988z"/>
+            </clipPath>
+            <g clip-path="url(#notegroup-F)">
+              <rect x="26" y="29" width="67" height="82" class="shape"/>
+            </g>
+          </symbol>

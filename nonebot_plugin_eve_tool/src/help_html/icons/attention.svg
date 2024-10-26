@@ -1,0 +1,8 @@
+<symbol id="attention">
+            <clipPath id="attention-A">
+              <path d="M71.903 50.905l-4.169 24.583h-7.429l-4.21-24.583V29h15.81zM70.435 99h-12.87V86.177h12.87z"/>
+            </clipPath>
+            <g clip-path="url(#attention-A)">
+              <rect x="56" y="29" width="16" height="70" class="shape"/>
+            </g>
+          </symbol>

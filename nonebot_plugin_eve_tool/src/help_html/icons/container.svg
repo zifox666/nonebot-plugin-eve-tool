@@ -1,0 +1,33 @@
+<symbol id="container">
+            <clipPath id="container-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#container-A)">
+              <g opacity=".6">
+                <clipPath id="container-B">
+                  <path d="M29 99h70V29H29z"/>
+                </clipPath>
+                <g clip-path="url(#container-B)">
+                  <clipPath id="container-C">
+                    <path d="M99 99H29V29h70z"/>
+                  </clipPath>
+                  <g clip-path="url(#container-C)">
+                    <rect x="29" y="29" width="70" height="70" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="container-D">
+                  <path d="M18.666 109.336h90.668V18.664H18.666z"/>
+                </clipPath>
+                <g clip-path="url(#container-D)">
+                  <clipPath id="container-E">
+                    <path d="M103.332 59.5h5v-5h-5zm-83.664 0h5v-5h-5zm83.664 14h5v-5h-5zm-83.664 0h5v-5h-5zM73.5 103.332h-5v5h5zm0-83.664h-5v5h5zm-14 83.664h-5v5h5zm0-83.664h-5v5h5zm42.834 5.996V41.07l7 7V25.836l-6.84-7.172H79.932l7 7zm0 76.672H86.932l-7 7h22.234l7.168-6.844V79.93l-7 7zm-76.668 0V86.93l-7-7v22.234l6.84 7.172h22.562l-7-7zm0-61.266l-7 7V25.508l7.168-6.844h22.234l-7 7H25.666z"/>
+                  </clipPath>
+                  <g clip-path="url(#container-E)">
+                    <rect x="18" y="18" width="92" height="92" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </symbol>

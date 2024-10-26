@@ -1,0 +1,24 @@
+<symbol id="market">
+            <clipPath id="market-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".25" clip-path="url(#market-A)">
+              <clipPath id="market-B">
+                <path d="M33.133 94.781H99.91V47.67H33.133z"/>
+              </clipPath>
+              <g clip-path="url(#market-B)">
+                <clipPath id="market-C">
+                  <path d="M86.816 67.857l-13.885-6.08-14.785 21.25L44.227 50.42 33.133 63.677v31.104h66.778V47.764c-.313 0-.618-.038-.917-.094z"/>
+                </clipPath>
+                <g clip-path="url(#market-C)">
+                  <rect x="33" y="47" width="67" height="48" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="market-D">
+              <path d="M28.133 28v71.781h71.778v-5H33.133V63.677L44.227 50.42l13.919 32.607 14.785-21.25 13.886 6.08L98.994 47.67c.299.055.604.094.917.094a5 5 0 1 0 0-10 5 5 0 0 0-5 5c0 1.173.421 2.236 1.094 3.087L85.406 63.42l-13.707-6-12.816 18.42-13.678-32.045-12.072 14.431V28z"/>
+            </clipPath>
+            <g clip-path="url(#market-D)">
+              <rect x="28" y="28" width="77" height="72" class="shape"/>
+            </g>
+          </symbol>

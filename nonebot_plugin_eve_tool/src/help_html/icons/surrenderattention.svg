@@ -1,0 +1,20 @@
+<symbol id="surrenderattention">
+            <clipPath id="surrenderattention-A">
+              <path d="M74.191 94.86c0 10.572 8.569 19.14 19.139 19.14s19.139-8.568 19.139-19.14-8.568-19.139-19.139-19.139-19.139 8.57-19.139 19.139m16.09-5.051V81.36h6.098l-.001 8.449-1.608 9.483h-2.865zm.567 13.607h4.964v4.945h-4.964z"/>
+            </clipPath>
+            <g clip-path="url(#surrenderattention-A)">
+              <rect x="74" y="75" width="39" height="39" class="shape"/>
+            </g>
+            <clipPath id="surrenderattention-B">
+              <path d="M47.203 44.513c-11.65 3.274-23.875 7.46-31.673 4.657.231.48.479.93.727 1.393 7.009 10.631 12.384 10.095 18.727 9.561 6.224-.525 13.382-1.05 23.932 8.971l24.518-34.396c-10.672-10.293-18.58-8.512-25.478-6.73-7.164 1.848-13.239 3.697-20.19-7.969-4.879 18.313 9.437 24.513 9.437 24.513"/>
+            </clipPath>
+            <g clip-path="url(#surrenderattention-B)">
+              <rect x="15" y="20" width="69" height="50" class="shape"/>
+            </g>
+            <clipPath id="surrenderattention-C">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#surrenderattention-C)">
+              <path d="M92.75 40.728L39.639 114l-5.166-1.806 53.753-75.139z" class="shape"/>
+            </g>
+          </symbol>

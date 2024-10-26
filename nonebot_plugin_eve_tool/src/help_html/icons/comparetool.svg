@@ -1,0 +1,56 @@
+<symbol id="comparetool">
+            <clipPath id="comparetool-A">
+              <path d="M72.452 88.735l-18.174 12.474 18.174 13.368v-5.413h23.542V94.31H72.452z"/>
+            </clipPath>
+            <g clip-path="url(#comparetool-A)">
+              <rect x="54" y="88" width="42" height="27" class="shape"/>
+            </g>
+            <clipPath id="comparetool-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".8" clip-path="url(#comparetool-B)">
+              <clipPath id="comparetool-C">
+                <path d="M17.789 91.706h71V17.423h-71z"/>
+              </clipPath>
+              <g clip-path="url(#comparetool-C)">
+                <path d="M86.632 36.675L53.29 55.925M29.242 31.308L53.29 17.423" fill="#fff"/>
+                <g opacity=".6">
+                  <clipPath id="comparetool-D">
+                    <path d="M17.789 91.706h59.548V17.423H17.79z"/>
+                  </clipPath>
+                  <g clip-path="url(#comparetool-D)">
+                    <clipPath id="comparetool-E">
+                      <path d="M51.181 91.706L17.789 72.425V42.183l33.392 19.28zm26.156-60.398L53.29 17.423v4.856l9.921 5.728 9.921 5.728zM53.29 55.925V51.07l-14.569-8.411-14.525-8.438-4.249 2.454z"/>
+                    </clipPath>
+                    <g clip-path="url(#comparetool-E)">
+                      <rect x="17" y="17" width="61" height="75" class="shape"/>
+                    </g>
+                  </g>
+                </g>
+                <clipPath id="comparetool-F">
+                  <path d="M53.29 17.423L29.242 31.308l4.203 2.427 9.923-5.728 9.922-5.728z"/>
+                </clipPath>
+                <g clip-path="url(#comparetool-F)">
+                  <rect x="29" y="17" width="25" height="17" class="shape"/>
+                </g>
+                <clipPath id="comparetool-G">
+                  <path d="M82.384 34.221l-14.526 8.438L53.29 51.07v4.855l33.342-19.25z"/>
+                </clipPath>
+                <g clip-path="url(#comparetool-G)">
+                  <rect x="53" y="34" width="34" height="22" class="shape"/>
+                </g>
+                <clipPath id="comparetool-H">
+                  <path d="M73.462 73.058v-5h15.327V42.183l-33.391 19.28v30.243l18.064-10.43z"/>
+                </clipPath>
+                <g clip-path="url(#comparetool-H)">
+                  <rect x="55" y="42" width="34" height="50" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="comparetool-I">
+              <path d="M120.211 81.014l-18.174-13.368v5.412H78.494v14.859h23.543v5.57z"/>
+            </clipPath>
+            <g clip-path="url(#comparetool-I)">
+              <rect x="78" y="67" width="43" height="27" class="shape"/>
+            </g>
+          </symbol>

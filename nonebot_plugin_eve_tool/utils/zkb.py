@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-from typing import Dict, Any
+from typing import Dict, Any, Tuple
 
 from urllib3.util import Url
 
@@ -13,7 +13,7 @@ class CharacterInfo:
         pass
 
 
-async def get_character_kb(char_id: str) -> dict[str | Any, str | None | Any]:
+async def get_character_kb(char_id: str) -> tuple[dict[str | Any, str | None | Any], str]:
     data = await get_zkb_info(char_id)
     char_info = CharacterInfo()
     char_info.charId = char_id
@@ -94,7 +94,7 @@ async def get_character_kb(char_id: str) -> dict[str | Any, str | None | Any]:
 
     }
 
-    return char_json
+    return char_json, char_id
 
 
 

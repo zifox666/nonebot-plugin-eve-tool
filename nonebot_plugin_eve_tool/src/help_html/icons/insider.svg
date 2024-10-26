@@ -1,0 +1,45 @@
+<symbol id="insider">
+            <clipPath id="insider-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#insider-A)">
+              <clipPath id="insider-B">
+                <path d="M23.774 92.72H92.77V23.724H23.775z"/>
+              </clipPath>
+              <g clip-path="url(#insider-B)">
+                <clipPath id="insider-C">
+                  <path d="M31.228 31.177h61.543v-7.453H23.774V92.72h7.454z"/>
+                </clipPath>
+                <g clip-path="url(#insider-C)">
+                  <rect x="23" y="23" width="70" height="70" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="insider-D">
+              <path d="M35.228 104.276h68.998V35.177H35.228zM81.217 58.3c0-1.536-1.17-2.016-4.29-2.64-3.03-.6-4.98-1.993-4.98-4.92s2.19-4.609 6.54-4.609 6.3 2.28 6.3 3.913h-3.601c-.149-1.032-1.529-1.513-2.759-1.513s-2.88.384-2.88 1.992c0 1.633.271 2.041 3.54 2.664 2.939.553 5.729 1.512 5.729 4.657 0 3.12-2.16 5.089-6.539 5.089-4.409 0-6.33-2.473-6.33-4.032h3.6c.12 1.007 1.32 1.631 2.759 1.631 1.682 0 2.911-.528 2.911-2.232m8.099-12.049h3.6v16.561h-3.6zm-25.469 0h3.599v16.561h-3.449l-5.82-9.744v9.744h-3.6V46.251h3.6l5.67 9.697zm-17.369 0h3.599v16.561h-3.599zm32.939 25h6.871c4.618 0 5.998 2.257 5.998 4.201v2.111c0 1.273-.599 2.809-2.43 3.577l2.161 5.208c.24.6.269 1.464.269 1.464h-3.449c0-.072 0-.648-.15-.983l-2.071-5.041h-3.599v6.024h-3.6zm-15.569 0h12.869v2.401h-9.27v4.392h7.05v2.4h-7.05v4.968h9.27v2.4H63.848zm-17.37 0h6.75c4.499 0 6.119 2.113 6.119 4.08v8.257c0 1.945-1.59 4.224-6.15 4.224h-6.719z"/>
+            </clipPath>
+            <g clip-path="url(#insider-D)">
+              <rect x="35" y="35" width="70" height="70" class="shape"/>
+            </g>
+            <clipPath id="insider-E">
+              <path d="M83.017 73.652v5.735h3.271c1.439 0 2.399-.767 2.399-1.824v-2.111c0-1.057-.96-1.8-2.399-1.8z"/>
+            </clipPath>
+            <g clip-path="url(#insider-E)">
+              <rect x="83" y="73" width="6" height="7" class="shape"/>
+            </g>
+            <clipPath id="insider-F">
+              <use href="#insider-I"/>
+            </clipPath>
+            <g clip-path="url(#insider-F)">
+              <rect x="50" y="73" width="6" height="13" class="shape"/>
+            </g>
+            <clipPath id="insider-G">
+              <use href="#insider-I"/>
+            </clipPath>
+            <g clip-path="url(#insider-G)">
+              <rect x="50" y="73" width="6" height="13" class="shape"/>
+            </g>
+            <defs>
+              <path id="insider-I" d="M50.077 73.652v11.76h3.12c1.741 0 2.55-.768 2.55-1.824v-8.136c0-1.057-.78-1.8-2.55-1.8z"/>
+            </defs>
+          </symbol>

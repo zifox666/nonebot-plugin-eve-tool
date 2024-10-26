@@ -1,0 +1,156 @@
+<symbol id="reprocess">
+            <clipPath id="reprocess-A">
+              <path d="M33.78 95.622zm1.635.545h.003"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-A)">
+              <rect x="33" y="95" width="3" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-B">
+              <path d="M35.415 96.167a5.94 5.94 0 0 1-1.634-.545c.448.268.993.456 1.634.545"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-B)">
+              <rect x="33" y="95" width="3" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-C">
+              <path d="M24.102 58.622l6.901 4.017-7.141 12.371c-.878 1.52-.878 4.002 0 5.522l7.471 12.938c.501.867 1.422 1.646 2.445 2.152-.92-.548-1.413-1.44-1.392-2.526.014-.724.253-1.534.747-2.388l6.056-10.413 5.611-9.72 6.902 3.982-5.834-21.769z"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-C)">
+              <rect x="22" y="52" width="30" height="44" class="shape"/>
+            </g>
+            <clipPath id="reprocess-D">
+              <path d="M35.743 96.209l-.002-.006-.323-.036.325.042"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-D)">
+              <rect x="35" y="96" width="1" height="1" class="shape"/>
+            </g>
+            <clipPath id="reprocess-E">
+              <path d="M32.385 93.147l.001-.051-.001.051m1.393 2.475h.003c-.908-.54-1.401-1.412-1.396-2.475-.005 1.063.487 1.935 1.393 2.475"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-E)">
+              <rect x="32" y="93" width="2" height="3" class="shape"/>
+            </g>
+            <clipPath id="reprocess-F">
+              <path d="M35.415 96.167z"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-F)">
+              <rect x="35" y="96" width="1" height="1" class="shape"/>
+            </g>
+            <clipPath id="reprocess-G">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".5" clip-path="url(#reprocess-G)">
+              <clipPath id="reprocess-H">
+                <path d="M32.385 96.229h25.203V80.295H32.385z"/>
+              </clipPath>
+              <g clip-path="url(#reprocess-H)">
+                <clipPath id="reprocess-I">
+                  <path d="M33.132 90.708c-.493.854-.732 1.663-.747 2.389-.021 1.086.473 1.976 1.397 2.526.515.26 1.065.443 1.633.544l.326.036 1.138.026h20.709V80.295h-18.4z"/>
+                </clipPath>
+                <g clip-path="url(#reprocess-I)">
+                  <rect x="32" y="80" width="26" height="17" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="reprocess-J">
+              <path d="M52.277 26.115c.386-.477.807-.837 1.246-1.08-.438.241-.86.602-1.246 1.08m-.011.014l.011-.014-.011.014m-.002.002l.002-.002-.002.002m-.033.042l.033-.042-.033.042m-.003.004l.003-.004-.003.004"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-J)">
+              <rect x="52" y="25" width="2" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-K">
+              <path d="M52.231 26.173c.352-.421.796-.81 1.292-1.138-.456.252-.894.632-1.292 1.138"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-K)">
+              <rect x="52" y="25" width="2" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-L">
+              <path d="M53.523 25.035c.941-.521 1.956-.501 2.887.065.619.376 1.195.989 1.687 1.846l5.959 10.47 5.58 9.738-6.91 3.963 21.748 5.899 5.9-21.748-6.943 3.948-7.103-12.393c-.873-1.521-3.018-2.77-4.774-2.776L56.616 24c-1.005-.001-2.14.403-3.093 1.035"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-L)">
+              <rect x="53" y="24" width="38" height="34" class="shape"/>
+            </g>
+            <clipPath id="reprocess-M">
+              <path d="M52.029 26.437l.009.002.19-.262-.199.26"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-M)">
+              <rect x="52" y="26" width="1" height="1" class="shape"/>
+            </g>
+            <clipPath id="reprocess-N">
+              <path d="M53.523 25.035c.849-.47 1.759-.5 2.613-.085a2.8 2.8 0 0 0-1.226-.291 2.83 2.83 0 0 0-1.387.376m2.616-.083l-.003-.002.003.002m.193.102l-.013-.007.013.007m.078.046l-.078-.046.078.046"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-N)">
+              <rect x="53" y="24" width="4" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-O"/>
+            <g clip-path="url(#reprocess-O)">
+              <rect x="52" y="26" width="1" height="1" class="shape"/>
+            </g>
+            <clipPath id="reprocess-P">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".5" clip-path="url(#reprocess-P)">
+              <clipPath id="reprocess-Q">
+                <path d="M41.03 53.323h23.026V24.659H41.03z"/>
+              </clipPath>
+              <g clip-path="url(#reprocess-Q)">
+                <clipPath id="reprocess-R">
+                  <path d="M58.097 26.946c-.491-.856-1.068-1.47-1.687-1.845-.932-.567-1.95-.588-2.887-.066a6.05 6.05 0 0 0-1.293 1.138l-.192.266-.597.971-10.41 17.903 5.015 2.915 8.761 5.095 9.249-15.907z"/>
+                </clipPath>
+                <g clip-path="url(#reprocess-R)">
+                  <rect x="41" y="24" width="24" height="30" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="reprocess-S">
+              <path d="M104.422 75.22c.244.596.359 1.165.356 1.685v.002c.005-.522-.112-1.091-.357-1.69"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-S)">
+              <rect x="104" y="75" width="1" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-T">
+              <path d="M104.778 76.905c.003-.52-.112-1.089-.356-1.685a5.99 5.99 0 0 1 .356 1.685"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-T)">
+              <rect x="104" y="75" width="1" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-U">
+              <path d="M61.725 88.188L77.785 104l-.036-7.988 14.287-.11c1.751-.015 3.89-1.271 4.757-2.8l7.368-12.993c.497-.875.701-2.063.617-3.202-.006 1.073-.524 1.948-1.473 2.481-.628.355-1.45.559-2.435.566l-12.049.057-11.222.087-.062-7.966z"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-U)">
+              <rect x="61" y="72" width="44" height="32" class="shape"/>
+            </g>
+            <clipPath id="reprocess-V">
+              <path d="M104.283 74.922l.138.295-.131-.302z"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-V)">
+              <rect x="104" y="74" width="1" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-W">
+              <path d="M104.778 76.936h0m-.001.021l.001-.021-.001.021m0 .011h0m-1.472 2.42a2.75 2.75 0 0 0 1.472-2.42c-.025 1.045-.541 1.897-1.472 2.42"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-W)">
+              <rect x="103" y="76" width="2" height="4" class="shape"/>
+            </g>
+            <clipPath id="reprocess-X">
+              <path d="M104.42 75.217h.001m.001.003l-.002-.003"/>
+            </clipPath>
+            <g clip-path="url(#reprocess-X)">
+              <rect x="104" y="74" width="1" height="2" class="shape"/>
+            </g>
+            <clipPath id="reprocess-Y">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".5" clip-path="url(#reprocess-Y)">
+              <clipPath id="reprocess-Z">
+                <path d="M79.5 80.011h25.278V56.073H79.5z"/>
+              </clipPath>
+              <g clip-path="url(#reprocess-Z)">
+                <clipPath id="reprocess-AA">
+                  <path d="M100.87 79.954c.985-.007 1.807-.211 2.435-.566.95-.534 1.468-1.408 1.473-2.483a5.95 5.95 0 0 0-.357-1.684l-.138-.3-.553-.994-10.494-17.854-5 2.94-8.736 5.136 9.321 15.863z"/>
+                </clipPath>
+                <g clip-path="url(#reprocess-AA)">
+                  <rect x="79" y="56" width="26" height="25" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

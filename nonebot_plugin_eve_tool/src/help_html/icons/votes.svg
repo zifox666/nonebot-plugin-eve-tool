@@ -1,0 +1,22 @@
+<symbol id="votes">
+            <clipPath id="votes-A">
+              <path d="M25.002 18.5l-6.529 30.182h91.031L102.971 18.5zm3.175 3.936h71.619l4.829 22.31H23.351z"/>
+            </clipPath>
+            <g clip-path="url(#votes-A)">
+              <rect x="18" y="18" width="92" height="31" class="shape"/>
+            </g>
+            <path d="M42.7 36.585l1.908-7.404H83.37l1.91 7.404z" class="shape"/>
+            <clipPath id="votes-B">
+              <path d="M68.17 75.67l-4.181-12.869-4.183 12.869h-13.53l10.947 7.951-4.182 12.869 10.948-7.953 10.946 7.953-4.181-12.869 10.947-7.951z"/>
+            </clipPath>
+            <g clip-path="url(#votes-B)">
+              <rect x="46" y="62" width="36" height="35" class="shape"/>
+            </g>
+            <clipPath id="votes-C">
+              <path d="M18.445 109.5h91.109V51.676H18.445zm3.936-53.888h83.237v49.952H22.381z"/>
+            </clipPath>
+            <g clip-path="url(#votes-C)">
+              <rect x="18" y="51" width="92" height="59" class="shape"/>
+            </g>
+            <path d="M29.27 62.5h-3.936v-3.936h3.936zm0 40.112h-3.936v-3.936h3.936zm73.397 0h-3.936v-3.936h3.936zm0-40.112h-3.936v-3.936h3.936z" class="shape"/>
+          </symbol>

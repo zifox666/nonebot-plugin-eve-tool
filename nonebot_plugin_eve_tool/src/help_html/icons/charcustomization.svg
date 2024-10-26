@@ -1,0 +1,24 @@
+<symbol id="charcustomization">
+            <clipPath id="charcustomization-A">
+              <path d="M63.999 32.357c-6.214 0-11.602-2.273-14.313-5.605l-5.689 1.942v16.897l10.74 10.741v44.335h18.525V56.332l10.739-10.741V28.694l-5.689-1.942c-2.711 3.332-8.099 5.605-14.313 5.605"/>
+            </clipPath>
+            <g clip-path="url(#charcustomization-A)">
+              <rect x="43" y="26" width="41" height="75" class="shape"/>
+            </g>
+            <clipPath id="charcustomization-B">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#charcustomization-B)">
+              <clipPath id="charcustomization-C">
+                <path d="M21.033 100.667h85.932V28.694H21.033z"/>
+              </clipPath>
+              <g clip-path="url(#charcustomization-C)">
+                <clipPath id="charcustomization-D">
+                  <path d="M83.261 56.28l3.667-3.667 14.179 3.781 5.858-19.859-22.964-7.841v16.897L73.262 56.332v44.335h9.999zM43.997 45.591V28.694l-22.964 7.841 5.858 19.859 14.179-3.781 3.667 3.667v44.387h10V56.332zm62.968-9.056z"/>
+                </clipPath>
+                <g clip-path="url(#charcustomization-D)">
+                  <rect x="21" y="28" width="86" height="73" class="shape"/>
+                </g>
+              </g>
+            </g>
+          </symbol>

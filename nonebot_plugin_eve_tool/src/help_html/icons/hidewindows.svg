@@ -1,0 +1,39 @@
+<symbol id="hidewindows">
+            <clipPath id="hidewindows-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g clip-path="url(#hidewindows-A)">
+              <g opacity=".6">
+                <clipPath id="hidewindows-B">
+                  <path d="M7 110.003h114V17.748H7z"/>
+                </clipPath>
+                <g clip-path="url(#hidewindows-B)">
+                  <clipPath id="hidewindows-C">
+                    <path d="M102.498 41.007v61.543H40.955v7.453h68.998V41.007z"/>
+                  </clipPath>
+                  <g clip-path="url(#hidewindows-C)">
+                    <rect x="40" y="41" width="70" height="70" class="shape"/>
+                  </g>
+                </g>
+              </g>
+              <g opacity=".8">
+                <clipPath id="hidewindows-D">
+                  <path d="M7 110.003h114V17.748H7z"/>
+                </clipPath>
+                <g clip-path="url(#hidewindows-D)">
+                  <clipPath id="hidewindows-E">
+                    <path d="M91.045 29.553v61.543H29.502v7.454h68.996V29.553z"/>
+                  </clipPath>
+                  <g clip-path="url(#hidewindows-E)">
+                    <rect x="29" y="29" width="70" height="70" class="shape"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <clipPath id="hidewindows-F">
+              <path d="M34.236 34.912h36v7h-36zM18.047 87.097h68.998v-69.1H18.047z"/>
+            </clipPath>
+            <g clip-path="url(#hidewindows-F)">
+              <rect x="18" y="17" width="70" height="71" class="shape"/>
+            </g>
+          </symbol>

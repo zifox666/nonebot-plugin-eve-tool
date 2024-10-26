@@ -1,0 +1,24 @@
+<symbol id="evemailtag">
+            <clipPath id="evemailtag-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#evemailtag-A)">
+              <clipPath id="evemailtag-B">
+                <path d="M37.742 105.187h65.946V28.65H37.742z"/>
+              </clipPath>
+              <g clip-path="url(#evemailtag-B)">
+                <clipPath id="evemailtag-C">
+                  <path d="M100.606 38.26l.002 14.438 3.08-6.754-5.183-13.869-7.509-3.424 1.886 1.886zM39.355 83.898l-1.613 3.537 9.467 4.317-7.771-7.771zM57.313 96.36l42.986-42.984-23.63 51.811z"/>
+                </clipPath>
+                <g clip-path="url(#evemailtag-C)">
+                  <rect x="37" y="28" width="67" height="78" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="evemailtag-D">
+              <path d="M65.104 28.062l-.344.129-.181.397-40.267 40.267 15.043 15.043.083.083 7.772 7.772 7.355 7.354 2.749-2.747 42.985-42.984.309-.309v-.369l-.002-14.438-7.723-7.723-1.887-1.886-5.836-5.837-14.806-.002zM77.491 45.93a7 7 0 0 1 0-9.898c1.312-1.314 3.092-2.052 4.948-2.052s3.637.737 4.949 2.05a7 7 0 0 1-9.897 9.9"/>
+            </clipPath>
+            <g clip-path="url(#evemailtag-D)">
+              <rect x="24" y="22" width="77" height="78" class="shape"/>
+            </g>
+          </symbol>

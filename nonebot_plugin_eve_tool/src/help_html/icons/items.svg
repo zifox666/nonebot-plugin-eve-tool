@@ -1,0 +1,25 @@
+<symbol id="items">
+            <path d="M103.645 42.728L64 65.618M35.407 36.347L64 19.837" class="shape"/>
+            <clipPath id="items-A">
+              <path d="M0 0h128v128H0z"/>
+            </clipPath>
+            <g opacity=".6" clip-path="url(#items-A)">
+              <clipPath id="items-B">
+                <path d="M21.79 108.162h70.804V19.837H21.789z"/>
+              </clipPath>
+              <g clip-path="url(#items-B)">
+                <clipPath id="items-C">
+                  <path d="M61.493 108.162L21.789 85.236V49.277l39.704 22.925zm31.101-71.815L64 19.837v5.774l11.797 6.811 11.797 6.81zM64 65.617v-5.772L46.678 49.844 29.407 39.811l-5.052 2.918z"/>
+                </clipPath>
+                <g clip-path="url(#items-C)">
+                  <rect x="21" y="19" width="72" height="90" class="shape"/>
+                </g>
+              </g>
+            </g>
+            <clipPath id="items-D">
+              <path d="M66.507 72.202v35.96l39.703-22.926V49.277zm-26.102-32.97l-4.998-2.885L64 19.837v5.774l-11.796 6.811zM64 65.617v-5.772l17.323-10.001 17.271-10.033 5.051 2.918z"/>
+            </clipPath>
+            <g clip-path="url(#items-D)">
+              <rect x="35" y="19" width="72" height="90" class="shape"/>
+            </g>
+          </symbol>

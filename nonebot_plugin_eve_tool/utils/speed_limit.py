@@ -30,3 +30,32 @@ async def speed_limit(kill_id: int, group_id: int) -> bool:
         return True
     else:
         return False
+
+
+async def save_url(redis_array, group_id, message_id, url):
+    """
+    将 URL 存储到 Redis 中，键格式为 sendId:{group_id}:{message_id}
+    """
+    key = f"sendId:{group_id}:{message_id}"
+    try:
+        await redis_array.hset(key, "url", url)
+        logger.info(f"Saved URL: {url} with key: {key}")
+    except Exception as e:
+        logger.error(f"Failed to save URL: {url} with key: {key}, error: {e}")
+
+
+async def get_url(redis_array, group_id, message_id):
+    """
+    从 Redis 中读取 URL，键格式为 sendId:{group_id}:{message_id}
+    """
+    key = f"sendId:{group_id}:{message_id}"
+    try:
+        url = await redis_array.hget(key, "url")
+        if url:
+            logger.info(f"Retrieved URL: {url} for key: {key}")
+        else:
+            logger.warning(f"No URL found for key: {key}")
+        return url
+    except Exception as e:
+        logger.error(f"Failed to retrieve URL for key: {key}, error: {e}")
+        return None

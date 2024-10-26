@@ -1,13 +1,16 @@
 import asyncio
 import random
 
+from nonebot import logger
 from nonebot.adapters import Bot
 from nonebot.adapters.onebot.v11 import MessageSegment
 
-from .speed_limit import speed_limit
+from ..database.redis.search import RA
+from .speed_limit import speed_limit, save_url
 from ..model import KillMailDetails
 from ..src import use_killmail_html
 from .png import html2pic, html2pic_element
+from .statis import insert_statis
 
 
 async def process_image(kill_mail_details: KillMailDetails) -> KillMailDetails:
@@ -19,11 +22,11 @@ async def message_send(bot: Bot, push_item, kill_mail_details):
     if push_item['push_type'] == 'group':
         # kill_mail_details = await process_image(kill_mail_details, 'G', push_item[3])
         kill_mail_details = await process_image(kill_mail_details)
-        await bot.send_group_msg(group_id=push_item['push_to'], message=MessageSegment.image(kill_mail_details.img))
+        return await bot.send_group_msg(group_id=push_item['push_to'], message=MessageSegment.image(kill_mail_details.img))
     else:
         # kill_mail_details = await process_image(kill_mail_details, 'F', push_item[3])
         kill_mail_details = await process_image(kill_mail_details)
-        await bot.send_private_msg(user_id=push_item['push_to'], message=MessageSegment.image(kill_mail_details.img))
+        return await bot.send_private_msg(user_id=push_item['push_to'], message=MessageSegment.image(kill_mail_details.img))
 
 
 async def process_push_items(push_items, subscription_type, kill_mail_details, bot):
@@ -39,11 +42,26 @@ async def process_push_items(push_items, subscription_type, kill_mail_details, b
         echo = await speed_limit(kill_mail_details.kill_mail_id, target_id)
         if echo:
             continue
+
+        await insert_statis(
+            "killmail_push",
+            f"{kill_mail_details.title}:{kill_mail_details.kill_mail_id}",
+            push_item['push_to'],
+            push_item['push_to']
+        )
         html_template = await use_killmail_html(kill_mail_details)
         # kill_mail_details.pic = await html2pic_element(html_content=str(html_template), element="container")
         kill_mail_details.pic = await html2pic(str(html_template), width=680, height=1080)
-        await message_send(bot, push_item, kill_mail_details)
+        message_id = await message_send(bot, push_item, kill_mail_details)
+        message_id = message_id.get('message_id', 0)
+        logger.debug(message_id)
         # await asyncio.sleep(delay_time)
+        await save_url(
+            RA,
+            push_item['push_to'],
+            message_id,
+            f'https://zkillboard.com/kill/{kill_mail_details.kill_mail_id}'
+        )
 
 
 async def message_handler(bot: Bot, kill_mail_details: KillMailDetails) -> bool:

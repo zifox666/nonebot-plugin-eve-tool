@@ -276,3 +276,18 @@ async def get_background_image() -> str | Url:
             background_image = "https://www.loliapi.com/acg/pe/"
 
     return background_image
+
+
+async def type_word(args: str) -> str:
+    """
+    整理合同内容
+    """
+    # 替换所有 \r 为 \n
+    args = args.replace('\r', '\n')
+    lines = args.split('\n')
+    converted_text = ''
+    for line in lines:
+        fields = line.split('\t')
+        converted_text += '\t'.join(fields) + '\n'
+    return converted_text
+

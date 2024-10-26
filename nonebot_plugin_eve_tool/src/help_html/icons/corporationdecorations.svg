@@ -1,0 +1,8 @@
+<symbol id="corporationdecorations">
+            <clipPath id="corporationdecorations-A">
+              <path d="M75.183 73.534L64 65.407l-11.185 8.127 4.273-13.148-11.184-8.125h13.823L64 39.113l4.271 13.148h13.825l-11.185 8.125zM43.301 19.8v90.4l20.698-14.557 20.7 14.557V19.8z" fill-rule="evenodd"/>
+            </clipPath>
+            <g clip-path="url(#corporationdecorations-A)">
+              <rect x="43" y="19" width="42" height="92" class="shape"/>
+            </g>
+          </symbol>
